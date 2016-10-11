@@ -1,0 +1,11 @@
+{
+    "name": "spoorloos/spoorloos-api",
+    "description": "API voor spoorloos",
+    "authors": [
+        {
+            "name": "Sander Kastelein",
+            "email": "sander@sanderkastelein.nl"
+        }
+    ],
+    "require": {}
+}
