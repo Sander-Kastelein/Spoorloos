@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spoorloos</title>
+    <style>
+        Body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        *{
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script src="three.min.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script>
+        var scene, camera, renderer, controls, grid;
+        init();
+        animate();
+
+
+        function init(){
+
+            //scene
+            scene = new THREE.Scene();
+
+            //camera
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 37000)
+            camera.position.z = 5000;
+            camera.position.y = 300;
+
+            //controls
+            controls = new THREE.OrbitControls( camera );
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.25;
+            controls.enableZoom = false;
+
+            //grid
+            grid = new THREE.GridHelper(37000,1000,0xff0000,0x000000);
+            scene.add(grid);
+
+            //renderer
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setClearColor(0xffffff);
+            document.body.appendChild(renderer.domElement);
+
+            //LIGHTS
+            //ambientLight
+            scene.add(new THREE.AmbientLight(0xffffff));
+        }
+
+        function animate(){
+            requestAnimationFrame(animate);
+
+            //controls
+            controls.update();
+
+            render();
+        }
+
+        function render(){
+            renderer.render(scene, camera);
+        }
+    </script>
+
+</body>
+</html>
