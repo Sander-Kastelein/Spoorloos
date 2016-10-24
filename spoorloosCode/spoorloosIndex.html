@@ -29,9 +29,9 @@
             scene = new THREE.Scene();
 
             //camera
-            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 37000)
-            camera.position.z = 5000;
-            camera.position.y = 300;
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
+            camera.position.z = 10;
+            camera.position.y = 20;
 
             //controls
             controls = new THREE.OrbitControls( camera );
@@ -40,7 +40,7 @@
             controls.enableZoom = false;
 
             //grid
-            grid = new THREE.GridHelper(37000,1000,0xff0000,0x000000);
+            grid = new THREE.GridHelper(370,666,0xff0000,0x000000);
             scene.add(grid);
 
             //renderer
@@ -52,6 +52,27 @@
             //LIGHTS
             //ambientLight
             scene.add(new THREE.AmbientLight(0xffffff));
+
+            //Trein
+            var TreinGeometry = new THREE.BoxGeometry(3, 5, 27);
+            var TreinTexture = new THREE.ImageUtils.loadTexture("Images/trein.png");
+            var TreinMaterial = new THREE.MeshPhongMaterial({ map: TreinTexture, side: THREE.DoubleSide });
+            var Trein = new THREE.Mesh(TreinGeometry, TreinMaterial);
+            Trein.position.y = 2.5;
+
+            var NeusGeo = new THREE.CylinderGeometry( 1.5, 1.5, 5, 64 );
+            var NeusTexture = new THREE.ImageUtils.loadTexture("Images/trein.png");
+            var NeusMaterial = new THREE.MeshBasicMaterial({ map: NeusTexture, side: THREE.DoubleSide });
+            var Neus = new THREE.Mesh( NeusGeo, NeusMaterial );
+            Neus.position.z = -13.5;
+            Neus.position.y = 2.5;
+
+            var wagon1 = Trein.clone();
+            wagon1.position.z = 28;
+
+            var wagon2 = Trein.clone();
+            wagon2.position.z = 56;
+            scene.add(Trein, Neus, wagon1, wagon2);
         }
 
         function animate(){
