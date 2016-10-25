@@ -31,13 +31,13 @@
             //camera
             camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
             camera.position.z = 10;
-            camera.position.y = 85;
+            camera.position.y = 80;
 
             //controls
             controls = new THREE.OrbitControls( camera );
             controls.enableDamping = true;
             controls.dampingFactor = 0.25;
-            controls.enableZoom = false;
+            controls.enableZoom = true;
 
             //grid
             grid = new THREE.GridHelper(370,666,0xff0000,0x000000);
@@ -80,7 +80,84 @@
 
             var wagon2 = Trein.clone();
             wagon2.position.z = 56;
-            scene.add(Trein, Neus, Achterkant, wagon1, wagon2, Connector);
+
+
+            wielen = new THREE.Object3D();
+            for (i = -12; i < 12; i+=1){
+                var wielGeo = new THREE.CylinderGeometry (0.5, 0.5, 0.1, 32);
+                var wielMat = new THREE.MeshPhongMaterial ({color: 0x000000});
+                var wiel = new THREE.Mesh(wielGeo, wielMat);
+                wiel.position.y = 0;
+                wiel.position.x = 0.7;
+                wiel.position.z = i;
+                wiel.rotation.x = Math.PI / 2;
+                wiel.rotation.z = Math.PI / 2;
+                wielen.add(wiel);
+            };
+
+            for (i = -12; i < 12; i+=1){
+                var wielGeo = new THREE.CylinderGeometry (0.5, 0.5, 0.1, 32);
+                var wielMat = new THREE.MeshPhongMaterial ({color: 0x000000});
+                var wiel = new THREE.Mesh(wielGeo, wielMat);
+                wiel.position.y = 0;
+                wiel.position.x = -0.7;
+                wiel.position.z = i;
+                wiel.rotation.x = Math.PI / 2;
+                wiel.rotation.z = Math.PI / 2;
+                wielen.add(wiel);
+            };
+
+            for (i = 16; i < 40; i+=1){
+                var wielGeo = new THREE.CylinderGeometry (0.5, 0.5, 0.1, 32);
+                var wielMat = new THREE.MeshPhongMaterial ({color: 0x000000});
+                var wiel = new THREE.Mesh(wielGeo, wielMat);
+                wiel.position.y = 0;
+                wiel.position.x = 0.7;
+                wiel.position.z = i;
+                wiel.rotation.x = Math.PI / 2;
+                wiel.rotation.z = Math.PI / 2;
+                wielen.add(wiel);
+            };
+
+            for (i = 16; i < 40; i+=1){
+                var wielGeo = new THREE.CylinderGeometry (0.5, 0.5, 0.1, 32);
+                var wielMat = new THREE.MeshPhongMaterial ({color: 0x000000});
+                var wiel = new THREE.Mesh(wielGeo, wielMat);
+                wiel.position.y = 0;
+                wiel.position.x = -0.7;
+                wiel.position.z = i;
+                wiel.rotation.x = Math.PI / 2;
+                wiel.rotation.z = Math.PI / 2;
+                wielen.add(wiel);
+            };
+
+            for (i = 45; i < 69; i+=1){
+                var wielGeo = new THREE.CylinderGeometry (0.5, 0.5, 0.1, 32);
+                var wielMat = new THREE.MeshPhongMaterial ({color: 0x000000});
+                var wiel = new THREE.Mesh(wielGeo, wielMat);
+                wiel.position.y = 0;
+                wiel.position.x = 0.7;
+                wiel.position.z = i;
+                wiel.rotation.x = Math.PI / 2;
+                wiel.rotation.z = Math.PI / 2;
+                wielen.add(wiel);
+            };
+
+            for (i = 45; i < 69; i+=1){
+                var wielGeo = new THREE.CylinderGeometry (0.5, 0.5, 0.1, 32);
+                var wielMat = new THREE.MeshPhongMaterial ({color: 0x000000});
+                var wiel = new THREE.Mesh(wielGeo, wielMat);
+                wiel.position.y = 0;
+                wiel.position.x = -0.7;
+                wiel.position.z = i;
+                wiel.rotation.x = Math.PI / 2;
+                wiel.rotation.z = Math.PI / 2;
+                wielen.add(wiel);
+            };
+
+
+
+            scene.add(Trein, Neus, Achterkant, wagon1, wagon2, Connector, wielen);
 
 
         }

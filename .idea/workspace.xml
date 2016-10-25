@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a23c810-ff05-4b56-80ff-282cb4643e29" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spoorloosCode/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spoorloosCode/.idea/spoorloosCode.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spoorloosCode/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spoorloosCode/Images/trein.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spoorloosCode/OrbitControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spoorloosCode/spoorloosIndex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spoorloosCode/three.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Code Reinder/spoorloosIndex.html" afterPath="$PROJECT_DIR$/Code Reinder/spoorloosIndex.html" />
     </list>
     <ignored path="Spoorloos.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,8 +29,8 @@
       <file leaf-file-name="spoorloosIndex.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Code Reinder/spoorloosIndex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            <state relative-caret-position="274">
+              <caret line="148" column="31" selection-start-line="148" selection-start-column="31" selection-end-line="148" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -93,7 +87,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -128,6 +121,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -207,11 +201,12 @@
       <updated>1477305585342</updated>
       <workItem from="1477305598677" duration="4363000" />
       <workItem from="1477310394716" duration="3489000" />
+      <workItem from="1477387011292" duration="5005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7852000" />
+    <option name="totallyTimeSpent" value="12857000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -251,7 +246,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spoorloosCode/spoorloosIndex.html">
+    <entry file="file://$PROJECT_DIR$/Code Reinder/spoorloosIndex.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -259,6 +254,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/spoorloosCode/spoorloosIndex.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -266,18 +262,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spoorloosCode/spoorloosIndex.html">
+    <entry file="file://$PROJECT_DIR$/spoorloosCode/spoorloosIndex.html" />
+    <entry file="file://$PROJECT_DIR$/Afmetingen plattegrond.rtf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+        <state relative-caret-position="-1142">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Code Reinder/spoorloosIndex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state relative-caret-position="274">
+          <caret line="148" column="31" selection-start-line="148" selection-start-column="31" selection-end-line="148" selection-end-column="31" />
           <folding />
         </state>
       </provider>
