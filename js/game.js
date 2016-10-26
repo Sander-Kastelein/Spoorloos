@@ -23,8 +23,8 @@ class Game
 
 		this.stationfloor = new StationFloor();
 		this.sun = new Sun();
+		this.train = new Train(game.assets.trainGeometry);
 
-		this.train = new Train(this.assets.trainGeometry);
 	}
 
 	initialize()
