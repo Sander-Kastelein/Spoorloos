@@ -1,20 +1,33 @@
 <!doctype html>
 <html>
 	<head>
-		
+		<style>
+			html,body{
+				padding: 0;
+				margin: 0;
+				min-height: 100%;
+				min-width: 100%;
+				overflow: hidden;
+			}
+
+
+		</style>
 	</head>
 	<body>
+
 		
 		<!-- Libs -->
-		<script src="/libs/three.min.js"></script>
+		<script src="libs/three.min.js"></script>
+		<script src="libs/OrbitControls.js"></script>
 
 
 		<!-- Load objects -->
-		<script src="/js/camera.js"></script>
-		<script src="/js/game.js"></script>
-		<script src="/js/train.js"></script>
+		<script src="js/camera.js"></script>
+		<script src="js/game.js"></script>
+		<script src="js/train.js"></script>
+		<script src="js/controller.js"></script>
 
 		<!-- Load init.js as last one so every object is pre-loaded -->
-		<script src="/js/init.js"></script>
+		<script src="js/init.js"></script>
 	</body>
 </html>

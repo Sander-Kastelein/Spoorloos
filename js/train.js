@@ -1,12 +1,11 @@
 "use strict";
 
-class Train extends THREE.Group
+class Train extends THREE.Mesh
 { 
 
 	constructor()
 	{
-		
-		super(); // Invoke new THREE.Group()
+		super(); // Invoke new THREE.Mesh()
 	}
 
 
