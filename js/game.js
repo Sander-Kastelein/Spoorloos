@@ -17,6 +17,7 @@ class Game
 		this.renderer = new THREE.WebGLRenderer();
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 1000);
 		this.controller = new Controller(this.camera);
+		this.stationfloor = new StationFloor();
 	}
 
 	initialize()
@@ -38,7 +39,7 @@ class Game
 		let delta = this.clock.getElapsedTime();
 		this.camera.update(delta);
 		this.controller.update();
-
+		this.stationfloor.update();
 		console.log("Tick");
 	}
 
