@@ -7,9 +7,10 @@
 
 class Game
 {
-	constructor()
+	constructor(assets)
 	{
 		game = this;
+		this.assets = assets;
 		console.log("Creating Game object...");
 
 		this.scene = new THREE.Scene(); // Add new scene to game object.
