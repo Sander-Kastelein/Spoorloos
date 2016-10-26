@@ -113,7 +113,6 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 	// this method is exposed, but perhaps it would be better if we can make it private...
 	this.update = function() {
-
 		var offset = new THREE.Vector3();
 
 		// so camera.up is the orbit axis
@@ -124,7 +123,6 @@ THREE.OrbitControls = function ( object, domElement ) {
 		var lastQuaternion = new THREE.Quaternion();
 
 		return function update () {
-
 			var position = scope.object.position;
 
 			offset.copy( position ).sub( scope.target );

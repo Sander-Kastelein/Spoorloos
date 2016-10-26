@@ -113,7 +113,6 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 	// this method is exposed, but perhaps it would be better if we can make it private...
 	this.update = function() {
-
 		var offset = new THREE.Vector3();
 
 		// so camera.up is the orbit axis

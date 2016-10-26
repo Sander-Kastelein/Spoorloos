@@ -16,8 +16,11 @@ class Game
 		this.scene = new THREE.Scene(); // Add new scene to game object.
 		this.clock = new THREE.Clock();
 		this.renderer = new THREE.WebGLRenderer();
+
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 1000);
-		this.controller = new Controller(this.camera);
+		this.controller = new Controller();
+		
+
 		this.stationfloor = new StationFloor();
 		this.sun = new Sun();
 
@@ -43,10 +46,9 @@ class Game
 		let delta = this.clock.getElapsedTime();
 		this.sun.update(delta);
 		this.camera.update(delta);
-		this.controller.update();
+		this.controller.update(delta);
 		this.stationfloor.update();
 		this.train.update(delta);
-		console.log("Tick");
 	}
 
 	start()

@@ -11,6 +11,6 @@ class Camera extends THREE.PerspectiveCamera
 
 	update(delta)
 	{
-		console.log("Tick Camera");
+		
 	}
 }
