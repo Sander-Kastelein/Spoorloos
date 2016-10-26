@@ -19,6 +19,7 @@ class Game
 		this.controller = new Controller(this.camera);
 		
 		this.sun = new Sun();
+		this.train = new Train(AssetLoader.trainGeometry);
 
 	}
 
@@ -42,6 +43,7 @@ class Game
 		this.sun.update(delta);
 		this.camera.update(delta);
 		this.controller.update();
+		this.train.update(delta);
 
 
 		console.log("Tick");
