@@ -14,11 +14,7 @@ class Sun extends THREE.AmbientLight
 			24:00 : 0
 			
 		*/
-		this.timeColors = [
-			
-		];
-
-
+		
 		super(0x404040, 5);
 		game.scene.add(this);
 		

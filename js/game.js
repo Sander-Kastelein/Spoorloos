@@ -7,9 +7,10 @@
 
 class Game
 {
-	constructor()
+	constructor(assets)
 	{
 		game = this;
+		this.assets = assets;
 		console.log("Creating Game object...");
 
 		this.scene = new THREE.Scene(); // Add new scene to game object.
@@ -19,7 +20,7 @@ class Game
 		this.controller = new Controller(this.camera);
 		this.stationfloor = new StationFloor();
 		this.sun = new Sun();
-		this.train = new Train(AssetLoader.trainGeometry);
+		this.train = new Train(this.assets.trainGeometry);
 	}
 
 	initialize()
