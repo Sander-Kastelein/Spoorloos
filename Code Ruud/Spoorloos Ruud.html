@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spoorloos</title>
+    <style>
+        Body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        *{
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+<script src="three.min.js"></script>
+<script src="OrbitControls.js"></script>
+<script>
+    var scene, camera, renderer, controls, grid;
+    init();
+    animate();
+
+
+    function init(){
+
+        //scene
+        scene = new THREE.Scene();
+
+        //camera
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
+        camera.position.z = 10;
+        camera.position.y = 10;
+
+        //controls
+        controls = new THREE.OrbitControls( camera );
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.25;
+        controls.enableZoom = true;
+
+        //grid
+        //grid = new THREE.GridHelper(370,666,0xff0000,0xffffff);
+        //scene.add(grid);
+
+        //renderer
+        renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(0xffffff);
+        document.body.appendChild(renderer.domElement);
+
+        //LIGHTS
+        //ambientLight
+        scene.add(new THREE.AmbientLight(0xffffff));
+
+        // ground
+        var groundTexture = new THREE.ImageUtils.loadTexture("Images/ground.jpg");
+        var groundGeometry = new THREE.PlaneBufferGeometry(100,362);
+        var groundMaterial = new THREE.MeshLambertMaterial({map: groundTexture, side: THREE.doubleSided});
+        var ground = new THREE.Mesh(groundGeometry, groundMaterial);
+        ground.rotation.x = -.5*Math.PI;
+        ground.position.y = 0;
+        scene.add(ground);
+
+        //Plein
+        var pGeometry = new THREE.BoxGeometry(48,2,87.5);
+        var pTexture = new THREE.ImageUtils.loadTexture("Images/tegel.jpg");
+        pTexture.wrapS = pTexture.wrapT = THREE.RepeatWrapping;
+        pTexture.repeat.set( 40, 87.5);
+        var pMaterial = new THREE.MeshLambertMaterial({map: pTexture, side: THREE.doubleSided});
+        var plein = new THREE.Mesh(pGeometry, pMaterial);
+        plein.position.y = 1;
+        scene.add(plein);
+
+        //looppad spoor
+        var lpGeometry = new THREE.BoxGeometry(10,2,162.5);
+        var lpTexture = new THREE.ImageUtils.loadTexture("Images/tegel.jpg");
+        lpTexture.wrapS = lpTexture.wrapT = THREE.RepeatWrapping;
+        lpTexture.repeat.set(10,162.5);
+        var lpMaterial = new THREE.MeshLambertMaterial({map: lpTexture, side: THREE.doubleSided});
+        var looppad = new THREE.Mesh(lpGeometry, lpMaterial);
+        looppad.position.y = 1;
+        looppad.position.x = 19;
+        looppad.position.z = 125;
+        scene.add(looppad);
+
+        var clonedLooppad = looppad.clone();
+        clonedLooppad.position.x = 0;
+        scene.add(clonedLooppad);
+
+        var clonedLooppad1 = looppad.clone();
+        clonedLooppad1.position.x = -19;
+        scene.add(clonedLooppad1);
+    }
+
+    function animate(){
+        requestAnimationFrame(animate);
+
+        //controls
+        controls.update();
+
+        render();
+    }
+
+    function render(){
+        renderer.render(scene, camera);
+    }
+</script>
+
+</body>
+</html>
