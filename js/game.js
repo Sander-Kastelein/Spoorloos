@@ -19,7 +19,7 @@ class Game
 		this.controller = new Controller(this.camera);
 		
 		this.sun = new Sun();
-		this.train = new Train(AssetLoader.trainGeometry);
+		this.train = new Train(game.assets.trainGeometry);
 
 	}
 
