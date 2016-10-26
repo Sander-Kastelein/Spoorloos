@@ -23,6 +23,7 @@ class Game
 
 		this.stationfloor = new StationFloor();
 		this.sun = new Sun();
+
 		this.train = new Train(game.assets.trainGeometry);
 
 	}
@@ -43,7 +44,7 @@ class Game
 
 	update()
 	{
-		let delta = this.clock.getElapsedTime();
+		let delta = this.clock.getDelta();
 		this.sun.update(delta);
 		this.camera.update(delta);
 		this.controller.update(delta);
