@@ -8,8 +8,11 @@ var game;
 
 document.addEventListener('DOMContentLoaded', function()
 {
+	
+
 	assetLoader.load(function(assets)
 	{
+		Data.interval(); // Start loading train data
 		game = new Game(assets);
 		game.initialize();
 		document.body.appendChild(game.renderer.domElement);

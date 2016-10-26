@@ -51,7 +51,10 @@ class Trein
 		$this->aankomstSpoor = '?';
 
 	
-		$this->aankomstSpoor = (string)end($general->ReisDeel->ReisStop);
+		if(isset($general->ReisDeel) && isset($general->ReisDeel->ReisStop))
+		{
+			$this->aankomstSpoor = (string)end($general->ReisDeel->ReisStop);
+		}
 	}
 
 }

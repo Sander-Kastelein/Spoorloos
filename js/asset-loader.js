@@ -31,6 +31,10 @@ assetLoader = new (class{
 			assetLoader.assets.trainGeometry = geometry;
 			assetLoaded();
 		});
+
+		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
+
+
 	}
 
 
