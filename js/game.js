@@ -43,13 +43,10 @@ class Game
 		this.sun.update(delta);
 		this.camera.update(delta);
 		this.controller.update();
-<<<<<<< HEAD
 		this.stationfloor.update();
-=======
 		this.train.update(delta);
 
 
->>>>>>> cbf5782119449e5a664d408d74b9b1e68b3af298
 		console.log("Tick");
 	}
 
