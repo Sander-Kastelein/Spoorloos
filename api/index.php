@@ -24,12 +24,12 @@ function NS()
 }
 
 
-$departures = NS()->getDepartures('Leeuwarden');
+$departures = NS()->getDepartures('Buitenpost');
 $treinen = [];
 
 foreach($departures->VertrekkendeTrein as $treinRow)
 {
-	$trein = new Trein('Leeuwarden' , $treinRow);
+	$trein = new Trein('Buitenpost' , $treinRow);
 	$trein->getRealtimeData();
 
 	$treinen[] = $trein;

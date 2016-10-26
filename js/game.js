@@ -18,13 +18,12 @@ class Game
 		this.renderer = new THREE.WebGLRenderer();
 
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 1000);
-		this.controller = new Controller();
 		
 
 		this.stationfloor = new StationFloor();
 		this.sun = new Sun();
 
-		this.train = new Train(game.assets.trainGeometry);
+		this.trainManager = new TrainManager();
 
 	}
 
@@ -45,11 +44,11 @@ class Game
 	update()
 	{
 		let delta = this.clock.getDelta();
+
 		this.sun.update(delta);
 		this.camera.update(delta);
-		this.controller.update(delta);
-		this.stationfloor.update();
-		this.train.update(delta);
+		this.stationfloor.update(delta);
+		this.trainManager.update(delta);
 	}
 
 	start()

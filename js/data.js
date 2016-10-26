@@ -16,6 +16,7 @@ var Data;
 	{
 		Data = this;
 
+		this.subscribers = [];
 		this.trains = [];
 		setInterval(this.interval.bind(this), API_POLL_INTERVAL);
 
@@ -24,10 +25,19 @@ var Data;
 	interval()
 	{
 		$.getJSON('/api', (trains) => {
-			console.log(trains);
+			this.trains = trains;
+			for(let i = 0; i < this.subscribers.length; i++)
+			{
+				let subscriber = this.subscribers[i];
+				subscriber(trains);
+			}
 		});
 	}
 
-
+	subscribe(callback)
+	{
+		console.log("Subscribe");
+		this.subscribers.push(callback);
+	}
 
 })

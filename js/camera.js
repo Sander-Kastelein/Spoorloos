@@ -21,11 +21,11 @@ class Camera extends THREE.PerspectiveCamera
 		this.angle += delta;
 
 
-		this.position.x = 50 * Math.sin(this.angle);
-		this.position.z = 75 * Math.cos(this.angle);
-		this.position.y = 60 + 20 * Math.cos(this.angle/2);
+		this.position.x = 30 * Math.sin(this.angle);
+		this.position.z = 40 * Math.cos(this.angle);
+		this.position.y = 30 + 10 * Math.cos(this.angle/2);
 
-		this.lookAt(game.scene);
+		this.lookAt(new THREE.Vector3(0,0,0));
 
 	}
 }
