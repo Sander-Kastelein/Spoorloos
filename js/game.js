@@ -15,6 +15,7 @@ class Game
 		this.scene = new THREE.Scene(); // Add new scene to game object.
 		this.clock = new THREE.Clock();
 		this.renderer = new THREE.WebGLRenderer();
+		this.camera = new Camera(45, 100 / 50, 1, 100);
 	}
 
 	initialize()
@@ -34,6 +35,9 @@ class Game
 	update()
 	{
 		let delta = this.clock.getElapsedTime();
+		
+		this.camera.update(delta);
+
 		console.log("Tick");
 	}
 
