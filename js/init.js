@@ -8,16 +8,20 @@ var game;
 
 document.addEventListener('DOMContentLoaded', function()
 {
-	game = new Game();
-	game.initialize();
-	document.body.appendChild(game.renderer.domElement);
-
-	// Resize game renderer on window resize
-	window.onresize = function()
+	assetLoader.load(function(assets)
 	{
-		game.renderer.setSize(window.innerWidth, window.innerHeight);
-	};
-	window.onresize();
+		game = new Game(assets);
+		game.initialize();
+		document.body.appendChild(game.renderer.domElement);
+
+		// Resize game renderer on window resize
+		window.onresize = function()
+		{
+			game.renderer.setSize(window.innerWidth, window.innerHeight);
+		};
+		window.onresize();
+	});
+	
 
 
 

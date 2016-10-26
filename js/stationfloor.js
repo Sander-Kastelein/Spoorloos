@@ -3,12 +3,21 @@
  */
 class StationFloor extends THREE.Mesh
 {
-    var squareGeometry;
-    var squareMaterial;
     constructor()
     {
+        let squareGeometry = new THREE.BoxGeometry(48,2,87.5);
+        let squareTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
+        squareTexture.wrapS = squareTexture.wrapT = THREE.RepeatWrapping;
+        squareTexture.repeat.set( 40, 87.5);
+        let squareMaterial = new THREE.MeshLambertMaterial({map: squareTexture, side: THREE.doubleSided});
+
         super(squareGeometry, squareMaterial);
+        game.scene.add(this);
     }
 
+    update(delta)
+    {
+        this.position.y = 1;
+    }
 
 }
