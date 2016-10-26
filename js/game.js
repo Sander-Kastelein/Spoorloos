@@ -20,12 +20,8 @@ class Game
 		this.controller = new Controller(this.camera);
 		this.stationfloor = new StationFloor();
 		this.sun = new Sun();
-<<<<<<< HEAD
-		this.train = new Train(game.assets.trainGeometry);
 
-=======
 		this.train = new Train(this.assets.trainGeometry);
->>>>>>> 1e4afad62d163b76ee2821eddf4f50a3ebe7ed39
 	}
 
 	initialize()
