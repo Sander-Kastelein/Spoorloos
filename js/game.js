@@ -18,9 +18,9 @@ class Game
 		this.renderer = new THREE.WebGLRenderer();
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 1000);
 		this.controller = new Controller(this.camera);
-		
+		this.stationfloor = new StationFloor();
 		this.sun = new Sun();
-
+		this.train = new Train(AssetLoader.trainGeometry);
 	}
 
 	initialize()
@@ -43,8 +43,13 @@ class Game
 		this.sun.update(delta);
 		this.camera.update(delta);
 		this.controller.update();
+<<<<<<< HEAD
+		this.stationfloor.update();
+=======
+		this.train.update(delta);
 
 
+>>>>>>> cbf5782119449e5a664d408d74b9b1e68b3af298
 		console.log("Tick");
 	}
 
