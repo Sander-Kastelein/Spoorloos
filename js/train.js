@@ -1,18 +1,32 @@
 "use strict";
 
-class Train
+class Train extends THREE.Object3D
 { 
 
 	constructor(trainObject)
 	{
-		// super(game.assets.trainGeometry); // Invoke new THREE.Mesh()
-		game.scene.add(game.assets.trainMesh);
+		super();
+		
+		
+
+		for(let i = 0; i < game.assets.train.children.length; i++)
+		{
+			let child = game.assets.train.children[i].clone();
+			this.add(child);
+		}
+
+		
+		this.scale.x = 0.01;
+		this.scale.z = 0.01;
+		this.scale.y = 0.01;
+
+		game.scene.add(this);
 
 		this.data = trainObject;
 		
 		this.position.x = Math.random() * 50;
 		this.position.z = Math.random() * 20;
-		this.position.y = 10;
+		this.position.y = 2;
 
 	}
 
