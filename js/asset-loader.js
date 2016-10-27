@@ -34,7 +34,8 @@ assetLoader = new (class{
 		});
 
 		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
-		this.assets.trainTexture = new THREE.ImageUtils.loadTexture("img/trein.png");
+		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
+		this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
 
 	}
 
