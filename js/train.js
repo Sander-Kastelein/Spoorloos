@@ -29,7 +29,7 @@ class Train extends THREE.Object3D
 		this.position.z = Math.random() * 20;
 		this.position.y = 2;
 
-		this.
+		
 
 	}
 
