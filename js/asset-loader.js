@@ -27,7 +27,7 @@ assetLoader = new (class{
 				callback = () => {}; // Null callback to prevent double calls;
 			}
 		};
-		
+
 		this.OBJLoader.load('models/3d-model.obj', function(group) {
 			assetLoader.assets.train = group;
 			assetLoaded();
