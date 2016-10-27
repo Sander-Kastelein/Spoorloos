@@ -27,7 +27,7 @@ assetLoader = new (class{
 			}
 		};
 		
-		this.JSONLoader.load('models/train.json', function(geometry) {
+		this.JSONLoader.load('models/3d-model.json', function(geometry) {
 			assetLoader.assets.trainGeometry = geometry;
 			assetLoaded();
 		});
