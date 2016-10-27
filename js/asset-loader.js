@@ -9,6 +9,7 @@ assetLoader = new (class{
 	constructor()
 	{
 		this.JSONLoader = new THREE.JSONLoader();
+		this.OBJLoader = new THREE.OBJLoader();
 		this.assets = {
 		};
 	}
@@ -26,11 +27,15 @@ assetLoader = new (class{
 				callback = () => {}; // Null callback to prevent double calls;
 			}
 		};
-		
-		this.JSONLoader.load('models/3d-model.json', function(geometry) {
-			assetLoader.assets.trainGeometry = geometry;
+
+		this.OBJLoader.load('models/3d-model.obj', function(group) {
+			assetLoader.assets.train = group;
 			assetLoaded();
 		});
+
+		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
+
+
 	}
 
 

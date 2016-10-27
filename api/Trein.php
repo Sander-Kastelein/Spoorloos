@@ -4,17 +4,17 @@ class Trein
 {
 
 
-	public $ritNummer, $vertrekTijd, $eindBestemming, $vertekStation, $treinSoort, $routeTekst, $vervoerder, $vertrekSpoor;
+	public $ritNummer, $vertrekTijd, $eindBestemming, $vertrekStation, $treinSoort, $routeTekst, $vervoerder, $vertrekSpoor;
 
 
-	public function __construct($vertekStation, $row)
+	public function __construct($vertrekStation, $row)
 	{
 
 		$this->ritNummer = (int)$row->RitNummer;
 		$this->vertrekTijd = strtotime($row->VertrekTijd);
 		$this->eindBestemming = (string)$row->EindBestemming;
 		
-		$this->vertekStation = (string)$vertekStation;
+		$this->vertrekStation = (string)$vertrekStation;
 
 		$this->treinSoort = ucfirst((string)$row->TreinSoort);
 		$this->routeTekst = (string)$row->RouteTekst;
@@ -30,7 +30,7 @@ class Trein
 	public function getRealtimeData()
 	{
 		$dt = date('c', $this->vertrekTijd);
-		$advice = NS()->getAdvise($this->vertekStation, $this->eindBestemming, false, false, false, $dt);
+		$advice = NS()->getAdvise($this->vertrekStation, $this->eindBestemming, false, false, false, $dt);
 
 		$general = $advice->ReisMogelijkheid;
 
@@ -51,7 +51,10 @@ class Trein
 		$this->aankomstSpoor = '?';
 
 	
-		$this->aankomstSpoor = (string)end($general->ReisDeel->ReisStop);
+		if(isset($general->ReisDeel) && isset($general->ReisDeel->ReisStop))
+		{
+			$this->aankomstSpoor = (string)end($general->ReisDeel->ReisStop);
+		}
 	}
 
 }
