@@ -29,7 +29,7 @@ assetLoader = new (class{
 		};
 		
 		this.OBJLoader.load('models/3d-model.obj', function(mesh) {
-			assetLoader.assets.trainGeometry = mesh.geometry;
+			assetLoader.assets.trainMesh = mesh;
 			assetLoaded();
 		});
 
