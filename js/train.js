@@ -13,11 +13,12 @@ class Train extends THREE.Object3D
 		for(let i = 0; i < game.assets.train.children.length; i++)
 		{
 			let child = game.assets.train.children[i].clone();
-			let texture = game.assets.trainTextureNS.clone();
+
+			let texture = game.assets.trainTextureNS;
 
 			if(this.data.vervoerder === "Arriva")
 			{
-				texture = game.assets.trainTextureArriva.clone();
+				texture = game.assets.trainTextureArriva;
 			}
 
 			child.material = new THREE.MeshLambertMaterial({map: texture, needsUpdate: true});
