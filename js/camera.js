@@ -20,11 +20,11 @@ class Camera extends THREE.PerspectiveCamera
 
 		if(Keyboard.isKeyDown("d"))
 		{
-			this.angle += delta;			
+			this.angle += 2*delta;
 		}
 		if(Keyboard.isKeyDown("a"))
 		{
-			this.angle -= delta;
+			this.angle -= 2*delta;
 		}
 		if(Keyboard.isKeyDown("w"))
 		{
