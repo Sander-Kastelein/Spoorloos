@@ -43,6 +43,7 @@ assetLoader = new (class{
 		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
 		this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
 		this.assets.groundTexture = new THREE.ImageUtils.loadTexture("img/ground.jpg")
+		this.assets.trackTexture = new THREE.ImageUtils.loadTexture("img/track.jpg");
 
 	}
 

@@ -41,6 +41,6 @@ class Camera extends THREE.PerspectiveCamera
 		//this.position.y = 10 + 10 * Math.cos(this.angle/2);
 
 		this.lookAt(new THREE.Vector3(0,0,0));
-
+		//this.lookAt(game.track.children[0]);
 	}
 }

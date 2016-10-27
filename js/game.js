@@ -17,7 +17,7 @@ class Game
 		this.clock = new THREE.Clock();
 		this.renderer = new THREE.WebGLRenderer();
 
-		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 1000);
+		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 10000);
 		
 
 		this.stationfloor = new StationFloor();
@@ -25,6 +25,7 @@ class Game
 
 		this.trainManager = new TrainManager();
 		this.ground = new Ground();
+		this.track = new Track();
 
 	}
 
@@ -51,6 +52,7 @@ class Game
 		this.stationfloor.update(delta);
 		this.trainManager.update(delta);
 		this.ground.update(delta);
+		this.track.update(delta);
 	}
 
 	start()
