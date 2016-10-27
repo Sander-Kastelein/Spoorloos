@@ -8,8 +8,8 @@ class StationFloor extends THREE.Object3D
         super();
         // Stationfloor texture
         let stationFloorTexture = game.assets.stationFloorTexture;
-        //stationFloorTexture.wrapS = stationFloorTexture.wrapT = THREE.RepeatWrapping;
-        //stationFloorTexture.repeat.set( 40, 87.5);
+        stationFloorTexture.wrapS = stationFloorTexture.wrapT = THREE.RepeatWrapping;
+        stationFloorTexture.repeat.set( 4, 4);
 
         // Station square
         let squareGeometry = new THREE.BoxGeometry(48,2,87.5);
