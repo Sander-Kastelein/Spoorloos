@@ -38,7 +38,17 @@ class StationFloor extends THREE.Object3D
         pavement1.position.x = -19;
         this.add(pavement1);
 
-        // add to game
+        //pavementRailway 5 & 8
+        let pavement58Geometry = new THREE.BoxGeometry(10,2,112.5);
+        let pavement58Material = new THREE.MeshLambertMaterial({map:pavementTexture, side: THREE.doubleSided});
+        let pavement58 = new THREE.Mesh(pavement58Geometry, pavement58Material);
+        pavement58.position.x = 16.5;
+        pavement58.position.z = -99;
+        pavement58.position.y = 0;
+        pavement58.rotation.y = 5/360*Math.PI;
+        this.add(pavement58);
+
+        // add stationFloor to game
         game.scene.add(this);
         this.position.y = 1;
     }

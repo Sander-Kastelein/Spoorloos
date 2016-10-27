@@ -17,7 +17,7 @@ assetLoader = new (class{
 	load(callback)
 	{
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 1;
+		var amountOfAssetsToLoad = 2;
 
 		var assetLoaded = () => {
 			assetsLoaded ++;
@@ -32,6 +32,12 @@ assetLoader = new (class{
 			assetLoader.assets.train = group;
 			assetLoaded();
 		});
+
+		this.OBJLoader.load('models/1524mm Rail Track Concrete.obj', function(group) {
+			assetLoader.assets.track = group;
+			assetLoaded();
+		});
+
 
 		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
 		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
