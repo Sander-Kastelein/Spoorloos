@@ -9,6 +9,7 @@ assetLoader = new (class{
 	constructor()
 	{
 		this.JSONLoader = new THREE.JSONLoader();
+		this.OBJLoader = new THREE.OBJLoader();
 		this.assets = {
 		};
 	}
@@ -27,8 +28,8 @@ assetLoader = new (class{
 			}
 		};
 		
-		this.JSONLoader.load('models/train.json', function(geometry) {
-			assetLoader.assets.trainGeometry = geometry;
+		this.OBJLoader.load('models/3d-model.obj', function(mesh) {
+			assetLoader.assets.trainGeometry = mesh.geometry;
 			assetLoaded();
 		});
 

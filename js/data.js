@@ -6,7 +6,7 @@
 	Gets data from the PHP endpoint
 */
 
-const API_POLL_INTERVAL = 60 * 1000; // 60 000 ms => 60s => 1m
+const API_POLL_INTERVAL = 1 * 1000; // 60 000 ms => 60s => 1m
 
 var Data;
 
