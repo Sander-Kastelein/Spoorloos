@@ -24,6 +24,7 @@ class Game
 		this.sun = new Sun();
 
 		this.trainManager = new TrainManager();
+		this.ground = new Ground();
 
 	}
 
@@ -49,6 +50,7 @@ class Game
 		this.camera.update(delta);
 		this.stationfloor.update(delta);
 		this.trainManager.update(delta);
+		this.ground.update(delta);
 	}
 
 	start()
