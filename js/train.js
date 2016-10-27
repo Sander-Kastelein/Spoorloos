@@ -12,6 +12,7 @@ class Train extends THREE.Object3D
 		for(let i = 0; i < game.assets.train.children.length; i++)
 		{
 			let child = game.assets.train.children[i].clone();
+			child.material = new THREE.MeshLambertMaterial({map: game.assets.trainTexture, needsUpdate: true});
 			this.add(child);
 		}
 
@@ -27,6 +28,8 @@ class Train extends THREE.Object3D
 		this.position.x = Math.random() * 50;
 		this.position.z = Math.random() * 20;
 		this.position.y = 2;
+
+		this.
 
 	}
 
