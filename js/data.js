@@ -24,7 +24,7 @@ var Data;
 
 	interval()
 	{
-		$.getJSON('/api', (trains) => {
+		$.getJSON('http://sanderkastelein.nl/api/api.json', (trains) => {
 			this.trains = trains;
 			for(let i = 0; i < this.subscribers.length; i++)
 			{

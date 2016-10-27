@@ -1,5 +1,7 @@
 <?php
 
+header("Access-Control-Allow-Origin: *");
+
 try{
 	$json = json_decode(file_get_contents("config.json"), true);
 	define('API_USERNAME', $json['username']);
@@ -24,12 +26,12 @@ function NS()
 }
 
 
-$departures = NS()->getDepartures('Buitenpost');
+$departures = NS()->getDepartures('Leeuwarden');
 $treinen = [];
 
 foreach($departures->VertrekkendeTrein as $treinRow)
 {
-	$trein = new Trein('Buitenpost' , $treinRow);
+	$trein = new Trein('Leeuwarden' , $treinRow);
 	$trein->getRealtimeData();
 
 	$treinen[] = $trein;
