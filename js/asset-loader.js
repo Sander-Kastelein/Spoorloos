@@ -29,6 +29,7 @@ assetLoader = new (class{
 		};
 		
 		this.OBJLoader.load('models/3d-model.obj', function(mesh) {
+			mesh.scale.set(0.1, 0.1, 0.1);
 			assetLoader.assets.trainMesh = mesh;
 			assetLoaded();
 		});
