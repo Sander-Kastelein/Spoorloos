@@ -18,7 +18,14 @@ class Camera extends THREE.PerspectiveCamera
 	update(delta)
 	{
 
-		this.angle += delta;
+		if(Keyboard.isKeyDown("D"))
+		{
+			this.angle += delta;			
+		}
+		if(Keyboard.isKeyDown("A"))
+		{
+			this.angle -= delta;
+		}
 
 
 		this.position.x = 30 * Math.sin(this.angle);
