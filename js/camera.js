@@ -20,19 +20,27 @@ class Camera extends THREE.PerspectiveCamera
 
 		if(Keyboard.isKeyDown("d"))
 		{
-			this.angle += delta;			
+			this.angle += 2*delta;
 		}
 		if(Keyboard.isKeyDown("a"))
 		{
-			this.angle -= delta;
+			this.angle -= 2*delta;
+		}
+		if(Keyboard.isKeyDown("w"))
+		{
+			this.position.y += 100*delta;
+		}
+		if(Keyboard.isKeyDown("s"))
+		{
+			this.position.y -= 100*delta;
 		}
 
 
-		this.position.x = 30 * Math.sin(this.angle);
-		this.position.z = 40 * Math.cos(this.angle);
-		this.position.y = 30 + 10 * Math.cos(this.angle/2);
+		this.position.x = 60 * Math.sin(this.angle);
+		this.position.z = 100 * Math.cos(this.angle);
+		//this.position.y = 10 + 10 * Math.cos(this.angle/2);
 
 		this.lookAt(new THREE.Vector3(0,0,0));
-
+		//this.lookAt(game.track.children[0]);
 	}
 }
