@@ -35,6 +35,8 @@ class Camera extends THREE.PerspectiveCamera
 			this.position.y -= 100*delta;
 		}
 
+		this.position.y = this.position.y < 3 ? 3 : this.position.y;
+
 
 		this.position.x = 60 * Math.sin(this.angle);
 		this.position.z = 100 * Math.cos(this.angle);
