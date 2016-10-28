@@ -29,7 +29,11 @@ class TrainManager
 
 	update(delta)
 	{
-		
+		for(let i = 0; i < this.trains.length; i++)
+		{
+			let train = this.trains[i];
+			train.update(delta);
+		}
 
 	}
 
@@ -51,8 +55,20 @@ class TrainManager
 		{
 			train = new Train(trainObject);
 			this.trains.push(train);
+			train.update(0);
 		}
 		return train;
+	}
+
+	removeTrain(train)
+	{
+		for(let i = 0; i < this.trains.length; i++)
+		{
+			if(train.data['ritNummer'] == this.trains[i].data['ritNummer'])
+			{
+				this.trains = this.trains.splice(i, 1);
+			}
+		}
 	}
 
 }
