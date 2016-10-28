@@ -22,14 +22,14 @@ class Train extends THREE.Object3D
 			}
 
 			child.material = new THREE.MeshLambertMaterial({map: texture, needsUpdate: true});
+			child.castShadow = true;
+			child.receiveShadow = true;
 			this.add(child);
 		}
 
-		
 		this.scale.x = 0.01;
 		this.scale.z = 0.01;
 		this.scale.y = 0.01;
-
 		game.scene.add(this);
 
 		

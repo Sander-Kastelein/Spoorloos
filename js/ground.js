@@ -5,6 +5,7 @@ class Ground extends THREE.Mesh
 {
     constructor()
     {
+        super();
         let groundTexture = game.assets.groundTexture;
         groundTexture.wrapS = THREE.RepeatWrapping;
         groundTexture.wrapT = THREE.RepeatWrapping;
@@ -12,9 +13,10 @@ class Ground extends THREE.Mesh
 
         let groundMaterial = new THREE.MeshLambertMaterial({map: groundTexture, side: THREE.doubleSided});
         let groundGeometry = new THREE.PlaneBufferGeometry(1000,1000);
-
-        super(groundGeometry, groundMaterial);
-        this.rotation.x = -0.5*Math.PI;
+        let ground = new THREE.Mesh(groundGeometry, groundMaterial);
+        ground.rotation.x = -0.5*Math.PI;
+        ground.receiveShadow = true;
+        this.add(ground);
         game.scene.add(this);
     }
 

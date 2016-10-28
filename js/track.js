@@ -16,6 +16,8 @@ class Track extends THREE.Object3D
             let texture = game.assets.trackTexture;
 
             child.material = new THREE.MeshLambertMaterial({map: texture, needsUpdate: true});
+            child.castShadow = true;
+            child.receiveShadow = true;
             this.add(child);
         }
 
@@ -28,9 +30,6 @@ class Track extends THREE.Object3D
         this.position.x = 12;
         this.position.z = 127;
         this.position.y = 0;
-
-
-
     }
 
     update(delta)

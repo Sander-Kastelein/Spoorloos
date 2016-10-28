@@ -16,12 +16,11 @@ class Game
 		this.scene = new THREE.Scene(); // Add new scene to game object.
 		this.clock = new THREE.Clock();
 		this.renderer = new THREE.WebGLRenderer();
-
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 10000);
-		
+		this.stationfloor = new StationFloor()
 
-		this.stationfloor = new StationFloor();
-		this.sun = new Sun();
+		//this.sun = new Sun();
+		this.spotlight = new Spotlight();
 
 		this.trainManager = new TrainManager();
 		this.ground = new Ground();
@@ -47,7 +46,8 @@ class Game
 	{
 		let delta = this.clock.getDelta();
 
-		this.sun.update(delta);
+		//this.sun.update(delta);
+		this.spotlight.update(delta);
 		this.camera.update(delta);
 		this.stationfloor.update(delta);
 		this.trainManager.update(delta);

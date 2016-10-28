@@ -15,6 +15,8 @@ class StationFloor extends THREE.Object3D
         let squareGeometry = new THREE.BoxGeometry(48,2,87.5);
         let squareMaterial = new THREE.MeshLambertMaterial({map: stationFloorTexture, side: THREE.doubleSided});
         let square = new THREE.Mesh(squareGeometry, squareMaterial);
+        square.castShadow = true;
+        square.receiveShadow = true;
         this.add(square);
 
         // Station pavement
@@ -47,6 +49,15 @@ class StationFloor extends THREE.Object3D
         pavement58.position.y = 0;
         pavement58.rotation.y = 5/360*Math.PI;
         this.add(pavement58);
+
+        // CUBE TEST SHADOW
+        let cubeGeometry = new THREE.BoxGeometry(10,10,10);
+        let cubeMaterial = new THREE.MeshLambertMaterial({color: 0x0000ff});
+        let cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+        cube.position.set(0,6,0);
+        cube.receiveShadow = false;
+        cube.castShadow = true;
+        this.add(cube);
 
         // add stationFloor to game
         game.scene.add(this);

@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', function()
 		game.initialize();
 		document.body.appendChild(game.renderer.domElement);
 
+		// enable shadows
+		game.renderer.setClearColor(0x77e8eb);
+		game.renderer.shadowMap.enabled = true;
+		game.renderer.shadowMapSoft = true;
+
 		// Resize game renderer on window resize
 		window.onresize = function()
 		{
