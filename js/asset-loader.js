@@ -17,7 +17,7 @@ assetLoader = new (class{
 	load(callback)
 	{
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 2;
+		var amountOfAssetsToLoad = 3;
 
 		var assetLoaded = () => {
 			assetsLoaded ++;
@@ -38,6 +38,10 @@ assetLoader = new (class{
 			assetLoaded();
 		});
 
+		this.OBJLoader.load('models/Derby, Subway.obj', function (group) {
+			assetLoader.assets.restaurant = group;
+			assetLoaded();
+		})
 
 		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
 		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");

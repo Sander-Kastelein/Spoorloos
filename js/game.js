@@ -26,6 +26,7 @@ class Game
 		this.trainManager = new TrainManager();
 		this.ground = new Ground();
 		this.track = new Track();
+        this.restaurant = new Restaurant();
 
 	}
 
@@ -53,6 +54,7 @@ class Game
 		this.trainManager.update(delta);
 		this.ground.update(delta);
 		this.track.update(delta);
+		this.restaurant.update(delta);
 	}
 
 	start()
