@@ -42,7 +42,7 @@ class Train extends THREE.Object3D
 
 		this.position.y = this.ETA / 480;
 		this.position.y = this.position.y < 0 ? 0 : this.position.y;
-
+		this.position.y += 3;
 	}
 
 	destroy()
