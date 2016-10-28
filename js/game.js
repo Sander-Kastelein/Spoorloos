@@ -15,7 +15,13 @@ class Game
 
 		this.scene = new THREE.Scene(); // Add new scene to game object.
 		this.clock = new THREE.Clock();
-		this.renderer = new THREE.WebGLRenderer();
+		this.renderer = new THREE.WebGLRenderer({
+			antialias: true,
+			stencil: false,
+			precision: "highp",
+			preserveDrawingBuffer: true,
+			
+		});
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 10000);
 		this.stationfloor = new StationFloor()
 
