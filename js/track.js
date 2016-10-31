@@ -17,6 +17,7 @@ class Track extends THREE.Object3D
             child.material = new THREE.MeshLambertMaterial({map: texture, needsUpdate: true});
             child.castShadow = true;
             child.receiveShadow = true;
+            child.wrapAround = true;
             this.add(child);
         }
 

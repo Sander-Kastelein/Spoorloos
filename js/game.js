@@ -44,6 +44,12 @@ class Game
 	{
 		console.log("Initializing Game object...");
 		requestAnimationFrame(this.render.bind(this));
+
+		// enable shadows
+		this.renderer.setClearColor(0x000000);
+		this.renderer.shadowMap.enabled = true;
+		this.renderer.shadowMapSoft = true;
+		this.renderer.shadowMapType = THREE.PCFSoftShadowMap;
 	}
 
 	render()
