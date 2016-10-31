@@ -22,6 +22,5 @@ class pointlight extends THREE.PointLight
         this._angle += 0.01 * delta;
         this.position.x = 100 * (1 * Math.sin(this._angle));
         this.position.z = 100 * (1 * Math.cos(this._angle));
-        console.log(this.position);
     }
 }
