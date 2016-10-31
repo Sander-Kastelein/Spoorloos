@@ -1,30 +1,28 @@
-"use strict";
-
-class Sun extends THREE.AmbientLight
+/**
+ * Created by Ruud on 28-10-2016.
+ */
+class Sun extends THREE.PointLight
 {
+    constructor()
+    {
+        let color = 0xffffff;
+        let intensity = 2;
+        let distance = 2000;
+        let decay = 1.5;
 
-	constructor()
-	{
-		/*
-			00:00 : 0
-			01:00 : 3600
-			02:00 : 7200
-			12:00 : 43200
-			23:59 : 86340
-			24:00 : 0
-			
-		*/
-		
-		super(0x404040, 5);
-		game.scene.add(this);
-		
-		
+        super(color, intensity, distance,decay);
+        this.castShadow = true;
+        this.position.y = 500;
+        this.shadowBias = 0.0001;
+        this.shadowDarkness = 0.2;
+        this.shadowMapWidth = 1028;
+        this.shadowMapHeight = 1028;
+        game.scene.add(this);
+    }
 
-	}
-
-	update(delta)
-	{
-
-	}
-
+    update(delta)
+    {
+        this.position.x = 100 * (1 * Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.z = 100 * (1 * Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
+    }
 }

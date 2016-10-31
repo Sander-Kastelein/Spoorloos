@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function()
 		document.body.appendChild(game.renderer.domElement);
 
 		// enable shadows
-		game.renderer.setClearColor(0x77e8eb);
+		game.renderer.setClearColor(0x000000);
 		game.renderer.shadowMap.enabled = true;
 		game.renderer.shadowMapSoft = true;
 

@@ -57,6 +57,7 @@ class StationFloor extends THREE.Object3D
         cube.position.set(0,6,0);
         cube.receiveShadow = false;
         cube.castShadow = true;
+        cube.wrapAround = true;
         this.add(cube);
 
         // add stationFloor to game

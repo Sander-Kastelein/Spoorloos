@@ -15,19 +15,17 @@ class Game
 
 		this.scene = new THREE.Scene(); // Add new scene to game object.
 		this.clock = new THREE.Clock();
-		this.renderer = new THREE.WebGLRenderer({
+		this.renderer = new THREE.WebGLRenderer(
+			{
 			antialias: true,
 			stencil: false,
 			precision: "highp",
 			preserveDrawingBuffer: true,
-			
-		});
+			});
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 10000);
 		this.stationFloor = new StationFloor()
-
-		//this.sun = new Sun();
-		this.pointLight = new pointlight();
-
+		this.sun = new Sun();
+		this.hemisphere = new Hemisphere();
 		this.trainManager = new TrainManager();
 		this.ground = new Ground();
 		this.track = new Track();
@@ -54,8 +52,7 @@ class Game
 	{
 		let delta = this.clock.getDelta();
 
-		//this.sun.update(delta);
-		this.pointLight.update(delta);
+		this.sun.update(delta);
 		this.camera.update(delta);
 		this.stationFloor.update(delta);
 		this.trainManager.update(delta);
@@ -63,6 +60,7 @@ class Game
 		this.track.update(delta);
 		this.restaurant.update(delta);
 		this.hokje.update(delta);
+		this.hemisphere.update(delta);
 	}
 
 	start()
