@@ -31,6 +31,7 @@ class Game
 		this.track = new Track();
         this.restaurant = new Restaurant();
 		this.hokje = new Hokje();
+		this.skydome = new SkyDome();
 
 	}
 
@@ -61,6 +62,7 @@ class Game
 		this.restaurant.update(delta);
 		this.hokje.update(delta);
 		this.hemisphere.update(delta);
+		this.skydome.update(delta);
 	}
 
 	start()
