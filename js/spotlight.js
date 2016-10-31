@@ -12,16 +12,15 @@ class Spotlight extends THREE.SpotLight
         super(color, intensity, distance);
         this.castShadow = true;
         this.position.set(0,200,700);
-        //this.angle = 0;
-
+        this.angle = 0;
         game.scene.add(this);
     }
 
     update(delta)
     {
-        //this.angle += 0.5 * delta;
-        //this.position.x = 10 * Math.sin(this.angle);
-        //this.position.z = 10 * Math.cos(this.angle);
-        //this.position.y = 500 * Math.cos(this.angle/2);
+        this.angle += 1 * delta;
+        this.position.x = 10 * Math.sin(this.angle);
+        this.position.z = 10 * Math.cos(this.angle);
+        this.position.y = 1000 * Math.cos(this.angle/2);
     }
 }
