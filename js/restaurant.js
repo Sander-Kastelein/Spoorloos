@@ -23,6 +23,7 @@ class Restaurant extends THREE.Object3D
         this.scale.x = 0.01;
         this.scale.z = 0.01;
         this.scale.y = 0.02;
+        this.rotateY(deg2rad(180));
 
         game.scene.add(this);
 
