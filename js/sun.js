@@ -24,5 +24,6 @@ class Sun extends THREE.PointLight
     {
         this.position.x = 100 * (1 * Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
         this.position.z = 100 * (1 * Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.y = 200 * (1 * Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
     }
 }
