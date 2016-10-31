@@ -55,6 +55,7 @@ class Camera extends THREE.PerspectiveCamera
 		let delta = e.deltaY/1000;
 		this.zoom += delta;
 		if(this.zoom > 4) this.zoom = 4;
+		if(this.zoom < 0.01) this.zoom = 0.01;
 	}
 
 
