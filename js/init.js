@@ -21,6 +21,28 @@ function rad2deg(radians)
 	return (radians / Math.PI) * 180;
 }
 
+
+function getCurrentSecondOfTheDay()
+{
+	var date = new Date();
+	var secondsSince1970 = Math.round(date.getTime() / 1000);
+	return secondsSince1970 % (24 * 60 * 60);
+}
+
+function getCurrentSunAngleInDegrees()
+{
+	/*
+		00:00 = 180deg
+		12:00 = 0deg
+		18:00 = 90deg
+		06:00 = 270deg
+	*/
+	var  n = getCurrentSecondOfTheDay() / 3600 / 24;
+	n = n * 2 * Math.PI;
+	return rad2deg(n);
+}
+
+
 document.addEventListener('DOMContentLoaded', function()
 {
 	

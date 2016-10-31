@@ -30,7 +30,7 @@ class Hokje extends THREE.Object3D
         this.position.x = 15;
         this.position.z = -50;
         this.position.y = 10;
-        this.rotation.x = deg2rad(0);
+        this.rotateZ(deg2rad(90));// = deg2rad(0);
 
 
 
