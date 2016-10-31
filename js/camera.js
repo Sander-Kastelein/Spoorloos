@@ -9,7 +9,7 @@ class Camera extends THREE.PerspectiveCamera
 
 
 		this.position.y = 40;
-	
+
 
 		this.angle = 0;
 	}
