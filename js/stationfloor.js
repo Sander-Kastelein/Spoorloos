@@ -17,7 +17,8 @@ class StationFloor extends THREE.Object3D
         let square = new THREE.Mesh(squareGeometry, squareMaterial);
         square.castShadow = true;
         square.receiveShadow = true;
-        this.add(square);
+        square.wrapAround = true;
+         this.add(square);
 
         // Station pavement
         // pavementRailway 4&5
@@ -28,16 +29,25 @@ class StationFloor extends THREE.Object3D
         pavement45.position.y = 0;
         pavement45.position.x = 19;
         pavement45.position.z = 125;
+        pavement45.castShadow = true;
+        pavement45.receiveShadow = true;
+        pavement45.wrapAround = true;
         this.add(pavement45);
 
         // pavementRailway 2 & 3
         let pavement23 = pavement45.clone();
         pavement23.position.x = 0;
+        pavement23.castShadow = true;
+        pavement23.receiveShadow = true;
+        pavement23.wrapAround = true;
         this.add(pavement23);
 
         // pavementRailway 1
         let pavement1 = pavement45.clone();
         pavement1.position.x = -19;
+        pavement1.castShadow = true;
+        pavement1.receiveShadow = true;
+        pavement1.wrapAround = true;
         this.add(pavement1);
 
         //pavementRailway 5 & 8
@@ -48,17 +58,10 @@ class StationFloor extends THREE.Object3D
         pavement58.position.z = -99;
         pavement58.position.y = 0;
         pavement58.rotation.y = 5/360*Math.PI;
+        pavement58.castShadow = true    ;
+        pavement58.receiveShadow = true;
+        pavement58.wrapAround = true;
         this.add(pavement58);
-
-        // CUBE TEST SHADOW
-        let cubeGeometry = new THREE.BoxGeometry(10,10,10);
-        let cubeMaterial = new THREE.MeshLambertMaterial({color: 0x0000ff});
-        let cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-        cube.position.set(0,6,0);
-        cube.receiveShadow = false;
-        cube.castShadow = true;
-        cube.wrapAround = true;
-        this.add(cube);
 
         // add stationFloor to game
         game.scene.add(this);

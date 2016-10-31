@@ -36,6 +36,7 @@ class Game
 
         this.restaurant = new Restaurant();
 		this.hokje = new Hokje();
+		this.station = new Station();
 		this.skydome = new SkyDome();
 
 	}
@@ -44,6 +45,12 @@ class Game
 	{
 		console.log("Initializing Game object...");
 		requestAnimationFrame(this.render.bind(this));
+
+		// enable shadows
+		this.renderer.setClearColor(0x000000);
+		this.renderer.shadowMap.enabled = true;
+		this.renderer.shadowMapSoft = true;
+		this.renderer.shadowMapType = THREE.PCFSoftShadowMap;
 	}
 
 	render()
@@ -67,6 +74,7 @@ class Game
 		this.restaurant.update(delta);
 		this.hokje.update(delta);
 		this.hemisphere.update(delta);
+		this.station.update(delta);
 		this.skydome.update(delta);
 	}
 

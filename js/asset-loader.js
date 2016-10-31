@@ -17,7 +17,7 @@ assetLoader = new (class{
 	load(callback)
 	{
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 4;
+		var amountOfAssetsToLoad = 5;
 
 		var assetLoaded = () => {
 			assetsLoaded ++;
@@ -48,12 +48,18 @@ assetLoader = new (class{
 			assetLoaded();
 		});
 
+		this.OBJLoader.load('models/Station.obj', function (group) {
+			assetLoader.assets.station = group;
+			assetLoaded();
+		});
+
 		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
 		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
 		this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
 		this.assets.groundTexture = new THREE.ImageUtils.loadTexture("img/ground.jpg");
 		this.assets.trackTexture = new THREE.ImageUtils.loadTexture("img/track.jpg");
 		this.assets.restaurantTexture = new THREE.ImageUtils.loadTexture("img/smullers.jpg");
+		this.assets.stationTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
 
 	}
 
