@@ -6,6 +6,21 @@
 
 var game;
 
+
+/*
+	Misc functions
+*/
+
+function deg2rad(degrees)
+{
+	return (degrees/180) * Math.PI;
+}
+
+function rad2deg(radians)
+{
+	return (radians / Math.PI) * 180;
+}
+
 document.addEventListener('DOMContentLoaded', function()
 {
 	
