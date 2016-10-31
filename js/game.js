@@ -23,10 +23,10 @@ class Game
 			
 		});
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 10000);
-		this.stationfloor = new StationFloor()
+		this.stationFloor = new StationFloor()
 
 		//this.sun = new Sun();
-		this.spotlight = new Spotlight();
+		this.pointLight = new pointlight();
 
 		this.trainManager = new TrainManager();
 		this.ground = new Ground();
@@ -55,9 +55,9 @@ class Game
 		let delta = this.clock.getDelta();
 
 		//this.sun.update(delta);
-		this.spotlight.update(delta);
+		this.pointLight.update(delta);
 		this.camera.update(delta);
-		this.stationfloor.update(delta);
+		this.stationFloor.update(delta);
 		this.trainManager.update(delta);
 		this.ground.update(delta);
 		this.track.update(delta);

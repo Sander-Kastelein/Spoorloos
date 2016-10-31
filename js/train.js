@@ -11,7 +11,7 @@ class Train extends THREE.Object3D
 
 		for(let i = 0; i < game.assets.train.children.length; i++)
 		{
-			let child = game.assets.train.children[i].clone();1
+			let child = game.assets.train.children[i].clone();
 			let texture = game.assets.trainTextureNS;
 
 			if(this.data.vervoerder === "Arriva")
