@@ -28,7 +28,12 @@ class Game
 		this.hemisphere = new Hemisphere();
 		this.trainManager = new TrainManager();
 		this.ground = new Ground();
-		this.track = new Track();
+		this.trackManager = new TrackManager();
+
+		(new Track(12, 0, 17));
+		(new Track(12, 5, 17));
+		(new Track(12, 10, 17));
+
         this.restaurant = new Restaurant();
 		this.hokje = new Hokje();
 		this.skydome = new SkyDome();
@@ -58,7 +63,7 @@ class Game
 		this.stationFloor.update(delta);
 		this.trainManager.update(delta);
 		this.ground.update(delta);
-		this.track.update(delta);
+		this.trackManager.update(delta);
 		this.restaurant.update(delta);
 		this.hokje.update(delta);
 		this.hemisphere.update(delta);
