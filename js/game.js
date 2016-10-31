@@ -32,6 +32,7 @@ class Game
 		this.ground = new Ground();
 		this.track = new Track();
         this.restaurant = new Restaurant();
+		this.hokje = new Hokje();
 
 	}
 
@@ -61,6 +62,7 @@ class Game
 		this.ground.update(delta);
 		this.track.update(delta);
 		this.restaurant.update(delta);
+		this.hokje.update(delta);
 	}
 
 	start()
