@@ -4,11 +4,10 @@
 class Track extends THREE.Object3D
 {
 
-    constructor(trackObject)
+    constructor(x, y, z)
     {
         super();
 
-        this.data = trackObject;
 
         for(let i = 0; i < game.assets.track.children.length; i++)
         {
@@ -27,9 +26,12 @@ class Track extends THREE.Object3D
 
         game.scene.add(this);
 
-        this.position.x = 12;
-        this.position.z = 127;
-        this.position.y = 0;
+        this.position.x = x;
+        this.position.z = z;
+        this.position.y = y;
+
+
+        game.trackManager.tracks.push(this);
     }
 
     update(delta)
