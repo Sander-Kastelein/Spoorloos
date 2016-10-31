@@ -41,12 +41,12 @@ assetLoader = new (class{
 		this.OBJLoader.load('models/Derby, Subway.obj', function (group) {
 			assetLoader.assets.restaurant = group;
 			assetLoaded();
-		})
+		});
 
 		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
 		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
 		this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
-		this.assets.groundTexture = new THREE.ImageUtils.loadTexture("img/ground.jpg")
+		this.assets.groundTexture = new THREE.ImageUtils.loadTexture("img/ground.jpg");
 		this.assets.trackTexture = new THREE.ImageUtils.loadTexture("img/track.jpg");
 		this.assets.restaurantTexture = new THREE.ImageUtils.loadTexture("img/smullers.jpg");
 
