@@ -12,7 +12,7 @@ class pointlight extends THREE.PointLight
 
         super(color, intensity, distance,decay);
         this.castShadow = true;
-        this.position.y = 10;
+        this.position.y = 100;
         this._angle = 0;
         game.scene.add(this);
     }
