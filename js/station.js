@@ -21,6 +21,9 @@ class Station extends THREE.Object3D
             let texture = game.assets.stationTexture;
 
             child.material = new THREE.MeshLambertMaterial({map: texture, needsUpdate: true});
+            child.castShadow = true;
+            child.receiveShadow = true;
+            child.wrapAround = true;
             this.add(child);
         }
 

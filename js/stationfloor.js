@@ -15,7 +15,7 @@ class StationFloor extends THREE.Object3D
         let squareGeometry = new THREE.BoxGeometry(48,2,87.5);
         let squareMaterial = new THREE.MeshLambertMaterial({map: stationFloorTexture, side: THREE.doubleSided});
         let square = new THREE.Mesh(squareGeometry, squareMaterial);
-        square.castShadow = false;
+        square.castShadow = true;
         square.receiveShadow = true;
         square.wrapAround = true;
          this.add(square);
@@ -37,11 +37,17 @@ class StationFloor extends THREE.Object3D
         // pavementRailway 2 & 3
         let pavement23 = pavement45.clone();
         pavement23.position.x = 0;
+        pavement23.castShadow = true;
+        pavement23.receiveShadow = true;
+        pavement23.wrapAround = true;
         this.add(pavement23);
 
         // pavementRailway 1
         let pavement1 = pavement45.clone();
         pavement1.position.x = -19;
+        pavement1.castShadow = true;
+        pavement1.receiveShadow = true;
+        pavement1.wrapAround = true;
         this.add(pavement1);
 
         //pavementRailway 5 & 8
@@ -52,7 +58,7 @@ class StationFloor extends THREE.Object3D
         pavement58.position.z = -99;
         pavement58.position.y = 0;
         pavement58.rotation.y = 5/360*Math.PI;
-        pavement58.castShadow = false;
+        pavement58.castShadow = true    ;
         pavement58.receiveShadow = true;
         pavement58.wrapAround = true;
         this.add(pavement58);
