@@ -29,12 +29,9 @@ class Track extends THREE.Object3D
         game.scene.add(this);
 
         this.position.set(position.x, position.y, position.z);
-        
         this.rotation.x = rotation.x;
         this.rotation.y = rotation.y;
         this.rotation.z = rotation.z;
-
-
     }
 
     update(delta)
