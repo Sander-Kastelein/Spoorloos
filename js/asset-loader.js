@@ -17,7 +17,7 @@ assetLoader = new (class{
 	load(callback)
 	{
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 5;
+		var amountOfAssetsToLoad = 6;
 
 		var assetLoaded = () => {
 			assetsLoaded ++;
@@ -52,6 +52,11 @@ assetLoader = new (class{
 			assetLoader.assets.station = group;
 			assetLoaded();
 		});
+
+		this.OBJLoader.load('models/stationroof.obj', function (group) {
+			assetLoader.assets.stationroof = group;
+			assetLoaded();
+		})
 
 		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
 		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");

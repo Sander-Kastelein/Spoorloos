@@ -1,14 +1,23 @@
-/**
- * Created by Ben on 31-10-2016.
- */
 
 class TrackManager
 {
 
     constructor()
     {
-        this.tracks = [];
+        this.tracks = [
+            (new Track( new THREE.Vector3(26, 0, 130), new THREE.Vector3(0,0,0))),     // Track 5a
+            (new Track( new THREE.Vector3(31, 0, 130), new THREE.Vector3(0,0,0))),    // Sidetrack 1
+            (new Track( new THREE.Vector3(36, 0, 130), new THREE.Vector3(0,0,0))),    // Sidetrack 2
+            (new Track( new THREE.Vector3(26, 0, -50), new THREE.Vector3(0,0,0))),    // Track plein
+            (new Track( new THREE.Vector3(12, 0, 130), new THREE.Vector3(0,0,0))),    // 4
+            (new Track( new THREE.Vector3(7, 0, 130), new THREE.Vector3(0,0,0))),     // Track 3
+            (new Track( new THREE.Vector3(-7, 0, 130), new THREE.Vector3(0,0,0))),    // Track 2
+            (new Track( new THREE.Vector3(-12, 0, 130), new THREE.Vector3(0,0,0))),   // Track 1
+            (new Track( new THREE.Vector3(12, 0, -130), new THREE.Vector3(0,0,0))),   // Track 8
+        ];
     }
+
+
 
 
     update(delta)
@@ -19,4 +28,7 @@ class TrackManager
             track.update(delta);
         }
     }
+
+
+
 }
