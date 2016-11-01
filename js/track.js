@@ -30,6 +30,7 @@ class Track extends THREE.Object3D
         this.position.x = x;
         this.position.z = z;
         this.position.y = y;
+        this.rotation.y =
 
         game.trackManager.tracks.push(this);
     }
