@@ -5,7 +5,7 @@ class Hemisphere extends THREE.HemisphereLight
 {
     constructor()
     {
-        let skyColor = 0x0000ff;
+        let skyColor = 0xff0000;
         let groundColor = 0xffffffa;
         let intensity = 0.3;
 

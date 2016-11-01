@@ -30,12 +30,13 @@ class Game
 		this.ground = new Ground();
 
 		this.trackManager = new TrackManager();
-		this.trackManager.generateTracks();
+
 
         this.restaurant = new Restaurant();
 		this.hokje = new Hokje();
 		this.station = new Station();
 		this.skydome = new SkyDome();
+        this.stationroof = new Stationroof();
 
 	}
 
@@ -74,6 +75,7 @@ class Game
 		this.hemisphere.update(delta);
 		this.station.update(delta);
 		this.skydome.update(delta);
+        this.stationroof.update(delta);
 	}
 
 	start()

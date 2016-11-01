@@ -10,7 +10,6 @@ class Track extends THREE.Object3D
     {
         super();
 
-
         for(let i = 0; i < game.assets.track.children.length; i++)
         {
             let child = game.assets.track.children[i].clone();
@@ -29,15 +28,13 @@ class Track extends THREE.Object3D
 
         game.scene.add(this);
 
-        this.position.set(position);
+        this.position.set(position.x, position.y, position.z);
         
         this.rotation.x = rotation.x;
         this.rotation.y = rotation.y;
         this.rotation.z = rotation.z;
 
 
-
-        game.trackManager.tracks.push(this);
     }
 
     update(delta)
