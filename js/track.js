@@ -1,13 +1,14 @@
 /**
  * Created by Ruud on 27-10-2016.
  */
+
+
 class Track extends THREE.Object3D
 {
 
-    constructor(x, y, z)
+    constructor(position, rotation)
     {
         super();
-
 
         for(let i = 0; i < game.assets.track.children.length; i++)
         {
@@ -27,11 +28,10 @@ class Track extends THREE.Object3D
 
         game.scene.add(this);
 
-        this.position.x = x;
-        this.position.z = z;
-        this.position.y = y;
-
-        game.trackManager.tracks.push(this);
+        this.position.set(position.x, position.y, position.z);
+        this.rotation.x = rotation.x;
+        this.rotation.y = rotation.y;
+        this.rotation.z = rotation.z;
     }
 
     update(delta)

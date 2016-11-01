@@ -28,17 +28,9 @@ class Game
 		this.hemisphere = new Hemisphere();
 		this.trainManager = new TrainManager();
 		this.ground = new Ground();
+
 		this.trackManager = new TrackManager();
 
-		(new Track(26, 0, 130)); 	// Track 5a
-		(new Track(31, 0, 130));	// Sidetrack 1
-		(new Track(36, 0, 130));	// Sidetrack 2
-		(new Track(26, 0, -50));	// Track plein
-		(new Track(12, 0, 130));  	// 4
-		(new Track(7, 0, 130));		// Track 3
-		(new Track(-7, 0, 130));	// Track 2
-		(new Track(-12, 0, 130));	// Track 1
-		(new Track(12, 0, -130));	// Track 8
 
         this.restaurant = new Restaurant();
 		this.hokje = new Hokje();
