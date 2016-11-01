@@ -37,12 +37,10 @@
 
 		this.station = new Station();
 		this.skydome = new SkyDome();
-<<<<<<< HEAD
   		this.stationroof = new Stationroof();
 		this.stationtower = new Stationtower();
-=======
-		this.stationroof = new Stationroof();
->>>>>>> 104dfeb9d6c6142a632230108682f0019b00dc0b
+
+
 
 	}
 

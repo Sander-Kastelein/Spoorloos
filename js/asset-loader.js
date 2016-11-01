@@ -70,7 +70,7 @@ assetLoader = new (class{
 		this.assets.trackTexture = new THREE.ImageUtils.loadTexture("img/track.jpg");
 		this.assets.restaurantTexture = new THREE.ImageUtils.loadTexture("img/smullers.jpg");
 		this.assets.stationTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
-		this.assets.stationtowerTexture = new THREE.ImageUtils.loadTexture("img\towertexture.png");
+		this.assets.stationtowerTexture = new THREE.ImageUtils.loadTexture("img/towertexture.png");
 
 	}
 
