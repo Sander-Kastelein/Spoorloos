@@ -38,6 +38,7 @@ class Game
 		this.hokje = new Hokje();
 		this.station = new Station();
 		this.skydome = new SkyDome();
+        this.stationroof = new Stationroof();
 
 	}
 
@@ -76,6 +77,7 @@ class Game
 		this.hemisphere.update(delta);
 		this.station.update(delta);
 		this.skydome.update(delta);
+        this.stationroof.update(delta);
 	}
 
 	start()
