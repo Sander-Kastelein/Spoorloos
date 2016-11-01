@@ -38,6 +38,7 @@ class Game
 		this.station = new Station();
 		this.skydome = new SkyDome();
   		this.stationroof = new Stationroof();
+		this.stationtower = new Stationtower();
 
 	}
 
@@ -87,7 +88,7 @@ class Game
 		this.station.update(delta);
 		this.skydome.update(delta);
         this.stationroof.update(delta);
-		
+		this.stationtower.update(delta);
 
 	}
 
