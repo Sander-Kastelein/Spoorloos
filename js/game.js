@@ -29,12 +29,12 @@ class Game
 		this.trainManager = new TrainManager();
 		this.ground = new Ground();
 
-		this.trackManager = new TrackManager();
+		//this.trackManager = new TrackManager();
 
 
         this.restaurant = new Restaurant();
 		this.hokje = new Hokje();
-		this.station = new Station();
+		//this.station = new Station();
 		this.skydome = new SkyDome();
         this.stationroof = new Stationroof();
 
@@ -45,11 +45,11 @@ class Game
 		console.log("Initializing Game object...");
 		requestAnimationFrame(this.render.bind(this));
 
-		// enable shadows
 		this.renderer.setClearColor(0x000000);
+
+		// enable shadows
 		this.renderer.shadowMap.enabled = true;
 		this.renderer.shadowMapSoft = true;
-		this.renderer.shadowMapType = THREE.PCFSoftShadowMap;
 	}
 
 	render()
@@ -69,11 +69,11 @@ class Game
 		this.stationFloor.update(delta);
 		this.trainManager.update(delta);
 		this.ground.update(delta);
-		this.trackManager.update(delta);
+		//this.trackManager.update(delta);
 		this.restaurant.update(delta);
 		this.hokje.update(delta);
 		this.hemisphere.update(delta);
-		this.station.update(delta);
+		//this.station.update(delta);
 		this.skydome.update(delta);
         this.stationroof.update(delta);
 	}
