@@ -23,25 +23,20 @@
 			preserveDrawingBuffer: true,
 		});
 
-
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 10000);
 		this.stationFloor = new StationFloor()
 		this.sun = new Sun();
 		this.hemisphere = new Hemisphere();
 		this.trainManager = new TrainManager();
 		this.ground = new Ground();
-
 		this.trackManager = new TrackManager();
 		this.restaurant = new Restaurant();
 		this.hokje = new Hokje();
-
 		this.station = new Station();
 		this.skydome = new SkyDome();
   		this.stationroof = new Stationroof();
 		this.stationtower = new Stationtower();
-
-
-
+		this.spotlight = new SpotLight();
 	}
 
 	initialize()
@@ -73,8 +68,6 @@
 
 	update(next)
 	{
-
-
 		var delta = this.clock.getDelta();
 
 		let objectsToUpdate = [
@@ -90,6 +83,7 @@
 		this.station,
 		this.skydome,
 		this.stationroof,
+		this.spotlight,
 		];
 
 
