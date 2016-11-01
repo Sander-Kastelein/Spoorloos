@@ -15,7 +15,7 @@ class Track extends THREE.Object3D
             let child = game.assets.track.children[i].clone();
             let texture = game.assets.trackTexture;
 
-            child.material = new THREE.MeshLambertMaterial({map: texture, needsUpdate: true});
+            child.material = new THREE.MeshLambertMaterial({map: texture, needsUpdate: false});
             child.castShadow = true;
             child.receiveShadow = true;
             child.wrapAround = true;
