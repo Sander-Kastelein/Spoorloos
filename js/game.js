@@ -58,36 +58,55 @@ class Game
 		// Render logic
 		let start = Date.now();
 
-		this.update(); // Invoke game logic 
-		requestAnimationFrame(this.render.bind(this)); // Add self to render queue
-
-				
-		this.renderer.render(this.scene, this.camera);
-
-		let updateTime = Date.now() - start;
-		console.log("Render took: ", updateTime, "ms");
+		this.update((() => {
+			requestAnimationFrame(this.render.bind(this)); // Add self to render queue
+			this.renderer.render(this.scene, this.camera);
+			let updateTime = Date.now() - start;
+			console.log("Render took: ", updateTime, "ms");
+		}).bind(this));
+	
+		
 	}
 
-	update()
+	update(next)
 	{
 
-		let delta = this.clock.getDelta();
+		var delta = this.clock.getDelta();
 
-		this.sun.update(delta);
-		this.camera.update(delta);
-		this.stationFloor.update(delta);
-		this.trainManager.update(delta);
-		this.ground.update(delta);
+		let objectsToUpdate = [
+			this.sun,
+			this.camera,
+			this.stationFloor,
+			this.trainManager,
+			this.ground,
+			this.trackManager,
+			this.restaurant,
+			this.hokje,	
+			this.hemisphere,
+			this.station,
+			this.skydome,
+	        this.stationroof,
+        ];
 		
-		this.trackManager.update(delta);
-		this.restaurant.update(delta);
-		
-		this.hokje.update(delta);	
-		this.hemisphere.update(delta);
-		this.station.update(delta);
-		this.skydome.update(delta);
-        this.stationroof.update(delta);
-		
+
+
+        var objectsUpdated = 0;
+
+        for(let i = 0; i < objectsToUpdate.length; i++)
+        {
+        	(function(object, cb){
+        		object.update(delta);
+        		cb();
+        	})(objectsToUpdate[i], function(i){
+        		objectsUpdated++;
+        		if(objectsUpdated === objectsToUpdate.length)
+        		{
+        			next();
+        			next = () => {};
+        		}
+        	});
+        }
+
 
 	}
 
