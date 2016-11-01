@@ -3,25 +3,25 @@
 
 	Contains main game logic.
 	a.k.a. godclass
-*/
+	*/
 
-class Game
-{
-	constructor(assets)
+	class Game
 	{
-		game = this;
-		this.assets = assets;
-		console.log("Creating Game object...");
+		constructor(assets)
+		{
+			game = this;
+			this.assets = assets;
+			console.log("Creating Game object...");
 
 		this.scene = new THREE.Scene(); // Add new scene to game object.
 		this.clock = new THREE.Clock();
 		this.renderer = new THREE.WebGLRenderer(
-			{
+		{
 			antialias: true,
 			stencil: false,
 			precision: "highp",
 			preserveDrawingBuffer: true,
-			});
+		});
 
 		
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 10000);
@@ -32,12 +32,12 @@ class Game
 		this.ground = new Ground();
 
 		this.trackManager = new TrackManager();
-        this.restaurant = new Restaurant();
+		this.restaurant = new Restaurant();
 		this.hokje = new Hokje();
 
 		this.station = new Station();
 		this.skydome = new SkyDome();
-  		this.stationroof = new Stationroof();
+		this.stationroof = new Stationroof();
 
 	}
 
@@ -58,14 +58,14 @@ class Game
 		// Render logic
 		let start = Date.now();
 
-		this.update((() => {
-			requestAnimationFrame(this.render.bind(this)); // Add self to render queue
-			this.renderer.render(this.scene, this.camera);
-			let updateTime = Date.now() - start;
-			console.log("Render took: ", updateTime, "ms");
-		}).bind(this));
-	
-		
+		this.update();
+
+		requestAnimationFrame(this.render.bind(this)); // Add self to render queue
+		this.renderer.render(this.scene, this.camera);
+		let updateTime = Date.now() - start;
+		console.log("Render took: ", updateTime, "ms");
+
+
 	}
 
 	update(next)
@@ -74,40 +74,25 @@ class Game
 		var delta = this.clock.getDelta();
 
 		let objectsToUpdate = [
-			this.sun,
-			this.camera,
-			this.stationFloor,
-			this.trainManager,
-			this.ground,
-			this.trackManager,
-			this.restaurant,
-			this.hokje,	
-			this.hemisphere,
-			this.station,
-			this.skydome,
-	        this.stationroof,
-        ];
-		
+		this.sun,
+		this.camera,
+		this.stationFloor,
+		this.trainManager,
+		this.ground,
+		this.trackManager,
+		this.restaurant,
+		this.hokje,	
+		this.hemisphere,
+		this.station,
+		this.skydome,
+		this.stationroof,
+		];
 
 
-        var objectsUpdated = 0;
-
-        for(let i = 0; i < objectsToUpdate.length; i++)
-        {
-        	(function(object, cb){
-        		object.update(delta);
-        		cb();
-        	})(objectsToUpdate[i], function(i){
-        		objectsUpdated++;
-        		if(objectsUpdated === objectsToUpdate.length)
-        		{
-        			next();
-        			next = () => {};
-        		}
-        	});
-        }
-
-
+		for(let object of objectsToUpdate)
+		{
+			object.update(delta);
+		}
 	}
 
 	start()
