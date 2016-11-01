@@ -78,17 +78,13 @@ class Game
 		this.stationFloor.update(delta);
 		this.trainManager.update(delta);
 		this.ground.update(delta);
-<<<<<<< HEAD
-		//this.trackManager.update(delta);
-=======
 		
 		this.trackManager.update(delta);
->>>>>>> 3b32a99678452510fb6ba591e77f6f35b04a7c42
 		this.restaurant.update(delta);
 		
 		this.hokje.update(delta);	
 		this.hemisphere.update(delta);
-		//this.station.update(delta);
+		this.station.update(delta);
 		this.skydome.update(delta);
         this.stationroof.update(delta);
 		

@@ -11,7 +11,8 @@ class Sun extends THREE.PointLight
         let decay = 1.5;
 
         super(color, intensity, distance,decay);
-        this.castShadow = false;
+        this.castShadow = true;
+        this.shadowCameraVisible = true;
         this.shadowDarkness = 0.9;
         this.shadowMapWidth = 256;
         this.shadowMapHeight = 256;
@@ -23,6 +24,6 @@ class Sun extends THREE.PointLight
     {
         this.position.x = 100 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
         this.position.z = 100 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
-        this.position.y = 200 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.y = 1000 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
     }
 }
