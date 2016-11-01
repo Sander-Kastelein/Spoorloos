@@ -30,9 +30,13 @@ class Game
 		this.ground = new Ground();
 		this.trackManager = new TrackManager();
 
-		(new Track(12, 0, 17));
-		(new Track(12, 5, 17));
-		(new Track(12, 10, 17));
+		(new Track(26, 0, 130)); 	// Spoor 5a
+		(new Track(26, 0, -50));		// spoor plein
+		(new Track(12, 0, 130));  	// 4
+		(new Track(7, 0, 130));		// spoor 3
+		(new Track(-7, 0, 130));	// spoor 2
+		(new Track(-12, 0, 130));	// spoor 1
+		(new Track(12, 0, -130));	// spoor 8
 
         this.restaurant = new Restaurant();
 		this.hokje = new Hokje();
