@@ -16,7 +16,6 @@ class Sun extends THREE.PointLight
         this.shadowDarkness = 0.5;
         this.shadowMapWidth = 2048;
         this.shadowMapHeight = 2048;
-        this.position.y = 100;
         game.scene.add(this);
     }
 
@@ -24,5 +23,6 @@ class Sun extends THREE.PointLight
     {
         this.position.x = 100 * (1 * Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
         this.position.z = 100 * (1 * Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.y = 100 * (1 * Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
     }
 }
