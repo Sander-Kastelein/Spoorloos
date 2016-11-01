@@ -13,7 +13,7 @@ class TrackManager
             (new Track( new THREE.Vector3(7, 0, 130), new THREE.Vector3(0,0,0))),     // Track 3
             (new Track( new THREE.Vector3(-7, 0, 130), new THREE.Vector3(0,0,0))),    // Track 2
             (new Track( new THREE.Vector3(-12, 0, 130), new THREE.Vector3(0,0,0))),   // Track 1
-            (new Track( new THREE.Vector3(12, 0, -130), new THREE.Vector3(0,0,0))),   // Track 8
+            (new Track( new THREE.Vector3(8.3, 0, -130), new THREE.Vector3(0,5/360*Math.PI,0))),   // Track 8
         ];
     }
 
