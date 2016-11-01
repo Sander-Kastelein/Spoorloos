@@ -21,8 +21,8 @@ class Sun extends THREE.PointLight
 
     update(delta)
     {
-        this.position.x = 100 * (1 * Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
-        this.position.z = 100 * (1 * Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
-        this.position.y = 200 * (1 * Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.x = 100 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.z = 100 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.y = 200 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
     }
 }

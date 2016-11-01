@@ -27,13 +27,13 @@ class Station extends THREE.Object3D
             this.add(child);
         }
 
-        this.scale.x = 6.00;
-        this.scale.z = 6.00;
-        this.scale.y = 10.00;
+        this.scale.x = 3.00;
+        this.scale.z = 3.00;
+        this.scale.y = 5.00;
 
         game.scene.add(this);
 
-        this.position.x = 18.5;
+        this.position.x = -45;
         this.position.z = 30;
         this.position.y = -8;
         this.rotateY(deg2rad(0));// = deg2rad(0);
