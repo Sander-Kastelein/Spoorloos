@@ -33,9 +33,9 @@ class Station extends THREE.Object3D
 
         game.scene.add(this);
 
-        this.position.x = -35;
+        this.position.x = -38.5;
         this.position.z = 6;
-        this.position.y =0;
+        this.position.y = 2;
         this.rotateY(deg2rad(90));// = deg2rad(0);
 
 

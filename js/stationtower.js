@@ -15,7 +15,7 @@ class Stationtower extends THREE.Object3D
         for(let i = 0; i < game.assets.stationtower.children.length; i++)
         {
             let child = game.assets.stationtower.children[i].clone();
-            let texture = game.assets.stationtowerTexture;
+            let texture = game.assets.stationTowerTexture;
 
             child.material = new THREE.MeshLambertMaterial({map: texture, needsUpdate: true});
             child.castShadow = true;
@@ -30,9 +30,9 @@ class Stationtower extends THREE.Object3D
 
         game.scene.add(this);
 
-        this.position.x = -40;
+        this.position.x = -41.5;
         this.position.z = 0;
-        this.position.y = 18;
+        this.position.y = 21;
 
         this.rotateY(deg2rad(0));// = deg2rad(0);
 
