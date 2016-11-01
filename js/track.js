@@ -1,10 +1,12 @@
 /**
  * Created by Ruud on 27-10-2016.
  */
+
+
 class Track extends THREE.Object3D
 {
 
-    constructor(x, y, z)
+    constructor(position, rotation)
     {
         super();
 
@@ -27,9 +29,12 @@ class Track extends THREE.Object3D
 
         game.scene.add(this);
 
-        this.position.x = x;
-        this.position.z = z;
-        this.position.y = y;
+        this.position.set(position);
+        
+        this.rotation.x = rotation.x;
+        this.rotation.y = rotation.y;
+        this.rotation.z = rotation.z;
+
 
 
         game.trackManager.tracks.push(this);

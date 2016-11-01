@@ -14,8 +14,8 @@ class Sun extends THREE.PointLight
         this.castShadow = true;
         this.shadowCameraVisible = true;
         this.shadowDarkness = 0.5;
-        this.shadowMapWidth = 2048;
-        this.shadowMapHeight = 2048;
+        this.shadowMapWidth = 256;
+        this.shadowMapHeight = 256;
         this.position.y = 100;
         game.scene.add(this);
     }

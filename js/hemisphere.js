@@ -18,6 +18,6 @@ class Hemisphere extends THREE.HemisphereLight
 
     update()
     {
-
+        
     }
 }
