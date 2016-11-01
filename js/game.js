@@ -23,7 +23,7 @@
 			preserveDrawingBuffer: true,
 		});
 
-		
+
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 10000);
 		this.stationFloor = new StationFloor()
 		this.sun = new Sun();
@@ -37,7 +37,10 @@
 
 		this.station = new Station();
 		this.skydome = new SkyDome();
-		this.stationroof = new Stationroof();
+  		this.stationroof = new Stationroof();
+		this.stationtower = new Stationtower();
+
+
 
 	}
 
@@ -70,6 +73,7 @@
 
 	update(next)
 	{
+
 
 		var delta = this.clock.getDelta();
 
