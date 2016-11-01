@@ -11,6 +11,7 @@ class Sun extends THREE.PointLight
         let decay = 1.5;
 
         super(color, intensity, distance,decay);
+
         this.castShadow = false;
         this.shadowCameraVisible = false;
         this.shadowDarkness = 0.5;
