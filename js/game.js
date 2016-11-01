@@ -22,6 +22,8 @@ class Game
 			precision: "highp",
 			preserveDrawingBuffer: true,
 			});
+
+		
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 10000);
 		this.stationFloor = new StationFloor()
 		this.sun = new Sun();
@@ -29,14 +31,13 @@ class Game
 		this.trainManager = new TrainManager();
 		this.ground = new Ground();
 
-		//this.trackManager = new TrackManager();
-
-
+		this.trackManager = new TrackManager();
         this.restaurant = new Restaurant();
 		this.hokje = new Hokje();
-		//this.station = new Station();
+
+		this.station = new Station();
 		this.skydome = new SkyDome();
-        this.stationroof = new Stationroof();
+  		this.stationroof = new Stationroof();
 
 	}
 
@@ -55,13 +56,21 @@ class Game
 	render()
 	{
 		// Render logic
+		let start = Date.now();
+
 		this.update(); // Invoke game logic 
 		requestAnimationFrame(this.render.bind(this)); // Add self to render queue
+
+				
 		this.renderer.render(this.scene, this.camera);
+
+		let updateTime = Date.now() - start;
+		console.log("Render took: ", updateTime, "ms");
 	}
 
 	update()
 	{
+
 		let delta = this.clock.getDelta();
 
 		this.sun.update(delta);
@@ -69,13 +78,21 @@ class Game
 		this.stationFloor.update(delta);
 		this.trainManager.update(delta);
 		this.ground.update(delta);
+<<<<<<< HEAD
 		//this.trackManager.update(delta);
+=======
+		
+		this.trackManager.update(delta);
+>>>>>>> 3b32a99678452510fb6ba591e77f6f35b04a7c42
 		this.restaurant.update(delta);
-		this.hokje.update(delta);
+		
+		this.hokje.update(delta);	
 		this.hemisphere.update(delta);
 		//this.station.update(delta);
 		this.skydome.update(delta);
         this.stationroof.update(delta);
+		
+
 	}
 
 	start()
