@@ -5,12 +5,14 @@ class TrackManager
     constructor()
     {
         this.tracks = [
-            (new Track( new THREE.Vector3(26, 0.1, 40),null, new THREE.Vector3(0.001, 0.001, 0.005))),     // Track 5a
-            (new Track( new THREE.Vector3(26, 0.1, 130),null, new THREE.Vector3(0.001, 0.001, 0.005))),
-            (new Track( new THREE.Vector3(22.3, 0, -120), new THREE.Vector3(0,5/360*Math.PI,0))),   // Track 5b
-            (new Track( new THREE.Vector3(21.9, 0, -130), new THREE.Vector3(0,5/360*Math.PI,0))),   // Track 5b
-            (new Track( new THREE.Vector3(31, 0.1, 40),null, new THREE.Vector3(0.001, 0.001, 0.005))),     // Sidetrack 1
-            (new Track( new THREE.Vector3(31, 0.1, 130),null, new THREE.Vector3(0.001, 0.001, 0.005))),
+            (new Track( new THREE.Vector3(26, 0.1, 40))),     // Track 5a
+            (new Track( new THREE.Vector3(26, 0.1, 130))),    // track 5a
+            (new Track( new THREE.Vector3(22.48, 0, -120), new THREE.Vector3(0,5/360*Math.PI,0))),   // Track 5b
+            (new Track( new THREE.Vector3(22.08, 0, -130), new THREE.Vector3(0,5/360*Math.PI,0))),
+            (new Track( new THREE.Vector3(31, 0.1, 40))),     // Sidetrack 1a
+            (new Track( new THREE.Vector3(31, 0.1, 130))),
+            (new Track( new THREE.Vector3(27.48, 0, -120), new THREE.Vector3(0,5/360*Math.PI,0))),   // Sidetrack 1b
+            (new Track( new THREE.Vector3(27.08, 0, -130), new THREE.Vector3(0,5/360*Math.PI,0))),
             (new Track( new THREE.Vector3(36, 0, 130))),    // Sidetrack 2
             (new Track( new THREE.Vector3(12, 0, 130))),    // 4
             (new Track( new THREE.Vector3(7, 0, 130))),     // Track 3
