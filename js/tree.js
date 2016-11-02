@@ -5,8 +5,9 @@
 
 class Tree extends THREE.Object3D
 {
-
+    
     constructor(position, rotation, scale)
+
     {
         if(!scale) scale = new THREE.Vector3(1.00, 1.00, 1.00);
         if(!rotation) rotation = new THREE.Vector3(0, 0, 0);
