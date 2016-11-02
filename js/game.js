@@ -37,6 +37,7 @@
   		this.stationroof = new Stationroof();
 		//this.lights = new Lights();
            this.building = new Building();
+			this.sEntrance = new SEntrance();
 	}
 
 	initialize()
@@ -85,7 +86,8 @@
 		this.skydome,
 		this.stationroof,
 		//this.lights,
-            this.building
+            this.building,
+			this.sEntrance
 		];
 
 
