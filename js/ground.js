@@ -11,7 +11,7 @@ class Ground extends THREE.Mesh
         groundTexture.wrapT = THREE.RepeatWrapping;
         groundTexture.repeat.set( 100, 100 );
 
-        let groundMaterial = new THREE.MeshLambertMaterial({map: groundTexture, side: THREE.doubleSided});
+        let groundMaterial = new THREE.MeshPhongMaterial({map: groundTexture, side: THREE.doubleSided});
         let groundGeometry = new THREE.PlaneBufferGeometry(1000,1000);
         let ground = new THREE.Mesh(groundGeometry, groundMaterial);
         ground.rotation.x = -0.5*Math.PI;

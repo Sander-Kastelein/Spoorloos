@@ -17,10 +17,9 @@ class Stationtower extends THREE.Object3D
             let child = game.assets.stationtower.children[i].clone();
             let texture = game.assets.stationTowerTexture;
 
-            child.material = new THREE.MeshLambertMaterial({map: texture, needsUpdate: true});
+            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
             child.castShadow = true;
             child.receiveShadow = true;
-            child.wrapAround = true;
             this.add(child);
         }
 
