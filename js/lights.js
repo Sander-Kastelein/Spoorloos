@@ -13,7 +13,7 @@ class Lights extends THREE.Object3D
         let distance = 100;
         let angle = 0.6;
         let spot1 = new THREE.SpotLight(color, intensity,distance,angle);
-        spot1.position.set(0,15.5,35);
+        spot1.position.set(0,12.5,35);
         spot1.castShadow = true;
         this.add(spot1);
 

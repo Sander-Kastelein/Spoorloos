@@ -1,13 +1,13 @@
 /**
  * Created by Ruud on 28-10-2016.
  */
-    class Sun extends THREE.SpotLight
+        class Sun extends THREE.SpotLight
 {
     constructor()
     {
         let color = 0xffffff;
         let intensity = 1;
-        let distance = 2000;
+        let distance = 4000;
 
         super(color, intensity, distance);
         this.castShadow = true;
