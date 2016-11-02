@@ -70,6 +70,9 @@ assetLoader = new (class{
 
 		this.OBJLoader.load('models/Ecleposs Subway opj cinema4d.obj', function (group) {
 			assetLoader.assets.sEntrance = group;
+
+		this.OBJLoader.load('models/Tree2.obj', function (group) {
+			assetLoader.assets.tree = group;
 			assetLoaded();
 		});
 
@@ -83,6 +86,9 @@ assetLoader = new (class{
 		this.assets.stationTowerTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
 		this.assets.stationbuildingTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg");
 		this.assets.sEntranceTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg")
+		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/blatt.jpg");
+		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/bark.jpg");
+
 
 	}
 
