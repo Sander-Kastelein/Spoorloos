@@ -26,6 +26,7 @@
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 10000);
 		this.stationFloor = new StationFloor()
 		this.sun = new Sun();
+		this.tree = new Tree();
 		this.hemisphere = new Hemisphere();
 		this.trainManager = new TrainManager();
 		this.ground = new Ground();
@@ -37,6 +38,7 @@
   		this.stationroof = new Stationroof();
 		//this.lights = new Lights();
            this.building = new Building();
+			this.sEntrance = new SEntrance();
 	}
 
 	initialize()
@@ -84,8 +86,10 @@
 		this.station,
 		this.skydome,
 		this.stationroof,
+		this.tree,
 		//this.lights,
-            this.building
+            this.building,
+			this.sEntrance
 		];
 
 
