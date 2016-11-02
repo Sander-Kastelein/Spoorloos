@@ -13,7 +13,7 @@ class Building extends THREE.Object3D
             let child = game.assets.stationbuilding.children[i].clone();
             let texture = game.assets.stationbuildingTexture;
 
-            child.material = new THREE.MeshLambertMaterial({map: texture, needsUpdate: true});
+            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
             child.castShadow = false;
             child.receiveShadow = false;
             child.wrapAround = true;
