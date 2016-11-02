@@ -21,8 +21,8 @@ class Station extends THREE.Object3D
             let texture = game.assets.stationTexture;
 
             child.material = new THREE.MeshLambertMaterial({map: texture, needsUpdate: true});
-            child.castShadow = true;
-            child.receiveShadow = true;
+            child.castShadow = false;
+            child.receiveShadow = false;
             child.wrapAround = true;
             this.add(child);
         }
@@ -34,7 +34,7 @@ class Station extends THREE.Object3D
         game.scene.add(this);
 
         this.position.x = -38.5;
-        this.position.z = 6;
+        this.position.z = 150;
         this.position.y = 2;
         this.rotateY(deg2rad(90));// = deg2rad(0);
 
