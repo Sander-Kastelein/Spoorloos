@@ -80,19 +80,19 @@ assetLoader = new (class{
 			assetLoaded();
 		});
 
-				this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
-				this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
-				this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
-				this.assets.groundTexture = new THREE.ImageUtils.loadTexture("img/ground.jpg");
-				this.assets.trackTexture = new THREE.ImageUtils.loadTexture("img/track.jpg");
-				this.assets.restaurantTexture = new THREE.ImageUtils.loadTexture("img/smullers.jpg");
-				this.assets.stationTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
-				this.assets.stationTowerTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
-				this.assets.stationbuildingTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg");
-				this.assets.sEntranceTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg")
-				this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/blatt.jpg");
-				this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/bark.jpg");
-
-
-			}
+		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
+		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
+		this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
+		this.assets.groundTexture = new THREE.ImageUtils.loadTexture("img/ground.jpg");
+		this.assets.trackTexture = new THREE.ImageUtils.loadTexture("img/track.jpg");
+		this.assets.restaurantTexture = new THREE.ImageUtils.loadTexture("img/smullers.jpg");
+		this.assets.stationTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
+		this.assets.stationTowerTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
+		this.assets.stationbuildingTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg");
+		this.assets.sEntranceTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg")
+		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/blatt.jpg");
+		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/bark.jpg");
+		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg")
+		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg")
+		}
 });

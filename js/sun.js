@@ -1,7 +1,7 @@
 /**
  * Created by Ruud on 28-10-2016.
  */
-        class Sun extends THREE.SpotLight
+        class Sun extends THREE.PointLight
 {
     constructor()
     {
@@ -14,7 +14,6 @@
         this.target = game.stationFloor;
         this.shadowMapWidth = 1024;
         this.shadowMapHeight = 1024;
-        this.position.y = 100;
         game.scene.add(this);
     }
 
@@ -22,6 +21,6 @@
     {
         this.position.x = 400 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
         this.position.z = 400 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
-        //this.position.y = 200 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.y = 200 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
     }
 }
