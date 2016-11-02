@@ -5,7 +5,7 @@
 
 class Tree extends THREE.Object3D
 {
-    
+
     constructor(position, rotation, scale)
 
     {

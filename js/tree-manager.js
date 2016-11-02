@@ -9,20 +9,20 @@ class TreeManager
     constructor()
     {
         this.trees = [
-            (new Tree( new THREE.Vector3(26, 0.1, 40))),
-            (new Tree( new THREE.Vector3(26, 0.1, 130))),
-            (new Tree( new THREE.Vector3(22.48, 0, -120),
-            (new Tree( new THREE.Vector3(22.08, 0, -130),
-            (new Tree( new THREE.Vector3(31, 0.1, 40))),
-            (new Tree( new THREE.Vector3(31, 0.1, 130))),
-            (new Tree( new THREE.Vector3(27.48, 0, -120),
-            (new Tree( new THREE.Vector3(27.08, 0, -130),
-            (new Tree( new THREE.Vector3(36, 0, 130))),
-            (new Tree( new THREE.Vector3(12, 0, 130))),
-            (new Tree( new THREE.Vector3(7, 0, 130))),
-            (new Tree( new THREE.Vector3(-7, 0, 130))),
-            (new Tree( new THREE.Vector3(-12, 0, 130))),
-            (new Tree( new THREE.Vector3(8.3, 0, -130)))))))))))
+            (new Tree( new THREE.Vector3(60, 0.1, 30))),
+            (new Tree( new THREE.Vector3(60, 0.1, 20))),
+            (new Tree( new THREE.Vector3(60, 0, 8))),
+            (new Tree( new THREE.Vector3(60, 0, -5))),
+            (new Tree( new THREE.Vector3(60, 0.1, -19))),
+            (new Tree( new THREE.Vector3(60, 0.1, -30))),
+            (new Tree( new THREE.Vector3(60, 0, -43))),
+            (new Tree( new THREE.Vector3(60, 0, -50))),
+            (new Tree( new THREE.Vector3(60, 0, -62))),
+            (new Tree( new THREE.Vector3(60, 0, -80))),
+            (new Tree( new THREE.Vector3(60, 0, -92))),
+            (new Tree( new THREE.Vector3(60, 0, -100))),
+            (new Tree( new THREE.Vector3(60, 0, -108))),
+            (new Tree( new THREE.Vector3(60, 0, -110)))
         ];
     }
 
