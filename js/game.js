@@ -50,6 +50,7 @@
 		// enable shadows
 		this.renderer.shadowMap.enabled = true;
 		this.renderer.shadowMapSoft = true;
+		this.renderer.shadowMapDarkness = 0.5;
 	}
 
 	render()

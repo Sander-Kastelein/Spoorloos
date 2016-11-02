@@ -19,11 +19,10 @@ class Station extends THREE.Object3D
         {
             let child = game.assets.station.children[i].clone();
             let texture = game.assets.stationTexture;
+            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
+            child.castShadow = true;
+            child.receiveShadow = true;
 
-            child.material = new THREE.MeshLambertMaterial({map: texture, needsUpdate: true});
-            child.castShadow = false;
-            child.receiveShadow = false;
-            child.wrapAround = true;
             this.add(child);
         }
 

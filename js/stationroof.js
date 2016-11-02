@@ -19,11 +19,10 @@ class Stationroof extends THREE.Object3D
         {
             let child = game.assets.stationroof.children[i].clone();
             let texture = game.assets.stationroofTexture;
+            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
+            child.castShadow = true;
+            child.receiveShadow = true;
 
-            child.material = new THREE.MeshLambertMaterial({map: texture, needsUpdate: true});
-            child.castShadow = false;
-            child.receiveShadow = false;
-            child.wrapAround = true;
             this.add(child);
         }
 

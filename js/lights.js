@@ -9,14 +9,16 @@ class Lights extends THREE.Object3D
 
         // station roof light
         let color = 0xff0000;
-        let intensity = 15;
-        let distance = 1000;
-        let spot1 = new THREE.SpotLight(color, intensity, distance);
-        spot1.position.set(0,12,0);
+        let intensity = 5;
+        let distance = 100;
+        let angle = 0.6;
+        let spot1 = new THREE.SpotLight(color, intensity,distance,angle);
+        spot1.position.set(0,15.5,35);
         spot1.castShadow = true;
-        spot1.shadowCameraVisible = true;
-        spot1.target = game.stationFloor;
         this.add(spot1);
+
+        let spotLightHelper = new THREE.SpotLightHelper(spot1);
+        this. add(spotLightHelper);
 
         game.scene.add(this);
       }

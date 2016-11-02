@@ -19,10 +19,9 @@ class Train extends THREE.Object3D
 				texture = game.assets.trainTextureArriva;
 			}
 
-			child.material = new THREE.MeshLambertMaterial({map: texture, needsUpdate: true});
+			child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
 			child.castShadow = true;
 			child.receiveShadow = true;
-			child.wrapAround = true;
 			this.add(child);
 		}
 		this.scale.x = 0.01;
