@@ -28,13 +28,13 @@ class Stationroof extends THREE.Object3D
         }
 
         this.scale.x = 7.10;
-        this.scale.z = 20.10;
+        this.scale.z = 25.10;
         this.scale.y = 3.15;
 
         game.scene.add(this);
 
         this.position.x = 0;
-        this.position.z = 30;
+        this.position.z = 50;
         this.position.y = 0;
 
         this.rotateY(deg2rad(0));// = deg2rad(0);

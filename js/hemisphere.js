@@ -5,14 +5,10 @@ class Hemisphere extends THREE.HemisphereLight
 {
     constructor()
     {
-        let skyColor = 0xff0000;
-        let groundColor = 0xffffffa;
-        let intensity = 0.3;
-
-        super(skyColor, groundColor, intensity)
-        this.color.setHSL( 0.6, 1, 0.6 );
-        this.groundColor.setHSL( 0.095, 1, 0.75 );
-        this.position.set( 0, 1000, 0 );
+        super();
+        this.color.setHSL( 0.75, 1, 0.98 );
+        this.groundColor.setHSL( 0.43, 0.46, 0.64 );
+        this.intensity = 0.3;
         game.scene.add(this);
     }
 
