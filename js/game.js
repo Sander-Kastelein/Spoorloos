@@ -26,9 +26,9 @@
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 10000);
 		this.stationFloor = new StationFloor()
 		this.sun = new Sun();
-		this.tree = new Tree();
 		this.hemisphere = new Hemisphere();
 		this.trainManager = new TrainManager();
+		this.treeManager = new TreeManager();
 		this.ground = new Ground();
 		this.trackManager = new TrackManager();
 		this.restaurant = new Restaurant();
@@ -39,6 +39,8 @@
 		this.lights = new Lights();
         this.building = new Building();
 		this.sEntrance = new SEntrance();
+		this.cycleRackManager = new CycleRackManager();
+
 	}
 
 	initialize()
@@ -89,7 +91,9 @@
 		this.tree,
 		this.lights,
 		this.building,
-		this.sEntrance
+		this.sEntrance, //tunnel
+		this.cycleRackManager,
+		this.treeManager,
 		];
 
 

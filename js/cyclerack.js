@@ -1,22 +1,18 @@
 /**
- * Created by Reinder on 27-10-2016.
+ * Created by Ben on 2-11-2016.
  */
 
-
-class Tree extends THREE.Object3D
+class CycleRack extends THREE.Object3D
 {
 
     constructor(position, rotation, scale)
-
     {
-        if(!scale) scale = new THREE.Vector3(1.00, 1.00, 1.00);
-        if(!rotation) rotation = new THREE.Vector3(0, 0, 0);
         super();
 
-        for(let i = 0; i < game.assets.tree.children.length; i++)
+        for(let i = 0; i < game.assets.cycleRack.children.length; i++)
         {
-            let child = game.assets.tree.children[i].clone();
-            let texture = game.assets.treeTexture;
+            let child = game.assets.cycleRack.children[i].clone();
+            let texture = game.assets.cyclerackTexture;
 
             child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: false});
             child.castShadow = true;
@@ -30,9 +26,9 @@ class Tree extends THREE.Object3D
         this.rotation.x = rotation.x;
         this.rotation.y = rotation.y;
         this.rotation.z = rotation.z;
-        this.scale.x = scale.x; //0.001;
-        this.scale.z = scale.z; //0.0050;
-        this.scale.y = scale.y; //0.001;
+        this.scale.x = scale.x;
+        this.scale.z = scale.z;
+        this.scale.y = scale.y;
     }
 
     update(delta)

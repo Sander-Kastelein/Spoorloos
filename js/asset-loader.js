@@ -16,7 +16,7 @@ assetLoader = new (class{
 
 	load(callback) {
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 10;
+		var amountOfAssetsToLoad = 11;
 
 		var assetLoaded = () =>
 		{
@@ -80,6 +80,11 @@ assetLoader = new (class{
 			assetLoaded();
 		});
 
+		this.OBJLoader.load('models/Bicycle Parking Rack 01.obj', function (group) {
+			assetLoader.assets.cycleRack = group;
+			assetLoaded();
+		});
+
 		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
 		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
 		this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
@@ -94,5 +99,6 @@ assetLoader = new (class{
 		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/bark.jpg");
 		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg")
 		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg")
+		this.assets.cyclerackTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
 		}
 });
