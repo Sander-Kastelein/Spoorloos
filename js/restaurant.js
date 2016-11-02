@@ -18,8 +18,8 @@ class Restaurant extends THREE.Object3D
 
             child.material = new THREE.MeshLambertMaterial({map: texture, needsUpdate: true});
             child.castShadow = true;
-            child.receiveShadow = false;
-            child.wrapAround = false;
+            child.receiveShadow = true;
+            child.wrapAround = true;
             this.add(child);
         }
 
