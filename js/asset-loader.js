@@ -14,26 +14,28 @@ assetLoader = new (class{
 		};
 	}
 
-	load(callback)
-	{
+	load(callback) {
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 9;
+		var amountOfAssetsToLoad = 10;
 
-		var assetLoaded = () => {
-			assetsLoaded ++;
-			if(assetsLoaded === amountOfAssetsToLoad)
-			{
+		var assetLoaded = () =>
+		{
+			assetsLoaded++;
+			if (assetsLoaded === amountOfAssetsToLoad) {
 				callback(assetLoader.assets);
-				callback = () => {}; // Null callback to prevent double calls;
+				callback = () =>
+				{
+				}
+				; // Null callback to prevent double calls;
 			}
 		};
 
-		this.OBJLoader.load('models/3d-model.obj', function(group) {
+		this.OBJLoader.load('models/3d-model.obj', function (group) {
 			assetLoader.assets.train = group;
 			assetLoaded();
 		});
 
-		this.OBJLoader.load('models/1524mm Rail Track Concrete.obj', function(group) {
+		this.OBJLoader.load('models/1524mm Rail Track Concrete.obj', function (group) {
 			assetLoader.assets.track = group;
 			assetLoaded();
 		});
@@ -69,28 +71,28 @@ assetLoader = new (class{
 		});
 
 		this.OBJLoader.load('models/Ecleposs Subway opj cinema4d.obj', function (group) {
+			assetLoaded();
 			assetLoader.assets.sEntrance = group;
+		});
 
 		this.OBJLoader.load('models/Tree2.obj', function (group) {
 			assetLoader.assets.tree = group;
 			assetLoaded();
 		});
 
-		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
-		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
-		this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
-		this.assets.groundTexture = new THREE.ImageUtils.loadTexture("img/ground.jpg");
-		this.assets.trackTexture = new THREE.ImageUtils.loadTexture("img/track.jpg");
-		this.assets.restaurantTexture = new THREE.ImageUtils.loadTexture("img/smullers.jpg");
-		this.assets.stationTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
-		this.assets.stationTowerTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
-		this.assets.stationbuildingTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg");
-		this.assets.sEntranceTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg")
-		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/blatt.jpg");
-		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/bark.jpg");
+				this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
+				this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
+				this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
+				this.assets.groundTexture = new THREE.ImageUtils.loadTexture("img/ground.jpg");
+				this.assets.trackTexture = new THREE.ImageUtils.loadTexture("img/track.jpg");
+				this.assets.restaurantTexture = new THREE.ImageUtils.loadTexture("img/smullers.jpg");
+				this.assets.stationTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
+				this.assets.stationTowerTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
+				this.assets.stationbuildingTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg");
+				this.assets.sEntranceTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg")
+				this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/blatt.jpg");
+				this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/bark.jpg");
 
 
-	}
-
-
+			}
 });
