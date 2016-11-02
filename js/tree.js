@@ -1,42 +1,37 @@
 /**
- * Created by Reinder on 2-11-2016.
+ * Created by Reinder on 27-10-2016.
  */
 
 
 class Tree extends THREE.Object3D
 {
 
-    constructor(treeObject)
+    constructor(position, rotation, scale)
     {
+        if(!scale) scale = new THREE.Vector3(1.00, 1.00, 1.00);
+        if(!rotation) rotation = new THREE.Vector3(0, 0, 0);
         super();
-
-        this.data = treeObject;
 
         for(let i = 0; i < game.assets.tree.children.length; i++)
         {
             let child = game.assets.tree.children[i].clone();
             let texture = game.assets.treeTexture;
 
-            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
+            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: false});
             child.castShadow = true;
             child.receiveShadow = true;
-            child.wrapAround = true;
             this.add(child);
         }
 
-
-        this.scale.x = 1.00;
-        this.scale.z = 1.00;
-        this.scale.y = 1.00;
-
-            this.position.x = 40;
-            this.position.z = 50;
-            this.position.y = 0;
-            this.rotateY(deg2rad(90));// = deg2rad(0);
-
         game.scene.add(this);
 
-
+        this.position.set(position.x, position.y, position.z);
+        this.rotation.x = rotation.x;
+        this.rotation.y = rotation.y;
+        this.rotation.z = rotation.z;
+        this.scale.x = scale.x; //0.001;
+        this.scale.z = scale.z; //0.0050;
+        this.scale.y = scale.y; //0.001;
     }
 
     update(delta)
