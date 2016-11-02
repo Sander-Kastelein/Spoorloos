@@ -6,11 +6,9 @@
 class Hokje extends THREE.Object3D
 {
 
-    constructor(hokjeObject)
+    constructor()
     {
         super();
-
-        this.data = hokjeObject;
 
         for(let i = 0; i < game.assets.hokje.children.length; i++)
         {

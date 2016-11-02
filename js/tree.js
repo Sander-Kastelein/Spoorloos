@@ -6,11 +6,9 @@
 class Tree extends THREE.Object3D
 {
 
-    constructor(treeObject)
+    constructor()
     {
         super();
-
-        this.data = treeObject;
 
         for(let i = 0; i < game.assets.tree.children.length; i++)
         {
