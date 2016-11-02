@@ -4,8 +4,11 @@
 
 class CycleRack extends THREE.Object3D
 {
-    constructor()
+
+    constructor(position, rotation, scale)
     {
+        if(!scale) scale = new THREE.Vector3(0.005, 0.005, 0.003);
+        if(!rotation) rotation = new THREE.Vector3(0, 0, 0);
         super();
 
         for(let i = 0; i < game.assets.cyclerack.children.length; i++)
@@ -13,26 +16,22 @@ class CycleRack extends THREE.Object3D
             let child = game.assets.cyclerack.children[i].clone();
             let texture = game.assets.cyclerackTexture;
 
-            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
-            child.castShadow = false;
-            child.receiveShadow = false;
-            child.wrapAround = true;
+            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: false});
+            child.castShadow = true;
+            child.receiveShadow = true;
             this.add(child);
-
-            this.scale.x = 0.005;
-            this.scale.z = 0.005;
-            this.scale.y = 0.003;
-
-            game.scene.add(this);
-
-            this.position.x = 50;
-            this.position.z = -20;
-            this.position.y = 0;
         }
+
+        game.scene.add(this);
+
+        this.position.set(position.x, position.y, position.z);
+        this.rotation.x = rotation.x;
+        this.rotation.y = rotation.y;
+        this.rotation.z = rotation.z;
+        this.scale.x = scale.x; //0.001;
+        this.scale.z = scale.z; //0.0050;
+        this.scale.y = scale.y; //0.001;
     }
-
-
-
 
     update(delta)
     {

@@ -39,7 +39,7 @@
 		//this.lights = new Lights();
            this.building = new Building();
 			this.sEntrance = new SEntrance();
-			this.cyclerack = new CycleRack();
+			this.CycleRackManager = new CycleRackManager();
 	}
 
 	initialize()
@@ -91,7 +91,7 @@
 		//this.lights,
             this.building,
 			this.sEntrance,
-			this.cyclerack
+			this.CycleRackManager
 		];
 
 

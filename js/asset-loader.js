@@ -97,6 +97,7 @@ assetLoader = new (class{
 				this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/blatt.jpg");
 				this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/bark.jpg");
 				this.assets.sEntranceTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
+				this.assets.cyclerackTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
 
 
 			}
