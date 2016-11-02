@@ -39,6 +39,7 @@
 		//this.lights = new Lights();
            this.building = new Building();
 			this.sEntrance = new SEntrance();
+			this.cyclerack = new CycleRack();
 	}
 
 	initialize()
@@ -89,7 +90,8 @@
 		this.tree,
 		//this.lights,
             this.building,
-			this.sEntrance
+			this.sEntrance,
+			this.cyclerack
 		];
 
 
