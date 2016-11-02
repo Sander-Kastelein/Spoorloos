@@ -76,7 +76,6 @@ assetLoader = new (class{
 		this.assets.restaurantTexture = new THREE.ImageUtils.loadTexture("img/smullers.jpg");
 		this.assets.stationTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
 		this.assets.stationTowerTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
-		this.assets.srlTexture = new THREE.ImageUtils.loadTexture("img/lamp.jpg");
 		this.assets.stationbuildingTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg");
 
 	}

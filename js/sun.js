@@ -1,15 +1,15 @@
 /**
  * Created by Ruud on 28-10-2016.
  */
-class Sun extends THREE.PointLight
+class Sun extends THREE.DirectionalLight
 {
     constructor()
     {
         let color = 0xffffff;
         let intensity = 2;
         let distance = 2000;
-
         super(color, intensity, distance);
+        this.target = game.stationFloor;
         this.castShadow = true;
         this.shadowCameraVisible = true;
         this.shadowDarkness = 0.9;
