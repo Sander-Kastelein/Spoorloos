@@ -16,7 +16,7 @@ assetLoader = new (class{
 
 	load(callback) {
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 11;
+		var amountOfAssetsToLoad = 10;
 
 		var assetLoaded = () =>
 		{
@@ -30,58 +30,63 @@ assetLoader = new (class{
 			}
 		};
 
+		//1
 		this.OBJLoader.load('models/3d-model.obj', function (group) {
 			assetLoader.assets.train = group;
 			assetLoaded();
 		});
 
+		//2
 		this.OBJLoader.load('models/1524mm Rail Track Concrete.obj', function (group) {
 			assetLoader.assets.track = group;
 			assetLoaded();
 		});
 
+		//3
 		this.OBJLoader.load('models/Derby, Subway.obj', function (group) {
 			assetLoader.assets.restaurant = group;
 			assetLoaded();
 		});
 
+		//4
 		this.OBJLoader.load('models/Hokje.obj', function (group) {
 			assetLoader.assets.hokje = group;
 			assetLoaded();
 		});
 
+		//5
 		this.OBJLoader.load('models/Station.obj', function (group) {
 			assetLoader.assets.station = group;
 			assetLoaded();
 		});
 
+		//6
 		this.OBJLoader.load('models/stationroof.obj', function (group) {
 			assetLoader.assets.stationroof = group;
 			assetLoaded();
 		});
 
+		//7
 		this.OBJLoader.load('models/station-tower.obj', function (group) {
 			assetLoader.assets.stationtower = group;
 			assetLoaded();
 		});
 
+		//8
 		this.OBJLoader.load('models/stationbuilding.obj', function (group) {
 			assetLoader.assets.stationbuilding = group;
 			assetLoaded();
 		});
 
+		//9
 		this.OBJLoader.load('models/Ecleposs Subway opj cinema4d.obj', function (group) {
 			assetLoaded();
 			assetLoader.assets.sEntrance = group;
 		});
 
+		//10
 		this.OBJLoader.load('models/Tree2.obj', function (group) {
 			assetLoader.assets.tree = group;
-			assetLoaded();
-		});
-
-		this.OBJLoader.load('models/Bicycle Parking Rack 01.obj', function (group) {
-			assetLoader.assets.cycleRack = group;
 			assetLoaded();
 		});
 
@@ -99,6 +104,5 @@ assetLoader = new (class{
 		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/bark.jpg");
 		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg")
 		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg")
-		this.assets.cyclerackTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
 		}
 });

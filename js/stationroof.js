@@ -36,14 +36,9 @@ class Stationroof extends THREE.Object3D
         this.position.y = 0;
 
         this.rotateY(deg2rad(0));// = deg2rad(0);
-
-
-
     }
 
-    update(delta)
+    update()
     {
-
-
     }
 }

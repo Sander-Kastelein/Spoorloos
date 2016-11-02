@@ -37,7 +37,5 @@ class Building extends THREE.Object3D
 
     update(delta)
     {
-
-
     }
 }

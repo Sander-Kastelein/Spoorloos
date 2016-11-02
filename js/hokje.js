@@ -36,9 +36,7 @@ class Hokje extends THREE.Object3D
 
     }
 
-    update(delta)
+    update()
     {
-
-
     }
 }

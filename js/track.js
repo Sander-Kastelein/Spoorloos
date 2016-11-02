@@ -34,9 +34,7 @@ class Track extends THREE.Object3D
         this.scale.y = scale.y; //0.001;
     }
 
-    update(delta)
+    update()
     {
-
-
     }
 }

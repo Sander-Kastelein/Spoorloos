@@ -29,6 +29,5 @@ class Lights extends THREE.Object3D
 
       update()
       {
-
       }
     }
