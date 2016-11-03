@@ -80,8 +80,8 @@ assetLoader = new (class{
 
 		//9
 		this.OBJLoader.load('models/Ecleposs Subway opj cinema4d.obj', function (group) {
-			assetLoaded();
 			assetLoader.assets.sEntrance = group;
+			assetLoaded();
 		});
 
 		//10

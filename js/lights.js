@@ -24,7 +24,7 @@ class Lights extends THREE.Object3D
         spot2.receiveShadow = true;
         this.add(spot2);
 
-        game.scene.add(this);
+        // game.scene.add(this);
       }
 
       update()
