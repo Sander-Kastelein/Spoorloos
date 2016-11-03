@@ -87,7 +87,6 @@
 		this.station,
 		this.skydome,
 		this.stationroof,
-		this.tree,
 		this.lights,
 		this.building,
 		this.sEntrance,
@@ -95,8 +94,10 @@
 		];
 
 
-		for(let object of objectsToUpdate)
+		for(let i in objectsToUpdate)
 		{
+			let object = objectsToUpdate[i];
+			if(!object) alert("Een fucking opbject in objectsToUpdate bestaat niet in game.js; index = " + i);
 			object.update(delta);
 		}
 	}
