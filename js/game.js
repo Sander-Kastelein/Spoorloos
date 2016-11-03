@@ -19,7 +19,7 @@
 		{
 			antialias: true,
 			stencil: false,
-			precision: "highp",
+			precision: "lowp",
 			preserveDrawingBuffer: true,
 		});
 
@@ -53,8 +53,8 @@
 		this.renderer.setClearColor(0x000000);
 
 		// enable shadows
-		this.renderer.shadowMap.enabled = true;
-		this.renderer.shadowMapSoft = true;
+		this.renderer.shadowMap.enabled = false;
+		this.renderer.shadowMapSoft = false;
 		this.renderer.shadowMapDarkness = 0.5;
 	}
 
