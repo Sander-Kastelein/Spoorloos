@@ -24,14 +24,15 @@ class Train extends THREE.Object3D
 			child.receiveShadow = true;
 			this.add(child);
 		}
-		this.scale.x = 0.01;
-		this.scale.z = 0.01;
-		this.scale.y = 0.01;
+		this.scale.x = 0.03;
+		this.scale.z = 0.03;
+		this.scale.y = 0.06;
 		game.scene.add(this);
 
-		this.position.x = Math.random() * 50;
-		this.position.z = Math.random() * 20;
-		this.position.y = 2;
+		this.position.x = 25.8;
+		this.position.z = 0;
+		this.position.y = 0;
+		this.rotation.y = 180/360*Math.PI;
 	}
 
 	update(delta)
@@ -40,9 +41,9 @@ class Train extends THREE.Object3D
 		if(this.ETA <= 0) this.destroy();
 
 
-		this.position.y = this.ETA / 480;
-		this.position.y = this.position.y < 0 ? 0 : this.position.y;
-		this.position.y += 3;
+		//this.position.y = this.ETA / 480;
+		//this.position.y = this.position.y < 0 ? 0 : this.position.y;
+		//this.position.y += 3;
 	}
 
 	destroy()

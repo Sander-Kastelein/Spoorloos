@@ -65,6 +65,5 @@ class StationFloor extends THREE.Object3D
 
     update()
     {
-
     }
 }

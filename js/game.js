@@ -36,10 +36,10 @@
 		this.station = new Station();
 		this.skydome = new SkyDome();
   		this.stationroof = new Stationroof();
-		//this.lights = new Lights();
-           this.building = new Building();
-			this.sEntrance = new SEntrance();
-			this.cyclerack = new CycleRack();
+		this.lights = new Lights();
+        this.building = new Building();
+		this.sEntrance = new SEntrance();
+
 	}
 
 	initialize()
@@ -87,16 +87,17 @@
 		this.station,
 		this.skydome,
 		this.stationroof,
+		this.lights,
+		this.building,
+		this.sEntrance,
 		this.treeManager,
-		//this.lights,
-            this.building,
-			this.sEntrance,
-			this.cyclerack
 		];
 
 
-		for(let object of objectsToUpdate)
+		for(let i in objectsToUpdate)
 		{
+			let object = objectsToUpdate[i];
+			if(!object) alert("Een fucking opbject in objectsToUpdate bestaat niet in game.js; index = " + i);
 			object.update(delta);
 		}
 	}

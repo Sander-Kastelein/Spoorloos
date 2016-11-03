@@ -37,7 +37,4 @@ class TreeManager
             tree.update(delta);
         }
     }
-
-
-
 }

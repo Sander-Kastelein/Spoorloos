@@ -40,6 +40,7 @@ function getCurrentSunAngleInDegrees()
 	var  n = getCurrentSecondOfTheDay() / 3600 / 24;
 	n = n * 2 * Math.PI;
 	return rad2deg(n);
+
 }
 
 

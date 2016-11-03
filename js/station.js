@@ -41,9 +41,7 @@ class Station extends THREE.Object3D
 
     }
 
-    update(delta)
+    update()
     {
-
-
     }
 }

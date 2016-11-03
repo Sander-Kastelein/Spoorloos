@@ -23,6 +23,5 @@ class SkyDome extends THREE.Mesh
 
     update()
     {
-
     }
 }
