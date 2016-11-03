@@ -1,8 +1,4 @@
 /**
- * Created by Reinder on 3-11-2016.
- */
-
-/**
  * Created by Reinder on 2-11-2016.
  */
 

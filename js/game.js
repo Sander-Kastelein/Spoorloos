@@ -41,6 +41,7 @@
 		this.sEntrance = new SEntrance();
 		this.streetlampManager = new StreetlampManager();
 		this.cycleRackManager = new CycleRackManager();
+		this.houseManager = new HouseManager();
 
 	}
 
@@ -94,7 +95,8 @@
 		this.sEntrance,
 		this.treeManager,
 		this.streetlampManager,
-		this.cycleRackManager
+		this.cycleRackManager,
+		this.houseManager
 		];
 
 

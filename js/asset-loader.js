@@ -16,7 +16,7 @@ assetLoader = new (class{
 
 	load(callback) {
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 12;
+		var amountOfAssetsToLoad = 13;
 
 		var assetLoaded = () =>
 		{
@@ -101,6 +101,14 @@ assetLoader = new (class{
 			assetLoader.assets.cyclerack = group;
 			assetLoaded();
 		});
+
+		//13
+		this.OBJLoader.load('models/houses.obj', function (group) {
+			assetLoader.assets.house = group;
+			assetLoaded();
+		});
+
+
 
 		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
 		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
