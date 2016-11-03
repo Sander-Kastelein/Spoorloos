@@ -96,6 +96,12 @@ assetLoader = new (class{
 			assetLoaded();
 		});
 
+		//12
+		this.OBJLoader.load('models/Bicycle Parking Rack.obj', function (group) {
+			assetLoader.assets.cyclerack = group;
+			assetLoaded();
+		});
+
 		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
 		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
 		this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
@@ -105,11 +111,15 @@ assetLoader = new (class{
 		this.assets.stationTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
 		this.assets.stationTowerTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
 		this.assets.stationbuildingTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg");
-		this.assets.sEntranceTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg")
+		this.assets.sEntranceTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
 		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/blatt.jpg");
 		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/bark.jpg");
 		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg");
 		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg");
+<<<<<<< HEAD
 		this.assets.streetlampTexture = new THREE.ImageUtils.loadTexture("img/grey-concrete-texture.jpg")
+=======
+		this.assets.cyclerackTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
+>>>>>>> 7734799b76503a530b25094716542800c7eb991c
 		}
 });

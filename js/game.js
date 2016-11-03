@@ -39,7 +39,11 @@
 		this.lights = new Lights();
         this.building = new Building();
 		this.sEntrance = new SEntrance();
+<<<<<<< HEAD
 		this.streetlampManager = new StreetlampManager();
+=======
+		this.cycleRackManager = new CycleRackManager();
+>>>>>>> 7734799b76503a530b25094716542800c7eb991c
 
 	}
 
@@ -93,6 +97,7 @@
 		this.sEntrance,
 		this.treeManager,
 		this.streetlampManager,
+		this.cycleRackManager
 		];
 
 
