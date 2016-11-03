@@ -16,7 +16,7 @@ assetLoader = new (class{
 
 	load(callback) {
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 10;
+		var amountOfAssetsToLoad = 12;
 
 		var assetLoaded = () =>
 		{
@@ -90,6 +90,12 @@ assetLoader = new (class{
 			assetLoaded();
 		});
 
+		//11
+		this.OBJLoader.load('models/StreetLamp.obj', function (group) {
+			assetLoader.assets.streetlamp = group;
+			assetLoaded();
+		});
+
 		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
 		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
 		this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
@@ -102,7 +108,8 @@ assetLoader = new (class{
 		this.assets.sEntranceTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg")
 		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/blatt.jpg");
 		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/bark.jpg");
-		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg")
-		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg")
+		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg");
+		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg");
+		this.assets.streetlampTexture = new THREE.ImageUtils.loadTexture("img/grey-concrete-texture.jpg")
 		}
 });
