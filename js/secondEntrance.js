@@ -28,7 +28,7 @@ class SEntrance extends THREE.Object3D
         game.scene.add(this);
 
         this.position.x = 60;
-        this.position.z = 47;
+        this.position.z = 25;
         this.position.y = 0;
         this.rotateY(deg2rad(90));// = deg2rad(0);
 
