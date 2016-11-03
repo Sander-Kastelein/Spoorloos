@@ -16,7 +16,7 @@ assetLoader = new (class{
 
 	load(callback) {
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 11;
+		var amountOfAssetsToLoad = 12;
 
 		var assetLoaded = () =>
 		{
@@ -91,6 +91,12 @@ assetLoader = new (class{
 		});
 
 		//11
+		this.OBJLoader.load('models/StreetLamp.obj', function (group) {
+			assetLoader.assets.streetlamp = group;
+			assetLoaded();
+		});
+
+		//12
 		this.OBJLoader.load('models/Bicycle Parking Rack.obj', function (group) {
 			assetLoader.assets.cyclerack = group;
 			assetLoaded();
@@ -110,6 +116,7 @@ assetLoader = new (class{
 		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/bark.jpg");
 		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg");
 		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg");
+		this.assets.streetlampTexture = new THREE.ImageUtils.loadTexture("img/grey-concrete-texture.jpg")
 		this.assets.cyclerackTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
 		}
 });
