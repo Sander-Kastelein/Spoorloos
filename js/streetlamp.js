@@ -23,6 +23,7 @@
         let light = new THREE.PointLight(0xEBD6AD, 0.2,40,1)
         light.position.y = 10;
         light.position.x = 8;
+        light.intensity = 0.7;
         this.add(light);
 
         this.position.set(position.x, position.y, position.z);
