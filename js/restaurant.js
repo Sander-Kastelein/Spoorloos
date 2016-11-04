@@ -24,11 +24,11 @@ class Restaurant extends THREE.Object3D
 
         this.castShadow = true;
         this.receiveShadow = true;
-        this.scale.x = 0.01;
-        this.scale.z = 0.01;
-        this.scale.y = 0.02;
-        this.rotateY(deg2rad(0));
-        this.position.x = 5;
+        this.scale.x = 0.017;
+        this.scale.z = 0.017;
+        this.scale.y = 0.03;
+        this.rotateY(deg2rad(145));
+        this.position.x = 0;
         this.position.z = 10;
         this.position.y = 2;
         this.matrixAutoUpdate = false;
