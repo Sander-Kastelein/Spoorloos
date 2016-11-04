@@ -131,5 +131,6 @@ assetLoader = new (class{
 		this.assets.cyclerackTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
 		this.assets.stationroofTexture = new THREE.ImageUtils.loadTexture("img/dak.jpg");
 		this.assets.shelterPew = new THREE.ImageUtils.loadTexture("img/shelterpew.jpg");
+        this.assets.houseTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
 		}
 });

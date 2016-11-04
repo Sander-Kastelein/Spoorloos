@@ -9,7 +9,7 @@ class House extends THREE.Object3D
     constructor(position, rotation, scale)
 
     {
-        if(!scale) scale = new THREE.Vector3(0.002, 0.002, 0.002);
+        if(!scale) scale = new THREE.Vector3(0.01, 0.001, 0.001);
         if(!rotation) rotation = new THREE.Vector3(0, deg2rad(90), 0);
         super();
 

@@ -14,16 +14,18 @@ class Track extends THREE.Object3D
 
         let texture = game.assets.trackTexture;
         let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: false});
+
         for(let i = 0; i < game.assets.track.children.length; i++)
         {
             let child = game.assets.track.children[i].clone();
 
             child.material = material;
-            child.castShadow = true;
-            child.receiveShadow = true;
-
+            child.castShadow = false;
+            child.receiveShadow = false;
             this.add(child);
-        }
+        }   
+        this.receiveShadow = true;
+        this.castShadow = true;
 
         this.castShadow = false;
         this.receiveShadow = true;

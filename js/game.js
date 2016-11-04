@@ -42,6 +42,7 @@
 		this.streetlampManager = new StreetlampManager();
 		this.cycleRackManager = new CycleRackManager();
 		this.houseManager = new HouseManager();
+		this.cyclerackroof = new Cyclerackroof();
 
 	}
 
@@ -66,7 +67,6 @@
 
 		this.renderer.render(this.scene, this.camera);
 		let updateTime = Date.now() - start;
-		console.log("Render took: ", updateTime, "ms");
 
 		requestAnimationFrame(this.render.bind(this)); // Add self to render queue
 	}
@@ -94,7 +94,8 @@
 		this.treeManager,
 		this.streetlampManager,
 		this.cycleRackManager,
-		this.houseManager
+		this.houseManager,
+		this.cyclerackroof
 		];
 
 

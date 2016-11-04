@@ -38,7 +38,7 @@ class Train extends THREE.Object3D
 		this.position.x = 25.8;
 		this.position.z = 0;
 		this.position.y = 0;
-		this.rotation.y = 180/360*Math.PI;
+		this.rotation.y = deg2rad(270);
 		this.matrixAutoUpdate = false;
         this.updateMatrix();
 
