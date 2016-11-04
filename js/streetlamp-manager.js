@@ -25,9 +25,7 @@ class StreetlampManager
 
             //platform 5/8
             (new Streetlamp( new THREE.Vector3(22,-4, -70), new THREE.Vector3(0, 360/360*Math.PI, 0))),
-           // (new Streetlamp( new THREE.Vector3(22,-4, -100), new THREE.Vector3(0, 360/360*Math.PI, 0))),
             (new Streetlamp( new THREE.Vector3(18.5,-4, -155), new THREE.Vector3(0, 360/360*Math.PI, 0))),
-
         ];
     }
 
