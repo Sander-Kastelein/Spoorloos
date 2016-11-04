@@ -18,6 +18,8 @@ class Stationroof extends THREE.Object3D
         for(let i = 0; i < game.assets.stationroof.children.length; i++)
         {
             let child = game.assets.stationroof.children[i].clone();
+            let texture = game.assets.stationroofTexture;
+
             child.material = new THREE.MeshPhongMaterial({color: 0xffffff});
             child.castShadow = true;
             child.receiveShadow = true;
