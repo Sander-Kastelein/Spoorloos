@@ -16,7 +16,7 @@ assetLoader = new (class{
 
 	load(callback) {
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 14;
+		var amountOfAssetsToLoad = 15;
 
 		var assetLoaded = () =>
 		{
@@ -111,6 +111,12 @@ assetLoader = new (class{
 		//14
 		this.OBJLoader.load('models/platformroof.obj', function (group) {
 			assetLoader.assets.platformroof = group;
+			assetLoaded();
+		});
+
+		//15
+		this.OBJLoader.load('models/parkinglot.obj', function (group) {
+			assetLoader.assets.parkinglot = group;
 			assetLoaded();
 		});
 
