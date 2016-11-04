@@ -8,7 +8,10 @@ class HouseManager
     constructor()
     {
         this.houses = [
-            (new House( new THREE.Vector3(100, -5, -100)))
+            (new House( new THREE.Vector3(150, -5, -100))),
+            (new House( new THREE.Vector3(150, -5, 0))),
+            (new House( new THREE.Vector3(150, -5, 100))),
+            (new House( new THREE.Vector3(150, -5, 200)))
         ];
     }
 
