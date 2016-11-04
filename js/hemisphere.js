@@ -1,8 +1,8 @@
 /**
  * Created by Ruud on 31-10-2016.
  */
-class Hemisphere extends THREE.HemisphereLight
-{
+ class Hemisphere extends THREE.HemisphereLight
+ {
     constructor()
     {
         super();
@@ -14,6 +14,16 @@ class Hemisphere extends THREE.HemisphereLight
 
         this.matrixAutoUpdate = false;
         this.updateMatrix();
+    }
+
+    on()
+    {
+        // Turn lights on
+    }
+
+    off()
+    {
+        // Turn lights off
     }
 
     update()

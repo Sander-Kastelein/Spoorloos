@@ -28,6 +28,16 @@ class Lights extends THREE.Object3D
         this.updateMatrix();
       }
 
+      on()
+      {
+        // Turn lights on
+      }
+
+      off()
+      {
+        // Turn lights off
+      }
+
       update()
       {
       }
