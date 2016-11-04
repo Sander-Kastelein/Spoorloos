@@ -36,6 +36,24 @@ class Track extends THREE.Object3D
         this.scale.x = scale.x; //0.001;
         this.scale.z = scale.z; //0.0050;
         this.scale.y = scale.y; //0.001;
+
+
+            
+        // let geo = new THREE.Geometry();
+        // geo.vertices.push(new THREE.Vector3(
+        //     0,
+        //     0,
+        //     0
+        // ));
+
+        // this.line = new THREE.Line(
+        //     geo,
+        //     new THREE.LineBasicMaterial({
+        //         color: 0x00FF00
+        //     }
+        // );
+
+
         this.matrixAutoUpdate = false;
         this.updateMatrix();
 
