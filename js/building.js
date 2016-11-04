@@ -14,8 +14,8 @@
             let texture = game.assets.stationbuildingTexture;
 
             child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
-            child.castShadow = false;
-            child.receiveShadow = false;
+            child.castShadow = true;
+            child.receiveShadow = true;
             child.wrapAround = true;
             this.add(child);
 
@@ -29,7 +29,6 @@
             this.position.z = 0;
             this.position.y = 0;
             this.rotateY(deg2rad(-27));
-
 
             this.matrixAutoUpdate = false;
             this.updateMatrix();

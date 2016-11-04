@@ -10,10 +10,11 @@
         let distance = 4000;
 
         super(color, intensity, distance);
-        this.castShadow = false;
+        this.castShadow = true;
         this.target = game.stationFloor;
         this.shadowMapWidth = 1024;
         this.shadowMapHeight = 1024;
+        this.position.y = 100;
         game.scene.add(this);
 
         this.lastUpdate = 0;
@@ -30,7 +31,7 @@
         {
             this.position.x = 700 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
             this.position.z = 700 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
-            this.position.y = 200 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+            //this.position.y = 200 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
             this.updateMatrix();
             this.lastUpdate = 0;
         }

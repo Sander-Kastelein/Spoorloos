@@ -21,6 +21,7 @@ class Train extends THREE.Object3D
 
 			child.material = new THREE.MeshPhongMaterial({map: texture, side: THREE.BackSide, needsUpdate: true});
 			child.receiveShadow = true;
+			child.castShadow = true;
 
 			child.matrixAutoUpdate = false;
         	child.updateMatrix();
