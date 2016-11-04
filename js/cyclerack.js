@@ -32,6 +32,9 @@ class CycleRack extends THREE.Object3D
         this.scale.x = scale.x;
         this.scale.z = scale.z;
         this.scale.y = scale.y;
+
+        this.matrixAutoUpdate = false;
+        this.updateMatrix();
     }
 
     update(delta)

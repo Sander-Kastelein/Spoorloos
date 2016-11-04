@@ -14,8 +14,6 @@ class Lights extends THREE.Object3D
         let spot1 = new THREE.PointLight(0xEBD6AD, 2,30,0.9, 0.9);
         spot1.add(new THREE.Mesh(spot1Geometry, spot1Material));
         spot1.position.set(0,15,20);
-        spot1.castShadow = true;
-        spot1.receiveShadow = true;
         this.add(spot1);
 
         let spot2 = spot1.clone()
@@ -25,6 +23,19 @@ class Lights extends THREE.Object3D
         this.add(spot2);
 
         game.scene.add(this);
+
+        this.matrixAutoUpdate = false;
+        this.updateMatrix();
+      }
+
+      on()
+      {
+        // Turn lights on
+      }
+
+      off()
+      {
+        // Turn lights off
       }
 
       update()

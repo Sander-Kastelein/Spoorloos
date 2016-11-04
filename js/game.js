@@ -65,12 +65,11 @@
 
 		this.update();
 
-		requestAnimationFrame(this.render.bind(this)); // Add self to render queue
 		this.renderer.render(this.scene, this.camera);
 		let updateTime = Date.now() - start;
 		console.log("Render took: ", updateTime, "ms");
 
-
+		requestAnimationFrame(this.render.bind(this)); // Add self to render queue
 	}
 
 	update(next)
@@ -103,7 +102,7 @@
 		for(let i in objectsToUpdate)
 		{
 			let object = objectsToUpdate[i];
-			if(!object) alert("Een fucking opbject in objectsToUpdate bestaat niet in game.js; index = " + i);
+			if(!object);
 			object.update(delta);
 		}
 	}

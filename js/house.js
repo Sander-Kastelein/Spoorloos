@@ -33,6 +33,9 @@ class House extends THREE.Object3D
         this.scale.x = scale.x; //0.001;
         this.scale.z = scale.z; //0.0050;
         this.scale.y = scale.y; //0.001;
+
+        this.matrixAutoUpdate = false;
+        this.updateMatrix();
     }
 
     update()

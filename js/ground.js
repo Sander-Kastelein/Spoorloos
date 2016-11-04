@@ -18,6 +18,9 @@ class Ground extends THREE.Mesh
         ground.receiveShadow = true;
         this.add(ground);
         game.scene.add(this);
+
+        this.matrixAutoUpdate = false;
+        this.updateMatrix();
     }
 
     update()
