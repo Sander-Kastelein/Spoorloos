@@ -123,7 +123,6 @@ assetLoader = new (class{
 		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/blatt.jpg");
 		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/bark.jpg");
 		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg");
-		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg");
 		this.assets.streetlampTexture = new THREE.ImageUtils.loadTexture("img/grey-concrete-texture.jpg")
 		this.assets.cyclerackTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
 		this.assets.stationroofTexture = new THREE.ImageUtils.loadTexture("img/dak.jpg");
