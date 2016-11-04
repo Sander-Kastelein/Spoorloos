@@ -12,12 +12,15 @@ class Camera extends THREE.PerspectiveCamera
 
 
 		this.angle = 0;
+		this.zoom = 0.5;
+
+		document.addEventListener("mousewheel", this.handleScrollEvent.bind(this), false);
+		// this.handleScrollEvent
 	}
 
 
 	update(delta)
 	{
-		this.angle += deg2rad(delta) * 4;
 
 		if(Keyboard.isKeyDown("d"))
 		{
@@ -36,14 +39,23 @@ class Camera extends THREE.PerspectiveCamera
 			this.position.y -= 100*delta;
 		}
 
-		this.position.y = this.position.y < 3 ? 3 : this.position.y;
+		// this.position.y = this.position.y < 3 ? 3 : this.position.y;
+		// this.position.y = this.position.y > 150 ? 150 : this.position.y;
 
-
-		this.position.x = 60 * Math.sin(this.angle);
-		this.position.z = 100 * Math.cos(this.angle);
-		//this.position.y = 10 + 10 * Math.cos(this.angle/2);
+		this.position.x = this.zoom * 100 * Math.sin(this.angle);
+		this.position.z = this.zoom * 100 * Math.cos(this.angle);
 
 		this.lookAt(new THREE.Vector3(0,0,0));
-		//this.lookAt(game.track.children[0]);
 	}
-}	
+
+	handleScrollEvent(e)
+	{
+		let delta = e.deltaY/1000;
+		this.zoom += delta;
+		if(this.zoom > 4) this.zoom = 4;
+		if(this.zoom < 0.01) this.zoom = 0.01;
+	}
+
+
+	
+}
