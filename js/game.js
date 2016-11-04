@@ -43,7 +43,12 @@
 		this.cycleRackManager = new CycleRackManager();
 		this.houseManager = new HouseManager();
 		this.cyclerackroof = new Cyclerackroof();
+<<<<<<< HEAD
 		this.parkinglot = new Parkinglot();
+=======
+		this.platformroofManager = new PlatformRoofManager();
+		this.plazatower = new PlazaTower();
+>>>>>>> 40b9543e0e42c158b4af5b90d6099fa3e9b57292
 
 	}
 
@@ -97,7 +102,9 @@
 		this.cycleRackManager,
 		this.houseManager,
 		this.cyclerackroof,
-		this.parkinglot
+		this.parkinglot,
+		this.platformroofManager,
+		this.plazatower
 		];
 
 

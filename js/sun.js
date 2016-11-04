@@ -5,7 +5,7 @@
 {
     constructor()
     {
-        let color = 0xffffff;
+        let color = 0xEBD6AD;
         let intensity = 1;
         let distance = 4000;
 
