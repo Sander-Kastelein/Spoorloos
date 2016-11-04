@@ -35,6 +35,9 @@ class Streetlamp extends THREE.Object3D
         this.scale.y = scale.y;
 
         game.scene.add(this);
+
+        this.matrixAutoUpdate = false;
+        this.updateMatrix();
     }
 
     update()

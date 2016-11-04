@@ -61,6 +61,9 @@ class StationFloor extends THREE.Object3D
         // add stationFloor to game
         game.scene.add(this);
         this.position.y = 1;
+
+        this.matrixAutoUpdate = false;
+        this.updateMatrix();
     }
 
     update()

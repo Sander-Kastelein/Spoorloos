@@ -11,6 +11,9 @@ class Hemisphere extends THREE.HemisphereLight
         this.intensity = 0.3;
         this.position.set( 0, 500, 0 );
         game.scene.add(this);
+
+        this.matrixAutoUpdate = false;
+        this.updateMatrix();
     }
 
     update()

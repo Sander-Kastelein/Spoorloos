@@ -15,12 +15,24 @@
         this.shadowMapWidth = 1024;
         this.shadowMapHeight = 1024;
         game.scene.add(this);
+
+        this.lastUpdate = 0;
+
+        this.matrixAutoUpdate = false;
+        this.updateMatrix();
     }
 
     update(delta)
     {
-        this.position.x = 700 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
-        this.position.z = 700 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
-        this.position.y = 200 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+        this.lastUpdate += delta;
+
+        if(this.lastUpdate > 60)
+        {
+            this.position.x = 700 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+            this.position.z = 700 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
+            this.position.y = 200 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+            this.updateMatrix();
+            this.lastUpdate = 0;
+        }
     }
 }

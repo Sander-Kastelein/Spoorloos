@@ -33,7 +33,8 @@ class Restaurant extends THREE.Object3D
         this.position.z = 10;
         this.position.y = 2;
 
-
+        this.matrixAutoUpdate = false;
+        this.updateMatrix();
 
     }
 

@@ -25,6 +25,9 @@ class Lights extends THREE.Object3D
         this.add(spot2);
 
         game.scene.add(this);
+
+        this.matrixAutoUpdate = false;
+        this.updateMatrix();
       }
 
       update()
