@@ -1,4 +1,4 @@
-/*
+	/*
 	init.js
 
 	This file boostraps the application
@@ -63,10 +63,6 @@ document.addEventListener('DOMContentLoaded', function()
 		window.onresize();
 	});
 	
-
-
-
-
 }, false);
 
 
