@@ -20,7 +20,6 @@ class Streetlamp extends THREE.Object3D
             let light = new THREE.PointLight(0xEBD6AD, 0.2,40,1)
             light.position.y = 10;
             light.position.x = 8;
-
             child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
             child.add(light);
             this.add(child);
