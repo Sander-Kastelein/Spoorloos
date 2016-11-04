@@ -16,7 +16,10 @@ class Lights extends THREE.Object3D
         spot1.add(new THREE.Mesh(spot1Geometry, spot1Material));
 
         spot1.position.set(0,14,20);
-        spot1.castShadow = true;
+        spot1.castShadow = false; // Performance
+        spot1.distance = 20;
+
+
 
         spot1.shadow.mapSize.width = 128;
         spot1.shadow.mapSize.height = 128;
