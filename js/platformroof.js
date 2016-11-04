@@ -20,7 +20,7 @@ class PlatformRoof extends THREE.Object3D
             child.material = material;
             child.castShadow = false;
             child.receiveShadow = false;
-            
+
             this.add(child);
         }
 
