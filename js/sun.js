@@ -14,13 +14,14 @@
         this.target = game.stationFloor;
         this.shadowMapWidth = 1024;
         this.shadowMapHeight = 1024;
+        //this.position.y = 100;
         game.scene.add(this);
     }
 
     update(delta)
     {
-        this.position.x = 400 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
-        this.position.z = 400 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.x = 700 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.z = 700 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
         this.position.y = 200 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
     }
 }
