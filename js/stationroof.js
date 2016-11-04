@@ -9,17 +9,17 @@
 class Stationroof extends THREE.Object3D
 {
 
-    constructor(stationroofObject)
+    constructor()
     {
         super();
 
-        this.data = stationroofObject;
+        let material = new THREE.MeshPhongMaterial({color: 0xffffff});
 
         for(let i = 0; i < game.assets.stationroof.children.length; i++)
         {
             let child = game.assets.stationroof.children[i].clone();
 
-            child.material = new THREE.MeshPhongMaterial({color: 0xffffff});
+            child.material = material;
             child.castShadow = true;
             child.receiveShadow = true;
 
@@ -29,17 +29,14 @@ class Stationroof extends THREE.Object3D
         this.scale.x = 6;
         this.scale.z = 25.10;
         this.scale.y = 3.15;
-
-        game.scene.add(this);
-
         this.position.x = 0;
         this.position.z = 50;
         this.position.y = 0;
-
         this.rotateY(deg2rad(0));// = deg2rad(0);
-
         this.matrixAutoUpdate = false;
         this.updateMatrix();
+
+        game.scene.add(this);
     }
 
     update()

@@ -22,9 +22,6 @@ class TrackManager
         ];
     }
 
-
-
-
     update(delta)
     {
         for (let i = 0; i < this.tracks.length; i++)

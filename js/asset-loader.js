@@ -130,5 +130,6 @@ assetLoader = new (class{
 		this.assets.streetlampTexture = new THREE.ImageUtils.loadTexture("img/grey-concrete-texture.jpg")
 		this.assets.cyclerackTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
 		this.assets.stationroofTexture = new THREE.ImageUtils.loadTexture("img/dak.jpg");
+		this.assets.shelterPew = new THREE.ImageUtils.loadTexture("img/shelterpew.jpg");
 		}
 });

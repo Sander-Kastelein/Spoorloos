@@ -7,32 +7,30 @@
     constructor()
     {
         super();
+        let texture = game.assets.stationbuildingTexture;
+        let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true})
 
         for(let i = 0; i < game.assets.stationbuilding.children.length; i++)
         {
             let child = game.assets.stationbuilding.children[i].clone();
-            let texture = game.assets.stationbuildingTexture;
-
-            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
-            child.castShadow = true;
-            child.receiveShadow = true;
-            child.wrapAround = true;
+            child.material = material;
+            child.castShadow = false;
+            child.receiveShadow = false;
             this.add(child);
-
-            this.scale.x = 0.002;
-            this.scale.z = 0.002;
-            this.scale.y = 0.004;
-
-            game.scene.add(this);
-
-            this.position.x = -36.2;
-            this.position.z = 0;
-            this.position.y = 0;
-            this.rotateY(deg2rad(-27));
-
-            this.matrixAutoUpdate = false;
-            this.updateMatrix();
         }
+
+        this.castShadow = true;
+        this.receiveShadow = true;
+        this.scale.x = 0.002;
+        this.scale.z = 0.002;
+        this.scale.y = 0.004;
+        this.position.x = -36.2;
+        this.position.z = 0;
+        this.position.y = 0;
+        this.rotateY(deg2rad(-27));
+        this.matrixAutoUpdate = false;
+        this.updateMatrix();
+        game.scene.add(this);
     }
 
 

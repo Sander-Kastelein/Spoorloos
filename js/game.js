@@ -32,7 +32,7 @@
 		this.ground = new Ground();
 		this.trackManager = new TrackManager();
 		this.restaurant = new Restaurant();
-		this.hokje = new Hokje();
+		this.shelterpew = new ShelterPew();
 		this.station = new Station();
 		this.skydome = new SkyDome();
   		this.stationroof = new Stationroof();
@@ -83,7 +83,7 @@
 		this.ground,
 		this.trackManager,
 		this.restaurant,
-		this.hokje,	
+		this.shelterpew,
 		this.hemisphere,
 		this.station,
 		this.skydome,

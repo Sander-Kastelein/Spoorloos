@@ -5,7 +5,6 @@
 
 class TreeManager
 {
-
     constructor()
     {
         this.trees = [
@@ -25,9 +24,6 @@ class TreeManager
             (new Tree( new THREE.Vector3(60, 0, -110)))
         ];
     }
-
-
-
 
     update(delta)
     {

@@ -5,37 +5,35 @@
 class Restaurant extends THREE.Object3D
 {
 
-    constructor(restaurantObject)
+    constructor()
     {
         super();
-
-        this.data = restaurantObject;
+        let texture = game.assets.restaurantTexture;
+        let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
 
         for(let i = 0; i < game.assets.restaurant.children.length; i++)
         {
             let child = game.assets.restaurant.children[i].clone();
-            let texture = game.assets.restaurantTexture;
 
-            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
-            child.castShadow = true;
-            child.receiveShadow = true;
+            child.material = material;
+            child.castShadow = false;
+            child.receiveShadow = false;
+
             this.add(child);
         }
 
+        this.castShadow = true;
+        this.receiveShadow = true;
         this.scale.x = 0.01;
         this.scale.z = 0.01;
         this.scale.y = 0.02;
         this.rotateY(deg2rad(0));
-
-        game.scene.add(this);
-
         this.position.x = 5;
         this.position.z = 10;
         this.position.y = 2;
-
         this.matrixAutoUpdate = false;
         this.updateMatrix();
-
+        game.scene.add(this);
     }
 
     update()

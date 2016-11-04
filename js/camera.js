@@ -7,10 +7,7 @@ class Camera extends THREE.PerspectiveCamera
 		super(fov, aspect, near, far); // this = new THREE.PerspectiveCamera(fov, aspect, near, far);
 		game.scene.add(this);
 
-
 		this.position.y = 40;
-
-
 		this.angle = 0;
 		this.zoom = 0.5;
 
@@ -44,7 +41,6 @@ class Camera extends THREE.PerspectiveCamera
 
 		this.position.x = this.zoom * 100 * Math.sin(this.angle);
 		this.position.z = this.zoom * 100 * Math.cos(this.angle);
-
 		this.lookAt(new THREE.Vector3(0,0,0));
 	}
 
