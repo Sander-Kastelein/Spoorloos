@@ -17,11 +17,12 @@ class Streetlamp extends THREE.Object3D
         {
             let child = game.assets.streetlamp.children[i].clone();
             let texture = game.assets.streetlampTexture;
+            let light = new THREE.PointLight(0xEBD6AD, 0.2,40,1)
+            light.position.y = 10;
+            light.position.x = 8;
 
             child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
-            child.add(new THREE.PointLight(0xff0000, 2,20,0.9));
-            child.castShadow = true;
-            child.receiveShadow = true;
+            child.add(light);
             this.add(child);
         }
 
