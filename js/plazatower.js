@@ -10,7 +10,7 @@ class PlazaTower extends THREE.Object3D
         super();
 
         let texture = game.assets.plazatowerTexture;
-        let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
+        let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true, side: THREE.doubleSided});
 
         for(let i = 0; i < game.assets.plazatower.children.length; i++)
         {
@@ -22,6 +22,8 @@ class PlazaTower extends THREE.Object3D
             this.add(child);
         }
 
+        texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set( 4, 3);
         this.castShadow = true;
         this.receiveShadow = true;
         this.scale.x = 0.001;

@@ -118,6 +118,8 @@ assetLoader = new (class{
 
 		this.OBJLoader.load('models/parkinglot.obj', function (group) {
 			assetLoader.assets.parkinglot = group;
+			assetLoaded();
+		});
 
 		//16
 		this.OBJLoader.load('models/plazatower.obj', function (group) {
@@ -143,5 +145,6 @@ assetLoader = new (class{
 		this.assets.stationroofTexture = new THREE.ImageUtils.loadTexture("img/dak.jpg");
 		this.assets.shelterPew = new THREE.ImageUtils.loadTexture("img/shelterpew.jpg");
         this.assets.houseTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
+		this.assets.plazatowerTexture = new THREE.ImageUtils.loadTexture("img/skyscraper.jpg");
 		}
 });
