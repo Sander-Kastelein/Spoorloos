@@ -10,11 +10,10 @@
         let distance = 4000;
 
         super(color, intensity, distance);
-        this.castShadow = true;
+        this.castShadow = false;
         this.target = game.stationFloor;
         this.shadowMapWidth = 1024;
         this.shadowMapHeight = 1024;
-        //this.position.y = 100;
         game.scene.add(this);
     }
 
