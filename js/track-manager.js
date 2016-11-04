@@ -31,4 +31,19 @@ class TrackManager
         }
     }
 
+
+    findClosestTrack(position)
+    {
+        let best = this.tracks[0];
+
+        for(let track of this.tracks)
+        {
+            if(position.distanceTo(best) > position.distanceTo(track))
+            {
+                best = track;
+            }
+        }
+        return track;
+    }
+
 }
