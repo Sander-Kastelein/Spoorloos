@@ -8,15 +8,15 @@ class PlatformRoof extends THREE.Object3D
     constructor(position, rotation, scale)
 
     {
-        if(!scale) scale = new THREE.Vector3(0.002, 0.002, 0.002);
-        if(!rotation) rotation = new THREE.Vector3(0, deg2rad(90), 0);
+        if(!scale) scale = new THREE.Vector3(1.6, 2, 38);
+        if(!rotation) rotation = new THREE.Vector3(0, deg2rad(0), 0);
         super();
 
         for(let i = 0; i < game.assets.platformroof.children.length; i++)
         {
             let child = game.assets.platformroof.children[i].clone();
 
-            child.material = new THREE.MeshPhongMaterial({color: });
+            child.material = new THREE.MeshPhongMaterial({color: 0xfffffff });
             child.castShadow = true;
             child.receiveShadow = true;
             this.add(child);
