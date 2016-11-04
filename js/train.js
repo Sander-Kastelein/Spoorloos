@@ -10,7 +10,7 @@ class Train extends THREE.Object3D
 		this.data = trainObject;
 
 		let texture = game.assets.trainTextureNS;
-		let material = new THREE.MeshPhongMaterial({map: texture, side: THREE.BackSide, needsUpdate: true});
+		let material = new THREE.MeshPhongMaterial({map: texture, side: THREE.DoubleSide, needsUpdate: true});
 
 		for(let i = 0; i < game.assets.train.children.length; i++)
 		{
