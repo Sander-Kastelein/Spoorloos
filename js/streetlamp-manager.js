@@ -9,11 +9,9 @@ class StreetlampManager
     constructor()
     {
         this.streetlamps = [
-            (new Streetlamp( new THREE.Vector3(0, 0, -20))),
+            (new Streetlamp( new THREE.Vector3(23.5,-4, 50), new THREE.Vector3(0, 360/360*Math.PI, 0))),
         ];
     }
-
-
 
 
     update(delta)

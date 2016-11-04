@@ -18,21 +18,22 @@ class Streetlamp extends THREE.Object3D
             let child = game.assets.streetlamp.children[i].clone();
             let texture = game.assets.streetlampTexture;
 
-            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: false});
+            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
+            child.add(new THREE.PointLight(0xff0000, 2,20,0.9));
             child.castShadow = true;
             child.receiveShadow = true;
             this.add(child);
         }
 
-        game.scene.add(this);
-
         this.position.set(position.x, position.y, position.z);
         this.rotation.x = rotation.x;
         this.rotation.y = rotation.y;
         this.rotation.z = rotation.z;
-        this.scale.x = scale.x; //0.001;
-        this.scale.z = scale.z; //0.0050;
-        this.scale.y = scale.y; //0.001;
+        this.scale.x = scale.x;
+        this.scale.z = scale.z;
+        this.scale.y = scale.y;
+
+        game.scene.add(this);
     }
 
     update()
