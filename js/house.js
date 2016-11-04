@@ -9,7 +9,7 @@ class House extends THREE.Object3D
     constructor(position, rotation, scale)
 
     {
-        if(!scale) scale = new THREE.Vector3(1.00, 1.002, 1.002);
+        if(!scale) scale = new THREE.Vector3(0.01, 0.001, 0.001);
         if(!rotation) rotation = new THREE.Vector3(0, deg2rad(90), 0);
         super();
 
@@ -18,9 +18,10 @@ class House extends THREE.Object3D
             let child = game.assets.house.children[i].clone();
             let texture = game.assets.houseTexture;
 
-            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: false});
+            child.material = new THREE.MeshPhongMaterial({map: texture});
             child.castShadow = true;
             child.receiveShadow = true;
+            child.wrapAround = true;
             this.add(child);
         }
 
