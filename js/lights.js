@@ -44,11 +44,13 @@ class Lights extends THREE.Object3D
       on()
       {
         // Turn lights on
+        game.scene.add(this);
       }
 
       off()
       {
         // Turn lights off
+        game.scene.remove(this);
       }
 
       update()
