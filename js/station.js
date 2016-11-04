@@ -32,7 +32,7 @@ class Station extends THREE.Object3D
         this.scale.y = 0.015;
         this.position.x = -38.5;
         this.position.z = 150;
-        this.position.y = 2;
+        this.position.y = 0;
         this.rotateY(deg2rad(90));
         this.matrixAutoUpdate = false;
         this.updateMatrix();

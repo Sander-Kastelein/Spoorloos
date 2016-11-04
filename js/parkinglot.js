@@ -1,19 +1,19 @@
 /**
- * Created by Ben on 28-10-2016.
+ * Created by Reinder on 04-11-2016.
  */
 
-class Restaurant extends THREE.Object3D
+class Parkinglot extends THREE.Object3D
 {
 
     constructor()
     {
         super();
-        let texture = game.assets.restaurantTexture;
+        let texture = game.assets.parkinglotTexture;
         let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
 
-        for(let i = 0; i < game.assets.restaurant.children.length; i++)
+        for(let i = 0; i < game.assets.parkinglot.children.length; i++)
         {
-            let child = game.assets.restaurant.children[i].clone();
+            let child = game.assets.parkinglot.children[i].clone();
 
             child.material = material;
             child.castShadow = false;
@@ -24,13 +24,12 @@ class Restaurant extends THREE.Object3D
 
         this.castShadow = true;
         this.receiveShadow = true;
-        this.scale.x = 0.017;
-        this.scale.z = 0.017;
-        this.scale.y = 0.03;
-        this.rotateY(deg2rad(145));
-        this.position.x = 0;
-        this.position.z = 10;
-        this.position.y = 2;
+        this.scale.x = this.scale.z = 0.04;
+        this.scale.y = 0.02;
+        this.rotateY(deg2rad(90));
+        this.position.x = 100;
+        this.position.z = -30;
+        this.position.y = 0;
         this.matrixAutoUpdate = false;
         this.updateMatrix();
         game.scene.add(this);

@@ -16,7 +16,7 @@ assetLoader = new (class{
 
 	load(callback) {
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 14;
+		var amountOfAssetsToLoad = 16;
 
 		var assetLoaded = () =>
 		{
@@ -113,13 +113,27 @@ assetLoader = new (class{
 			assetLoader.assets.platformroof = group;
 			assetLoaded();
 		});
+		//15
+
+		this.OBJLoader.load('models/parkinglot.obj', function (group) {
+			assetLoader.assets.parkinglot = group;
+		});
+		
+		//16
+		this.OBJLoader.load('models/plazatower.obj', function (group) {
+			assetLoader.assets.plazatower = group;
+			assetLoaded();
+		});
+
+
 
 		let baksteen = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
-		
+
+
 
 		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
 		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
-        this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
+		this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
 		this.assets.groundTexture = new THREE.ImageUtils.loadTexture("img/ground.jpg");
 		this.assets.trackTexture = new THREE.ImageUtils.loadTexture("img/track.jpg");
 		this.assets.restaurantTexture = new THREE.ImageUtils.loadTexture("img/smullers.jpg");
@@ -134,6 +148,10 @@ assetLoader = new (class{
 		this.assets.cyclerackTexture = baksteen;
 		this.assets.stationroofTexture = new THREE.ImageUtils.loadTexture("img/dak.jpg");
 		this.assets.shelterPew = new THREE.ImageUtils.loadTexture("img/shelterpew.jpg");
-        this.assets.houseTexture = baksteen;
-		}
+		this.assets.houseTexture = baksteen;
+	}
+
+
+
+
 });
