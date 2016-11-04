@@ -12,16 +12,20 @@ class Track extends THREE.Object3D
         if(!rotation) rotation = new THREE.Vector3(0, 0, 0);
         super();
 
+        let texture = game.assets.trackTexture;
+        let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: false});
+
         for(let i = 0; i < game.assets.track.children.length; i++)
         {
             let child = game.assets.track.children[i].clone();
-            let texture = game.assets.trackTexture;
 
-            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: false});
-            child.castShadow = true;
-            child.receiveShadow = true;
+            child.material = material;
+            child.castShadow = false;
+            child.receiveShadow = false;
             this.add(child);
-        }
+        }   
+        this.receiveShadow = true;
+        this.castShadow = true;
 
         game.scene.add(this);
 
