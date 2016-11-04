@@ -35,7 +35,7 @@
         light.distance = 20;
         light.angle = deg2rad(90);
         light.castShadow = false;
-
+        this.light = light;
         this.castShadow = true;
         this.receiveShadow = true;
         this.add(light);
@@ -50,6 +50,18 @@
         this.matrixAutoUpdate = false;
         this.updateMatrix();
         game.scene.add(this);
+    }
+
+    on()
+    {
+        // Turn lights on
+        game.scene.add(this.light);
+    }
+
+    off()
+    {
+        // Turn lights off
+        game.scene.remove(this.light);
     }
 
     update()

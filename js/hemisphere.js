@@ -14,18 +14,18 @@
 
         this.matrixAutoUpdate = false;
         this.updateMatrix();
-
-        game.scene.add(this);
     }
 
     on()
     {
         // Turn lights on
+        game.scene.add(this);
     }
 
     off()
     {
         // Turn lights off
+        game.scene.remove(this);
     }
 
     update()
