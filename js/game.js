@@ -68,7 +68,6 @@
 
 		this.renderer.render(this.scene, this.camera);
 		let updateTime = Date.now() - start;
-		console.log("Render took: ", updateTime, "ms");
 
 		requestAnimationFrame(this.render.bind(this)); // Add self to render queue
 	}
