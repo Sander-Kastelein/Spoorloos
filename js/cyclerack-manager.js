@@ -21,7 +21,21 @@ class CycleRackManager
             (new CycleRack( new THREE.Vector3(55, 0, -50))),
             (new CycleRack( new THREE.Vector3(55, 0, -45))),
             (new CycleRack( new THREE.Vector3(55, 0, -40))),
-            (new CycleRack( new THREE.Vector3(55, 0, -35)))
+            (new CycleRack( new THREE.Vector3(55, 0, -35))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.1, -100))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.1, -95))),
+            (new CycleRack( new THREE.Vector3(56.5, 0, -90))),
+            (new CycleRack( new THREE.Vector3(56.5, 0, -85))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.1, -80))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.1, -75))),
+            (new CycleRack( new THREE.Vector3(56.5, 0, -70))),
+            (new CycleRack( new THREE.Vector3(56.5, 0, -65))),
+            (new CycleRack( new THREE.Vector3(56.5, 0, -60))),
+            (new CycleRack( new THREE.Vector3(56.5, 0, -55))),
+            (new CycleRack( new THREE.Vector3(56.5, 0, -50))),
+            (new CycleRack( new THREE.Vector3(56.5, 0, -45))),
+            (new CycleRack( new THREE.Vector3(56.5, 0, -40))),
+            (new CycleRack( new THREE.Vector3(56.5, 0, -35)))
         ];
     }
 

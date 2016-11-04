@@ -8,7 +8,7 @@ class CycleRack extends THREE.Object3D
     constructor(position, rotation, scale)
 
     {
-        if(!scale) scale = new THREE.Vector3(0.005, 0.005, 0.003);
+        if(!scale) scale = new THREE.Vector3(0.001, 0.001, 0.0007);
         if(!rotation) rotation = new THREE.Vector3(0, 0, 0);
         super();
 
