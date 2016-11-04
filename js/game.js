@@ -32,7 +32,7 @@
 		this.ground = new Ground();
 		this.trackManager = new TrackManager();
 		this.restaurant = new Restaurant();
-		this.hokje = new Hokje();
+		this.shelterpew = new ShelterPew();
 		this.station = new Station();
 		this.skydome = new SkyDome();
   		this.stationroof = new Stationroof();
@@ -42,6 +42,7 @@
 		this.streetlampManager = new StreetlampManager();
 		this.cycleRackManager = new CycleRackManager();
 		this.houseManager = new HouseManager();
+		this.cyclerackroof = new Cyclerackroof();
 
 	}
 
@@ -55,7 +56,6 @@
 		// enable shadows
 		this.renderer.shadowMap.enabled = true;
 		this.renderer.shadowMapSoft = true;
-		this.renderer.shadowMapDarkness = 0.5;
 	}
 
 	render()
@@ -83,7 +83,7 @@
 		this.ground,
 		this.trackManager,
 		this.restaurant,
-		this.hokje,	
+		this.shelterpew,
 		this.hemisphere,
 		this.station,
 		this.skydome,
@@ -94,7 +94,8 @@
 		this.treeManager,
 		this.streetlampManager,
 		this.cycleRackManager,
-		this.houseManager
+		this.houseManager,
+		this.cyclerackroof
 		];
 
 

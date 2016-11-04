@@ -3,38 +3,40 @@
  */
 
 
-class Hokje extends THREE.Object3D
+class ShelterPew extends THREE.Object3D
 {
 
     constructor()
     {
         super();
 
+        let texture = game.assets.shelterPew;
+        let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
+
         for(let i = 0; i < game.assets.hokje.children.length; i++)
         {
             let child = game.assets.hokje.children[i].clone();
-            let texture = game.assets.hokjeTexture;
 
-            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
-            child.castShadow = true;
-            child.receiveShadow = true;
+            child.material = material;
+            child.castShadow = false;
+            child.receiveShadow = false;
+
             this.add(child);
         }
 
+        this.castShadow = true;
+        this.receiveShadow = true;
         this.scale.x = 0.01;
         this.scale.z = 0.01;
         this.scale.y = 0.01;
-
-        game.scene.add(this);
-
         this.position.x = 15;
         this.position.z = -55;
         this.position.y = 2;
-        this.rotateY(deg2rad(90));// = deg2rad(0);
-
+        this.rotateY(deg2rad(90));
         this.matrixAutoUpdate = false;
         this.updateMatrix();
 
+        game.scene.add(this);
     }
 
     update()

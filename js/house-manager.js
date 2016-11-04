@@ -5,16 +5,12 @@
 
 class HouseManager
 {
-
     constructor()
     {
         this.houses = [
             (new House( new THREE.Vector3(100, -5, -100)))
         ];
     }
-
-
-
 
     update(delta)
     {
