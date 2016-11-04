@@ -9,7 +9,7 @@ class Streetlamp extends THREE.Object3D
     constructor(position, rotation, scale)
 
     {
-        if(!scale) scale = new THREE.Vector3(1.00, 1.00, 1.00);
+        if(!scale) scale = new THREE.Vector3(0.4, 0.8, 0.8);
         if(!rotation) rotation = new THREE.Vector3(0, 0, 0);
         super();
 
