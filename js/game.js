@@ -103,7 +103,7 @@
 		for(let i in objectsToUpdate)
 		{
 			let object = objectsToUpdate[i];
-			if(!object) alert("Een fucking opbject in objectsToUpdate bestaat niet in game.js; index = " + i);
+			if(!object);
 			object.update(delta);
 		}
 	}
