@@ -11,7 +11,6 @@
 
 const Keyboard = new (class
 {
-
 	constructor()
 	{
 		var keyboard = this;
@@ -35,5 +34,4 @@ const Keyboard = new (class
 	{
 		return this.keysDown.indexOf(key) > -1;
 	}
-
 });

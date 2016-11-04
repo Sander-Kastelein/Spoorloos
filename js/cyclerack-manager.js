@@ -4,7 +4,6 @@
 
 class CycleRackManager
 {
-
     constructor()
     {
         this.cycleracks = [
@@ -39,9 +38,6 @@ class CycleRackManager
         ];
     }
 
-
-
-
     update(delta)
     {
         for (let i = 0; i < this.cycleracks.length; i++)
@@ -50,7 +46,4 @@ class CycleRackManager
             cyclerack.update(delta);
         }
     }
-
-
-
 }

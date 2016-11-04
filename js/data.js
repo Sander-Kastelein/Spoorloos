@@ -18,6 +18,7 @@ var Data;
 
 		this.subscribers = [];
 		this.trains = [];
+
 		setInterval(this.interval.bind(this), API_POLL_INTERVAL);
 
 	}
@@ -39,5 +40,4 @@ var Data;
 		console.log("Subscribe");
 		this.subscribers.push(callback);
 	}
-
 })

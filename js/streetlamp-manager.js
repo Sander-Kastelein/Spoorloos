@@ -24,7 +24,6 @@ class StreetlampManager
         ];
     }
 
-
     update(delta)
     {
         for (let i = 0; i < this.streetlamps.length; i++)

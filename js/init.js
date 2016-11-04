@@ -6,7 +6,6 @@
 
 var game;
 
-
 /*
 	Misc functions
 */
@@ -20,7 +19,6 @@ function rad2deg(radians)
 {
 	return (radians / Math.PI) * 180;
 }
-
 
 function getCurrentSecondOfTheDay()
 {
@@ -40,14 +38,11 @@ function getCurrentSunAngleInDegrees()
 	var  n = getCurrentSecondOfTheDay() / 3600 / 24;
 	n = n * 2 * Math.PI;
 	return rad2deg(n);
-
 }
 
 
 document.addEventListener('DOMContentLoaded', function()
 {
-	
-
 	assetLoader.load(function(assets)
 	{
 		game = new Game(assets);

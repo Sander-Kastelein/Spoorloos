@@ -9,36 +9,40 @@ class Train extends THREE.Object3D
 		
 		this.data = trainObject;
 
+		let texture = game.assets.trainTextureNS;
+		let material = new THREE.MeshPhongMaterial({map: texture, side: THREE.DoubleSide, needsUpdate: true});
+
 		for(let i = 0; i < game.assets.train.children.length; i++)
 		{
 			let child = game.assets.train.children[i].clone();
-			let texture = game.assets.trainTextureNS;
 
 			if(this.data.vervoerder === "Arriva")
 			{
 				texture = game.assets.trainTextureArriva;
 			}
 
-			child.material = new THREE.MeshPhongMaterial({map: texture, side: THREE.DoubleSide, needsUpdate: true});
-			child.receiveShadow = true;
-
+			child.material = material;
+			child.receiveShadow = false;
+			child.castShadow = false;
 			child.matrixAutoUpdate = false;
         	child.updateMatrix();
 
 			this.add(child);
 		}
+
+		this.castShadow = true;
+		this.receiveShadow = true;
 		this.scale.x = 0.03;
 		this.scale.z = 0.03;
 		this.scale.y = 0.06;
-		game.scene.add(this);
-
 		this.position.x = 25.8;
 		this.position.z = 0;
 		this.position.y = 0;
 		this.rotation.y = deg2rad(270);
-
 		this.matrixAutoUpdate = false;
         this.updateMatrix();
+
+		game.scene.add(this);
 
 	}
 
