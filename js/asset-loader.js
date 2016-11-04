@@ -117,8 +117,9 @@ assetLoader = new (class{
 
 		this.OBJLoader.load('models/parkinglot.obj', function (group) {
 			assetLoader.assets.parkinglot = group;
+			assetLoaded();
 		});
-		
+
 		//16
 		this.OBJLoader.load('models/plazatower.obj', function (group) {
 			assetLoader.assets.plazatower = group;
