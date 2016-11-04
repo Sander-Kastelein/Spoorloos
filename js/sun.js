@@ -5,7 +5,7 @@
 {
     constructor()
     {
-        let color = 0xEBD6AD;
+        let color = 0xffffff;
         let intensity = 1;
         let distance = 4000;
 
@@ -14,7 +14,6 @@
         this.target = game.stationFloor;
         this.shadowMapWidth = 1024;
         this.shadowMapHeight = 1024;
-        this.position.y = 40;
         this.lastUpdate = 0;
         this.matrixAutoUpdate = false;
         this.updateMatrix();

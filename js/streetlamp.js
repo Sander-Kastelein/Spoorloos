@@ -27,14 +27,10 @@
 
         let anchor = new THREE.Object3D();
         anchor.position.y = 0;
-        let light = new THREE.SpotLight(0xEBD6AD, 0.2,40,1)
+        let light = new THREE.SpotLight(0xEBD6AD, 2, 30, deg2rad(90))
         light.position.y = 10;
         light.position.x = anchor.position.x = 8;
-        light.intensity = 0.7;
         light.target = anchor;
-        light.distance = 20;
-        light.angle = deg2rad(90);
-        light.castShadow = false;
         this.light = light;
         this.castShadow = true;
         this.receiveShadow = true;
