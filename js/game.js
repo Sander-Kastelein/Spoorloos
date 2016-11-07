@@ -47,8 +47,8 @@
 		this.parkinglot = new Parkinglot();
 		this.platformroofManager = new PlatformRoofManager();
 		this.plazatower = new PlazaTower();
-			this.fence = new Fence();
-
+		this.fence = new Fence();
+		this.backentrance = new BackEntrance();
 	}
 
 	initialize()
@@ -72,8 +72,6 @@
 
 		DbgDraw.render(game.scene);
 		this.renderer.render(this.scene, this.camera);
-
-
 
 		let updateTime = Date.now() - start;
 
@@ -109,6 +107,7 @@
 		this.platformroofManager,
 		this.plazatower,
 		this.fence,
+		this.backentrance
 		];
 
 

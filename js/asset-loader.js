@@ -16,7 +16,7 @@ assetLoader = new (class{
 
 	load(callback) {
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 17;
+		var amountOfAssetsToLoad = 18;
 
 		var assetLoaded = () =>
 		{
@@ -132,6 +132,16 @@ assetLoader = new (class{
 			assetLoaded();
 		});
 
+		//18
+		this.OBJLoader.load('models/Ecleposs Subway opj cinema4d.obj', function (group) {
+			assetLoader.assets.backentrance = group;
+			assetLoaded();
+		});
+
+
+
+		let baksteen = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
+
 		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
 		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
 		this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
@@ -149,5 +159,6 @@ assetLoader = new (class{
 		this.assets.plazatowerTexture = new THREE.ImageUtils.loadTexture("img/skyscraper.jpg");
 		this.assets.fenceTexture =  new THREE.ImageUtils.loadTexture("img/fence.png");
 		this.assets.stationTexture = new THREE.ImageUtils.loadTexture("img/stationTexture.jpg");
+		this.assets.backentranceTexture = baksteen;
 		};
 });

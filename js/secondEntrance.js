@@ -23,9 +23,9 @@ class SEntrance extends THREE.Object3D
 
         this.castShadow = true;
         this.receiveShadow = true;
-        this.scale.x = 0.01;
-        this.scale.z = 0.01;
-        this.scale.y = 0.01
+        this.scale.x = 0.008;
+        this.scale.z = 0.008;
+        this.scale.y = 0.008;
         this.position.x = 60;
         this.position.z = 25;
         this.position.y = 0;
