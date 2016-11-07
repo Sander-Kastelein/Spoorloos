@@ -11,8 +11,7 @@ class Sun extends THREE.Object3D
         let intensity = 0.3;
         let distance = 4000;
         //let angle = deg2rad(90);
-        let anchor = new THREE.Object3D();
-        anchor.position.set(0,0,0);
+
 
         var sun = new THREE.SpotLight(color, intensity, distance);
         let helper = new THREE.SpotLightHelper(sun);
@@ -21,7 +20,6 @@ class Sun extends THREE.Object3D
         this.position.set(40,2000,0); // debug purposes
 
         this.castShadow = true;
-        this.target = anchor;
         this.shadowMapWidth = 1024;
         this.shadowMapHeight = 1024;
 
@@ -54,6 +52,7 @@ class Sun extends THREE.Object3D
         this.position.x = 1000 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
         this.position.z = 1000 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
         this.position.y = 600 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+
         this.updateMatrix();
         this.lastUpdate = 0;
     }
