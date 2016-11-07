@@ -38,7 +38,7 @@ class TrackManager
 
         for(let track of this.tracks)
         {
-            if(position.distanceTo(best) > position.distanceTo(track))
+            if(position.distanceTo(best.line) > position.distanceTo(track.line))
             {
                 best = track;
             }

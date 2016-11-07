@@ -17,10 +17,11 @@
 		this.clock = new THREE.Clock();
 		this.renderer = new THREE.WebGLRenderer(
 		{
-			antialias: true,
+			antialias: false,
 			stencil: false,
 			precision: "lowp",
-			preserveDrawingBuffer: true,
+			preserveDrawingBuffer: false,
+			depth: true
 		});
 
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 10000);
@@ -68,7 +69,11 @@
 
 		this.update();
 
+		DbgDraw.render(game.scene);
 		this.renderer.render(this.scene, this.camera);
+
+
+
 		let updateTime = Date.now() - start;
 
 		requestAnimationFrame(this.render.bind(this)); // Add self to render queue

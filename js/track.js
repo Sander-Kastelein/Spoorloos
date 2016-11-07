@@ -39,20 +39,22 @@ class Track extends THREE.Object3D
 
 
             
-        // let geo = new THREE.Geometry();
-        // geo.vertices.push(new THREE.Vector3(
-        //     0,
-        //     0,
-        //     0
-        // ));
+        
+        let lineMaterial = new THREE.LineBasicMaterial({color: 0x00FF00});
 
-        // this.line = new THREE.Line(
-        //     geo,
-        //     new THREE.LineBasicMaterial({
-        //         color: 0x00FF00
-        //     }
-        // );
+        let geo = new THREE.Geometry();
+        geo.vertices.push(
+            new THREE.Vector3(0, 1, 0),
+            new THREE.Vector3(0, 100, 0)
+        );
 
+
+        this.line = new THREE.Line(
+            geo,
+            lineMaterial
+        );   
+
+        this.add(this.line);  
 
         this.matrixAutoUpdate = false;
         this.updateMatrix();
@@ -62,5 +64,7 @@ class Track extends THREE.Object3D
 
     update()
     {
+        
+        
     }
 }
