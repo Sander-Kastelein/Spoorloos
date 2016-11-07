@@ -7,13 +7,15 @@ class Sun extends THREE.SpotLight
     constructor()
     {
         let color = 0xffffff;
-        let intensity = 0.3;
-        let distance = 1250;
+        let intensity = 1.3;
+        let distance = 3000;
+        //let angle = deg2rad(70);
 
         super(color, intensity, distance);
         
         
         this.helper = new THREE.SpotLightHelper(this);
+
         game.scene.add(this, this.helper);
 
         this.castShadow = true;
@@ -24,7 +26,6 @@ class Sun extends THREE.SpotLight
 
         this.matrixAutoUpdate = false;
         this.updateMatrix();
-
         game.scene.add(this);
 
         this.updatePosition();
@@ -45,9 +46,9 @@ class Sun extends THREE.SpotLight
 
     updatePosition()
     {
-        this.position.x = 100 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
-        this.position.z = 100 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
-        this.position.y = 600 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.x = 400 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.z = 400 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.y = 100  // (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
 
         this.updateMatrix();
         this.lastUpdate = 0;

@@ -62,6 +62,14 @@
 
     update()
     {
+        if (game.sun.position.y > 0)
+        {
+            this.off();
+        }
+        else
+        {
+            this.on();
+        }
     }
 }
 

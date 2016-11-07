@@ -16,7 +16,7 @@ assetLoader = new (class{
 
 	load(callback) {
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 16;
+		var amountOfAssetsToLoad = 18;
 
 		var assetLoaded = () =>
 		{
@@ -126,11 +126,21 @@ assetLoader = new (class{
 			assetLoaded();
 		});
 
+		//17
+		this.OBJLoader.load('models/fence.obj', function (group) {
+			assetLoader.assets.fence = group;
+			assetLoaded();
+		});
+
+		//18
+		this.OBJLoader.load('models/Ecleposs Subway opj cinema4d.obj', function (group) {
+			assetLoader.assets.backentrance = group;
+			assetLoaded();
+		});
+
 
 
 		let baksteen = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
-
-
 
 		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
 		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
@@ -138,19 +148,17 @@ assetLoader = new (class{
 		this.assets.groundTexture = new THREE.ImageUtils.loadTexture("img/ground.jpg");
 		this.assets.trackTexture = new THREE.ImageUtils.loadTexture("img/track.jpg");
 		this.assets.restaurantTexture = new THREE.ImageUtils.loadTexture("img/smullers.jpg");
-		this.assets.stationTexture = baksteen;
-		this.assets.stationTowerTexture = baksteen;
 		this.assets.stationbuildingTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg");
-		this.assets.sEntranceTexture = baksteen;
 		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/blatt.jpg");
 		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/bark.jpg");
 		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg");
 		this.assets.streetlampTexture = new THREE.ImageUtils.loadTexture("img/grey-concrete-texture.jpg")
-		this.assets.cyclerackTexture = baksteen;
 		this.assets.stationroofTexture = new THREE.ImageUtils.loadTexture("img/dak.jpg");
 		this.assets.shelterPew = new THREE.ImageUtils.loadTexture("img/shelterpew.jpg");
-        this.assets.houseTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
+        this.assets.houseTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg");
 		this.assets.plazatowerTexture = new THREE.ImageUtils.loadTexture("img/skyscraper.jpg");
-		this.assets.houseTexture = baksteen;
+		this.assets.fenceTexture =  new THREE.ImageUtils.loadTexture("img/fence.png");
+		this.assets.stationTexture = new THREE.ImageUtils.loadTexture("img/stationTexture.jpg");
+		this.assets.backentranceTexture = baksteen;
 		};
 });

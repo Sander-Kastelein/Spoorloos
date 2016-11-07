@@ -1,22 +1,23 @@
 /**
- * Created by Ruud on 4-11-2016.
+ * Created by Ruud on 7-11-2016.
  */
 
-class PlatformRoof extends THREE.Object3D
+class Fence extends THREE.Object3D
 {
 
     constructor(position, rotation, scale)
 
     {
-        if(!scale) scale = new THREE.Vector3(1.6, 2.2, 38);
-        if(!rotation) rotation = new THREE.Vector3(0, deg2rad(0), 0);
+        if(!position) position = new THREE.Vector3(35   ,0, 0);
+        if(!scale) scale = new THREE.Vector3(0.03, 0.03, 0.03);
+        if(!rotation) rotation = new THREE.Vector3(0, deg2rad(90), 0);
         super();
+        let texture = game.assets.fenceTexture
+        let material = new THREE.MeshPhongMaterial({map: texture, side: THREE.doubleSided});
 
-        let material = new THREE.MeshPhongMaterial({color: 0xa7a7a7});
-
-        for(let i = 0; i < game.assets.platformroof.children.length; i++)
+        for(let i = 0; i < game.assets.fence.children.length; i++)
         {
-            let child = game.assets.platformroof.children[i].clone();
+            let child = game.assets.fence.children[i].clone();
             child.material = material;
             child.castShadow = false;
             child.receiveShadow = false;
@@ -43,5 +44,3 @@ class PlatformRoof extends THREE.Object3D
     {
     }
 }
-
-
