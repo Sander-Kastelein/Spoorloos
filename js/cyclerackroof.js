@@ -22,13 +22,13 @@ class Cyclerackroof extends THREE.Object3D
         }
 
         this.scale.x = 1.5;
-        this.scale.z = 22;
+        this.scale.z = 17.5;
         this.scale.y = 1;
 
         game.scene.add(this);
 
         this.position.x = 55;
-        this.position.z = -20;
+        this.position.z = 15;
         this.position.y = 0;
 
         this.rotateY(deg2rad(0));// = deg2rad(0);
