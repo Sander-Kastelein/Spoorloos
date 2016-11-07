@@ -55,8 +55,8 @@ assetLoader = new (class{
 		});
 
 		//5
-		this.OBJLoader.load('models/blockbuilding.obj', function (group) {
-			assetLoader.assets.blockbuilding = group;
+		this.OBJLoader.load('models/blockbuild.obj', function (group) {
+			assetLoader.assets.blockbuild = group;
 			assetLoaded();
 		});
 
@@ -159,7 +159,7 @@ assetLoader = new (class{
         this.assets.houseTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg");
 		this.assets.plazatowerTexture = new THREE.ImageUtils.loadTexture("img/skyscraper.jpg");
 		this.assets.fenceTexture =  new THREE.ImageUtils.loadTexture("img/fence.png");
-		this.assets.blockbuildingTexture = new THREE.ImageUtils.loadTexture("img/blockbuilding.jpg")
+		this.assets.blockbuildingTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg")
 		this.assets.pavementTexture =  new THREE.ImageUtils.loadTexture("img/pavements.jpg");
 		this.assets.backentranceTexture = baksteen;
 

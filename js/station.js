@@ -18,9 +18,9 @@ class Station extends THREE.Object3D
         texture.repeat.set( 100,100);
         let material = new THREE.MeshPhongMaterial({map: texture});
 
-        for(let i = 0; i < game.assets.blockbuilding.children.length; i++)
+        for(let i = 0; i < game.assets.blockbuild.children.length; i++)
         {
-            let child = game.assets.blockbuilding.children[i].clone();
+            let child = game.assets.blockbuild.children[i].clone();
 
             child.material = material;
             child.castShadow = true;

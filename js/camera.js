@@ -8,7 +8,7 @@ class Camera extends THREE.PerspectiveCamera
 		game.scene.add(this);
 
 
-		this.position.y = 2;
+		this.position.y = 3;
 
 
 		this.angle = 0;
