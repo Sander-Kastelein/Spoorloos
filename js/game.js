@@ -19,7 +19,7 @@
 		{
 			antialias: false,
 			stencil: false,
-			precision: "lowp",
+			precision: "highp",
 			preserveDrawingBuffer: false,
 			depth: true
 		});

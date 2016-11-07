@@ -41,6 +41,32 @@ function getCurrentSunAngleInDegrees()
 }
 
 
+function randNum(min,max,bool)
+{
+  
+  var num = Math.floor(Math.random()*max) + min; // this will get a number between 1 and 99;
+  if(bool || typeof bool == "undefined"){
+    num *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
+  }
+  return num;
+}
+
+// Check of point is in radius
+function pointInCircle(point,target, radius) {
+  var distsq = (point.x - target.x) * (point.x - target.x) + (point.y - target.y) * (point.y - target.y) + (point.z - target.z) * (point.z - target.z);
+  // returns bool , distance to target origin 
+  return [distsq <= radius * radius * radius,distsq];
+}
+
+function calculatePointInCircle(r) {
+			x = Math.random() * 2 * r - r;
+			zlim = Math.sqrt(r * r - x * x);
+			z = Math.random() * 2 * zlim - zlim;
+    return [x,z];
+}
+
+
+
 document.addEventListener('DOMContentLoaded', function()
 {
 	assetLoader.load(function(assets)
