@@ -9,13 +9,13 @@ class TreeManager
     {
         this.trees = [
 
-            (new Tree( new THREE.Vector3(60, 0.1,30))),
-            (new Tree( new THREE.Vector3(60, 0, 20))),
-            (new Tree( new THREE.Vector3(60, 0.1,10))),
-            (new Tree( new THREE.Vector3(60, 0, 0))),
-            (new Tree( new THREE.Vector3(60, 0, -10))),
-            (new Tree( new THREE.Vector3(60, 0, -20))),
-            (new Tree( new THREE.Vector3(60, 0, -30))),
+            (new Tree( new THREE.Vector3(60, 0.1, 90))),
+            (new Tree( new THREE.Vector3(52, 0, 20))),
+            (new Tree( new THREE.Vector3(64, 0.1, -65))),
+            (new Tree( new THREE.Vector3(55, 0, 0))),
+            (new Tree( new THREE.Vector3(46, 0, -97.6))),
+            (new Tree( new THREE.Vector3(13.5, 0, 20))),
+            (new Tree( new THREE.Vector3(10.5, 0, -58))),
 
         ];
 
