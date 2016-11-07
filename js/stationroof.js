@@ -28,7 +28,7 @@ class Stationroof extends THREE.Object3D
 
         this.scale.x = 6;
         this.scale.z = 25.10;
-        this.scale.y = 3.15;
+        this.scale.y = 2.50;
         this.position.x = 0;
         this.position.z = 50;
         this.reflectivity = 0.01;

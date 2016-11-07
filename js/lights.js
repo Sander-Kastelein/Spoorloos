@@ -15,7 +15,7 @@ class Lights extends THREE.Object3D
         spot1.angle = deg2rad(200);
         
         spot1.add(new THREE.Mesh(spot1Geometry, spot1Material));
-        spot1.position.set(0,15,20);
+        spot1.position.set(0,11.9,20);
         spot1.castShadow = true; // Performance
 
         let anchor1 = new THREE.Object3D();
@@ -28,7 +28,7 @@ class Lights extends THREE.Object3D
 
         let spot2 = spot1.clone()
         let anchor2 = new THREE.Object3D();
-        spot2.position.set(0,15,-20);
+        spot2.position.set(0,11.9,-20);
         spot2.castShadow = true;
         spot2.target = anchor2;
         this.add(spot2);

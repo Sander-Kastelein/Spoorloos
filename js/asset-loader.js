@@ -16,7 +16,7 @@ assetLoader = new (class{
 
 	load(callback) {
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 16;
+		var amountOfAssetsToLoad = 17;
 
 		var assetLoaded = () =>
 		{
@@ -126,6 +126,12 @@ assetLoader = new (class{
 			assetLoaded();
 		});
 
+		//17
+		this.OBJLoader.load('models/fence.obj', function (group) {
+			assetLoader.assets.fence = group;
+			assetLoaded();
+		});
+
 		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
 		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
 		this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
@@ -141,6 +147,7 @@ assetLoader = new (class{
 		this.assets.shelterPew = new THREE.ImageUtils.loadTexture("img/shelterpew.jpg");
         this.assets.houseTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg");
 		this.assets.plazatowerTexture = new THREE.ImageUtils.loadTexture("img/skyscraper.jpg");
-		this.assets.stationTexture =  new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
+		this.assets.fenceTexture =  new THREE.ImageUtils.loadTexture("img/fence.png");
+		this.assets.stationTexture = new THREE.ImageUtils.loadTexture("img/stationTexture.jpg");
 		};
 });

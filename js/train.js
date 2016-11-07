@@ -42,7 +42,9 @@ class Train extends THREE.Object3D
 		this.castShadow = true;
 		this.receiveShadow = true;
 		
-		this.scale.x = this.scale.z = this.scale.y = 0.03;
+		this.scale.x = 0.03
+		this.scale.z = 0.03
+		this.scale.y = 0.05;
 
 
 		this.position.x = 26.2;
