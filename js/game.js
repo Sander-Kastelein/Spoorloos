@@ -25,6 +25,7 @@
 		});
 
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 10000);
+
 		this.stationFloor = new StationFloor()
 		this.sun = new Sun();
 		this.hemisphere = new Hemisphere();
