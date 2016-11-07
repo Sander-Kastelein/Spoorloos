@@ -48,7 +48,7 @@ class Sun extends THREE.SpotLight
     {
         this.position.x = 400 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
         this.position.z = 400 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
-        this.position.y = 400 // (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.y = 100  // (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
 
         this.updateMatrix();
         this.lastUpdate = 0;

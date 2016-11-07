@@ -39,14 +39,6 @@ class Lights extends THREE.Object3D
         this.matrixAutoUpdate = false;
         this.updateMatrix();
 
-        if (game.sun.position.y > 0)
-        {
-          this.off();
-        }
-        else
-        {
-          this.off();
-        }
         game.scene.add(this);
       }
 
@@ -63,6 +55,14 @@ class Lights extends THREE.Object3D
       }
 
       update()
-      {
+        {
+        if (game.sun.position.y > 0)
+        {
+          this.off();
+        }
+        else
+        {
+          this.on();
+        }
       }
     }
