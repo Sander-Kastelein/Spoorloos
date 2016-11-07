@@ -10,8 +10,7 @@ class ShelterPew extends THREE.Object3D
     {
         super();
 
-        let texture = game.assets.shelterPew;
-        let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
+        let material = new THREE.MeshPhongMaterial({color : 0x424242});
 
         for(let i = 0; i < game.assets.hokje.children.length; i++)
         {

@@ -13,7 +13,7 @@ class Stationroof extends THREE.Object3D
     {
         super();
 
-        let material = new THREE.MeshPhongMaterial({color: 0xbbbbff});
+        let material = new THREE.MeshPhongMaterial({color: 0x663300});
 
         for(let i = 0; i < game.assets.stationroof.children.length; i++)
         {

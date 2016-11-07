@@ -38,6 +38,15 @@ class Lights extends THREE.Object3D
 
         this.matrixAutoUpdate = false;
         this.updateMatrix();
+
+        //if (Sun.getValue(position.y) <= 0)
+        //{
+        //  on();
+       // }
+        //else
+       // {
+       //   off();
+       // }
         game.scene.add(this);
       }
 
