@@ -24,11 +24,11 @@ class Parkinglot extends THREE.Object3D
         this.castShadow = true;
         this.receiveShadow = true;
         this.scale.x = this.scale.z = 0.04;
-        this.scale.y = 0.02;
+        this.scale.y = 0.03;
         this.rotateY(deg2rad(90));
         this.position.x = 100;
         this.position.z = -30;
-        this.position.y = 0;
+        this.position.y = 0.5;
         this.matrixAutoUpdate = false;
         this.updateMatrix();
         game.scene.add(this);

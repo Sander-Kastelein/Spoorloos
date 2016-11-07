@@ -8,7 +8,7 @@ class Fence extends THREE.Object3D
     constructor(position, rotation, scale)
 
     {
-        if(!position) position = new THREE.Vector3(35   ,0, 0);
+        if(!position) position = new THREE.Vector3(40 ,0, 0);
         if(!scale) scale = new THREE.Vector3(0.03, 0.03, 0.03);
         if(!rotation) rotation = new THREE.Vector3(0, deg2rad(90), 0);
         super();

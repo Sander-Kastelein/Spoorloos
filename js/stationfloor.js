@@ -69,12 +69,16 @@ class StationFloor extends THREE.Object3D
         this.add(triangle);
 
         // parkinglotground
-        let pgGeometry = new THREE.BoxGeometry(48,1,87.5);
-        let pgMaterial = new THREE.MeshPhongMaterial({map: stationFloorTexture, side: THREE.doubleSided});
+        let texture = game.assets.pavementTexture;
+        texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set( 10, 10);
+
+        let pgGeometry = new THREE.BoxGeometry(80,1,90);
+        let pgMaterial = new THREE.MeshPhongMaterial({map: texture, side: THREE.doubleSided});
         let parkingground = new THREE.Mesh(pgGeometry, pgMaterial);
         parkingground.castShadow = true;
         parkingground.receiveShadow = true;
-        parkingground.position.set(-50,5,0)
+        parkingground.position.set(85,-1,-4)
         this.add(parkingground);
 
         // add stationFloor to game

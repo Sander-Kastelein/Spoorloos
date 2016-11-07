@@ -28,7 +28,7 @@ class SEntrance extends THREE.Object3D
         this.scale.y = 0.008;
         this.position.x = 60;
         this.position.z = 25;
-        this.position.y = 0;
+        this.position.y = 0.4;
         this.rotateY(deg2rad(90));// = deg2rad(0);
         this.matrixAutoUpdate = false;
         this.updateMatrix();

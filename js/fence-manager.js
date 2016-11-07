@@ -1,8 +1,9 @@
 /**
- * Created by Ben on 3-11-2016.
+ * Created by Ruud on 7-11-2016.
  */
 
-class CycleRackManager
+
+class FenceManager
 {
     constructor()
     {

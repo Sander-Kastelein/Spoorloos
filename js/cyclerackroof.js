@@ -14,7 +14,7 @@ class Cyclerackroof extends THREE.Object3D
             let child = game.assets.stationroof.children[i].clone();
             let texture = game.assets.stationroofTexture;
 
-            child.material = new THREE.MeshPhongMaterial({color: 0xffffff});
+            child.material = new THREE.MeshPhongMaterial({color: 0xa7a7a7});
             child.castShadow = true;
             child.receiveShadow = true;
 
@@ -29,7 +29,7 @@ class Cyclerackroof extends THREE.Object3D
 
         this.position.x = 55;
         this.position.z = 15;
-        this.position.y = 0;
+        this.position.y = 0.5;
 
         this.rotateY(deg2rad(0));// = deg2rad(0);
 

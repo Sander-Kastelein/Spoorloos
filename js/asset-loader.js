@@ -159,6 +159,7 @@ assetLoader = new (class{
 		this.assets.plazatowerTexture = new THREE.ImageUtils.loadTexture("img/skyscraper.jpg");
 		this.assets.fenceTexture =  new THREE.ImageUtils.loadTexture("img/fence.png");
 		this.assets.blockbuildingTexture = new THREE.ImageUtils.loadTexture("img/blockbuilding.jpg")
+		this.assets.pavementTexture =  new THREE.ImageUtils.loadTexture("img/pavements.jpg");
 		this.assets.backentranceTexture = baksteen;
 		};
 });
