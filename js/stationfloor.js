@@ -58,6 +58,16 @@ class StationFloor extends THREE.Object3D
         pavement58.receiveShadow = true;
         this.add(pavement58);
 
+        // triangle
+        let triangleGeometry = new THREE.BoxGeometry(25,2,15);
+        let triangleMaterial = new THREE.MeshPhongMaterial({map:pavementTexture, side: THREE.doubleSided});
+        let triangle = new THREE.Mesh(triangleGeometry, triangleMaterial);
+        triangle.position.set(-36.4,-1.08   ,58.1);
+        triangle.rotation.z = deg2rad(5);
+        triangle.castShadow = true    ;
+        triangle.receiveShadow = true;
+        this.add(triangle);
+
         // add stationFloor to game
         game.scene.add(this);
         this.position.y = 1;
