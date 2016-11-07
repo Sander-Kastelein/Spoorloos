@@ -9,8 +9,7 @@ class SEntrance extends THREE.Object3D
     {
         super();
 
-        let texture = game.assets.sEntranceTexture;
-        let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
+        let material = new THREE.MeshPhongMaterial({color: 0xa7a7a7});
 
         for(let i = 0; i < game.assets.sEntrance.children.length; i++)
         {

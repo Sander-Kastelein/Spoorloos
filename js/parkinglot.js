@@ -8,7 +8,7 @@ class Parkinglot extends THREE.Object3D
     constructor()
     {
         super();
-        let material = new THREE.MeshPhongMaterial({color: 0x424242});
+        let material = new THREE.MeshPhongMaterial({color: 0xa7a7a7});
 
         for(let i = 0; i < game.assets.parkinglot.children.length; i++)
         {
