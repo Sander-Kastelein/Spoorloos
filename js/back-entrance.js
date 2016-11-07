@@ -1,20 +1,20 @@
 /**
- * Created by Ben on 2-11-2016.
+ * Created by Ben on 7-11-2016.
  */
 
-class SEntrance extends THREE.Object3D
+class BackEntrance extends THREE.Object3D
 {
 
     constructor()
     {
         super();
 
-        let texture = game.assets.sEntranceTexture;
+        let texture = game.assets.backentranceTexture;
         let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
 
-        for(let i = 0; i < game.assets.sEntrance.children.length; i++)
+        for(let i = 0; i < game.assets.backentrance.children.length; i++)
         {
-            let child = game.assets.sEntrance.children[i].clone();
+            let child = game.assets.backentrance.children[i].clone();
 
             child.material = material;
             child.castShadow = false;
@@ -24,13 +24,13 @@ class SEntrance extends THREE.Object3D
 
         this.castShadow = true;
         this.receiveShadow = true;
-        this.scale.x = 0.008;
-        this.scale.z = 0.008;
-        this.scale.y = 0.008;
-        this.position.x = 60;
+        this.scale.x = 0.006;
+        this.scale.z = 0.006;
+        this.scale.y = 0.006;
+        this.position.x = 7;
         this.position.z = 25;
-        this.position.y = 0;
-        this.rotateY(deg2rad(90));// = deg2rad(0);
+        this.position.y = 2;
+        this.rotateY(deg2rad(270));// = deg2rad(0);
         this.matrixAutoUpdate = false;
         this.updateMatrix();
         game.scene.add(this);
@@ -40,3 +40,4 @@ class SEntrance extends THREE.Object3D
     {
     }
 }
+

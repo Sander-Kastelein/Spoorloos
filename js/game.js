@@ -47,6 +47,7 @@
 		this.parkinglot = new Parkinglot();
 		this.platformroofManager = new PlatformRoofManager();
 		this.plazatower = new PlazaTower();
+		this.backentrance = new BackEntrance();
 
 	}
 
@@ -106,7 +107,8 @@
 		this.cyclerackroof,
 		this.parkinglot,
 		this.platformroofManager,
-		this.plazatower
+		this.plazatower,
+		this.backentrance
 		];
 
 
