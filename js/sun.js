@@ -47,9 +47,6 @@ class Sun extends THREE.Object3D
             this.updatePosition();
         }
 
-            //this.position.x = 1000 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
-            //this.position.z = 1000 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
-            //this.position.y = 600 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
     }
 
     updatePosition()
