@@ -140,6 +140,7 @@ assetLoader = new (class{
 
 
 
+
 		let baksteen = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
 
 		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
@@ -161,5 +162,9 @@ assetLoader = new (class{
 		this.assets.blockbuildingTexture = new THREE.ImageUtils.loadTexture("img/blockbuilding.jpg")
 		this.assets.pavementTexture =  new THREE.ImageUtils.loadTexture("img/pavements.jpg");
 		this.assets.backentranceTexture = baksteen;
+
+
+		this.assets.plantsTexture = new THREE.ImageUtils.loadTexture("https://saschas.github.io/experiments/flower/assets/tex/map.png");
+
 		};
 });
