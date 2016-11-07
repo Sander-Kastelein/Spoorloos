@@ -21,8 +21,10 @@ class TreeManager
             (new Tree( new THREE.Vector3(60, 0, -92))),
             (new Tree( new THREE.Vector3(60, 0, -100))),
             (new Tree( new THREE.Vector3(60, 0, -108))),
-            (new Tree( new THREE.Vector3(60, 0, -110)))
+            (new Tree( new THREE.Vector3(60, 0, -110))),
         ];
+
+        
     }
 
     update(delta)
