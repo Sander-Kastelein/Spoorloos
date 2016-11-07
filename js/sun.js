@@ -8,7 +8,7 @@ class Sun extends THREE.SpotLight
     {
         let color = 0xffffff;
         let intensity = 0.3;
-        let distance = 4000;
+        let distance = 1250;
 
         super(color, intensity, distance);
         
