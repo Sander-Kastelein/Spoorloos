@@ -9,9 +9,9 @@ class Sun extends THREE.SpotLight
         let color = 0xffffff;
         let intensity = 1.3;
         let distance = 3000;
-        //let angle = deg2rad(70);
+        let angle = deg2rad(70);
 
-        super(color, intensity, distance);
+        super(color, intensity, distance, angle);
         
         
         this.helper = new THREE.SpotLightHelper(this);
@@ -46,9 +46,9 @@ class Sun extends THREE.SpotLight
 
     updatePosition()
     {
-        this.position.x = 400 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
-        this.position.z = 400 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
-        this.position.y = 100  // (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.x = 500 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.z = 500 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
+        this.position.y = 500;
 
         this.updateMatrix();
         this.lastUpdate = 0;

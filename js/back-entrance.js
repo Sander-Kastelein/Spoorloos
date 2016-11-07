@@ -9,8 +9,8 @@ class BackEntrance extends THREE.Object3D
     {
         super();
 
-        let texture = game.assets.backentranceTexture;
-        let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
+        let texture = game.assets.stationbuildingTexture;
+        let material = new THREE.MeshPhongMaterial({map: texture, side: THREE.doubleSided});
 
         for(let i = 0; i < game.assets.backentrance.children.length; i++)
         {

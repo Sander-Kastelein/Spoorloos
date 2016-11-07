@@ -17,7 +17,7 @@
 		this.clock = new THREE.Clock();
 		this.renderer = new THREE.WebGLRenderer(
 		{
-			antialias: false,
+			antialias: true,
 			stencil: false,
 			precision: "lowp",
 			preserveDrawingBuffer: false,
