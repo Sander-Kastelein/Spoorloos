@@ -64,11 +64,11 @@
     {
         if (game.sun.position.y > 0)
         {
-            this.light.off();
+            this.off();
         }
         else
         {
-            this.light.on();
+            this.on();
         }
     }
 }
