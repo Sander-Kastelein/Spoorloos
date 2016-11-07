@@ -32,6 +32,9 @@ class Sun extends THREE.Object3D
         this.matrixAutoUpdate = false;
         this.updateMatrix();
         game.scene.add(this);
+
+        this.updatePosition();
+        
     }
 
     update(delta)
