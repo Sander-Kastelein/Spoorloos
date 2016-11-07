@@ -45,7 +45,7 @@ THREE.FirstPersonControls = function ( object, domElement ) {
 	this.moveLeft = false;
 	this.moveRight = false;
 
-	this.mouseDragOn = false;
+	this.mouseDragOn = true;
 
 	this.viewHalfX = 0;
 	this.viewHalfY = 0;

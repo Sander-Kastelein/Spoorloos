@@ -66,11 +66,10 @@
 		<script src="js/plazatower.js"></script>
 		<script src="js/fence.js"></script>
 		<script src="js/back-entrance.js"></script>
+		<script src="js/user.js"></script>
 
 
-		<!-- Load init.js as last one so every object is pre-loaded -->
-		<script src="js/init.js"></script>
-
+		
 		<script src="js/debug.js"></script>
 
 		<!-- Shaders-->
@@ -94,5 +93,10 @@
 				gl_FragColor = vec4( mix( bottomColor, topColor, max( pow( max( h , 0.0), exponent ), 0.0 ) ), 1.0 );
 			}
 		</script>
+
+		<!-- Load init.js as last one so every object is pre-loaded -->
+		<script src="js/init.js"></script>
+
+
 	</body>
 </html>
