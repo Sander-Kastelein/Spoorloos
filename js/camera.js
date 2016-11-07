@@ -18,7 +18,7 @@ class Camera extends THREE.PerspectiveCamera
 		// this.handleScrollEvent
 
 
-		this.controls = new THREE.FirstPersonControls(this);
+		this.controls = new User(this);
 		this.controls.enabled = true;
 	}
 
