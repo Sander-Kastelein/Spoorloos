@@ -14,6 +14,8 @@ class Station extends THREE.Object3D
         super();
 
         let texture = game.assets.stationTexture;
+        texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set( 10, 10);
         let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
 
         for(let i = 0; i < game.assets.station.children.length; i++)

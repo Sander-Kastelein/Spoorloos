@@ -17,7 +17,7 @@ class Sun extends THREE.Object3D
         let helper = new THREE.SpotLightHelper(sun);
         this.add(sun, helper);
 
-        this.position.set(40,400,-1000); // debug purposes
+        this.position.set(40,2000,0); // debug purposes
 
         this.castShadow = true;
         this.target = anchor;

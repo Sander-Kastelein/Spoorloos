@@ -8,6 +8,8 @@
     {
         super();
         let texture = game.assets.stationbuildingTexture;
+        texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set( 10, 10);
         let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true})
 
         for(let i = 0; i < game.assets.stationbuilding.children.length; i++)
