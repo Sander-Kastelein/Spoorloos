@@ -13,20 +13,12 @@ class Sun extends THREE.SpotLight
         super(color, intensity, distance);
         
         
-        //let angle = deg2rad(90);
-
-
-        
         this.helper = new THREE.SpotLightHelper(this);
         game.scene.add(this, this.helper);
-
-        this.position.set(40,2000,0); // debug purposes
 
         this.castShadow = true;
         this.shadowMapWidth = 1024;
         this.shadowMapHeight = 1024;
-
-        this.position.y = 40;
 
         this.lastUpdate = 0;
 
