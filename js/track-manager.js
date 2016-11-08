@@ -56,7 +56,7 @@ class TrackManager
 
     getFirstTrackByPlatform(platform)
     {
-        return getTracksByPlatform(platform)[0] || null;
+        return this.getTracksByPlatform(platform)[0] || null;
     }
 
 }

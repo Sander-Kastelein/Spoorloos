@@ -122,7 +122,7 @@
 
 	resume()
 	{
-		console.log("Game resume");
+		// console.log("Game resume");
 		jQuery("#overlay").hide();
 		this.clock.start();
 		this.isRunning = true;
@@ -131,7 +131,7 @@
 
 	pause()
 	{
-		console.log("Game pause");
+		// console.log("Game pause");
 		jQuery("#overlay").fadeIn();
 		this.clock.stop();
 		this.isRunning = false;

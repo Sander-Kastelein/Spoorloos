@@ -71,4 +71,19 @@ class TrainManager
 		}
 	} 
 
+
+	get visibleTrains()
+	{
+		let trains = [];
+		for(let train of this.trains)
+		{
+			if(train.visible)
+			{
+				trains.push(train);
+			}
+		}
+		return trains;
+
+	}
+
 }

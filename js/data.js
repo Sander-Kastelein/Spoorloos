@@ -43,9 +43,9 @@ var Data;
 				return this.failedApiCall();
 			}
 		}
-
-
+		
 		this.trains = trains;
+
 		this.successfulApiCall();
 	}
 

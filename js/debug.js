@@ -14,6 +14,32 @@ window.addEventListener( 'mousedown', (event) => {
 }, false );
 
 
+window.addEventListener('keyup', (e) => {
+	if(e.key == "p") alert(game.trainManager.visibleTrains.length);
+
+	if(e.key == "t")
+	{
+		// TP
+		let train = game.trainManager.visibleTrains[0];
+		if(train)
+		{
+			game.camera.position.set(train.position.x, train.position.y, train.position.z);
+		}
+	}
+
+
+	if(e.key == "/")
+	{
+		let train = game.trainManager.visibleTrains[0];
+		if(train)
+		{
+			alert("Ik vertrek over: " + Math.round(train.timeFromDeparture) + " seconden!");
+		}
+	}
+
+});
+
+
 document.addEventListener('DOMContentLoaded', function()
 {
 var stats = new Stats();

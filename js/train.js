@@ -28,14 +28,15 @@ class Train extends THREE.Object3D
 			child.receiveShadow = false;
 			child.castShadow = false;
 			child.matrixAutoUpdate = false;
-        	child.updateMatrix();
+			child.updateMatrix();
 
-			this.add(child);
 
 			if(child.name.indexOf("Wheel") !== -1)
 			{
 				this.wheelSets.push(child);
 			}
+
+			this.add(child);
 
 		}
 
@@ -44,7 +45,7 @@ class Train extends THREE.Object3D
 		
 		this.scale.x = 0.03
 		this.scale.z = 0.03
-		this.scale.y = 0.05;
+		this.scale.y = 0.06;
 
 
 		this.position.x = 26.2;
@@ -52,7 +53,7 @@ class Train extends THREE.Object3D
 
 		this.rotation.y = deg2rad(270);
 		this.matrixAutoUpdate = false;
-        this.updateMatrix();
+		this.updateMatrix();
 
 		game.scene.add(this);
 
@@ -60,18 +61,35 @@ class Train extends THREE.Object3D
 		this.speed = 5;
 
 
+
 		this.hide();
 
+		this.track = game.trackManager.getFirstTrackByPlatform(this.data.aankomstSpoor);
+		this.track.moveTrain(this, 0);
 	}
 
 	update(delta)
 	{
 
 		// Check if train should become visible
-		if(!this.visible && this.ETA <= (5 * 60) && this.ETA > 0)
+		if(!this.visible && this.timeFromDeparture <= (60 * 10)) // Show trains 10 minutes before departure
 		{
 			this.show();
 		}
+
+		if(this.timeFromDeparture < -30)
+		{
+			this.hide();
+		}
+
+		
+		if(this.visible)
+		{
+			let position = this.track.moveTrain(this, this.timeFromDeparture);
+			this.position.set(position.x, position.y, position.z);
+			this.updateMatrix();
+		}
+		
 
 
 
@@ -87,7 +105,6 @@ class Train extends THREE.Object3D
 
 	hide()
 	{
-		this.scale.y = 0;
 		this.visible = false;
 	}
 
@@ -101,6 +118,18 @@ class Train extends THREE.Object3D
 	get ETA()
 	{
 		return this.data.actueleAankomstTijd - (new Date() / 1000);
+	}
+
+
+	// De tijd die het nog duurt VOORDAT de trein vertrekt
+	// NEGATIEF = VERTROKKEN!
+	get timeFromDeparture()
+	{
+		// if(this.data.vertrekTijd)
+		// {
+		// 	return this.data.vertrekTijd - Date.now();
+		// }
+		return ( this.data.geplandeVertrekTijd - (Date.now() / 1000) );
 	}
 
 }
