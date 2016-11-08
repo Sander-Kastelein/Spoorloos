@@ -13,11 +13,42 @@
 				overflow-y: hidden;
 				cursor: none !important;
 			}
+			#overlay
+			{
+				background-color: rgba(0,0,0,0.8);
+				color: white;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				position: absolute;
+				text-align: center;
+			}
+
+			.twitter-timeline
+			{
+				padding-top: 30px;
+			}
+
 		</style>
 	</head>
 	<body>
 		
+		<div id="overlay">
+			<h3>Wij konden de NS API helaas niet bereiken</h3>
+			<p>
+				Wij proberen de NS API nu te poken, maar die is een beetje verlegen :(
+			</p>
+
+			<a class="twitter-timeline" data-lang="nl" data-width="600" data-height="500" data-dnt="true" data-theme="dark" href="https://twitter.com/NS_online">Tweets by NS_online</a>
+
+			<small style="bottom: 20px; position:absolute; width:100%;left:0;">De NS wilde nog wel laten weten dat het de schuld is van Prorail</small>
+
+		</div>	
+
+
 		<!-- Libs -->
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 		<script src="libs/three.min.js"></script>
 		<script src="libs/three-obj-loader.js"></script>
 		<script src="libs/jquery.js"></script>

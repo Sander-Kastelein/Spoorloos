@@ -7,11 +7,11 @@
     {
         super();
 
-        this.color.setHSL( 0.75, 1, 0.98 );
-        this.groundColor.setHSL( 0.43, 0.46, 0.64 );
-        this.intensity = 0.5;
+        this.color.setHSL( 0, 1, 0.95);
+        this.groundColor.setHSL( 0.43, 0.46, 1 );
+        this.intensity = 0.6;
 
-        this.position.set( 0, 300, 0 );
+        this.position.set( 0, 500, 0 );
 
         this.matrixAutoUpdate = false;
         this.updateMatrix();

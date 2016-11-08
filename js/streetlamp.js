@@ -13,8 +13,8 @@
         if(!rotation) rotation = new THREE.Vector3(0, 0, 0);
         super();
 
-        let texture = game.assets.streetlampTexture;
-        let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
+        //let texture = game.assets.streetlampTexture;
+        let material = new THREE.MeshPhongMaterial({color: 0x001100});
 
         for(let i = 0; i < game.assets.streetlamp.children.length; i++)
         {

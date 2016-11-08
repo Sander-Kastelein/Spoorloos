@@ -6,11 +6,15 @@
 class Track extends THREE.Object3D
 {
 
-    constructor(position, rotation, scale)
+    constructor(platform, position, rotation, scale)
     {
         if(!scale) scale = new THREE.Vector3(0.001, 0.001, 0.005);
         if(!rotation) rotation = new THREE.Vector3(0, 0, 0);
         super();
+
+        this.platform = platform;
+
+
 
         let texture = game.assets.trackTexture;
         let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: false});

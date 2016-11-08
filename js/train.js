@@ -58,25 +58,21 @@ class Train extends THREE.Object3D
 
 
 		this.speed = 5;
+
+
+		this.hide();
+
 	}
 
 	update(delta)
 	{
 
-		if(this.ETA <= 0) this.destroy();
-
-
-		for(let wheelSets of this.wheelSets)
+		// Check if train should become visible
+		if(!this.visible && this.ETA <= (5 * 60) && this.ETA > 0)
 		{
-			
+			this.show();
 		}
 
-		this.position.z += delta * this.speed;
-		this.updateMatrix();
-
-
-
-		
 
 
 		//this.position.y = this.ETA / 480;
@@ -87,6 +83,17 @@ class Train extends THREE.Object3D
 	destroy()
 	{
 		game.scene.remove(this);
+	}
+
+	hide()
+	{
+		this.scale.y = 0;
+		this.visible = false;
+	}
+
+	show()
+	{
+		this.visible = true;
 	}
 
 
