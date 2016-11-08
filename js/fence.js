@@ -12,8 +12,8 @@ class Fence extends THREE.Object3D
         if(!scale) scale = new THREE.Vector3(0.03, 0.03, 0.03);
         if(!rotation) rotation = new THREE.Vector3(0, deg2rad(90), 0);
         super();
-        let texture = game.assets.fenceTexture
-        let material = new THREE.MeshPhongMaterial({map: texture, side: THREE.doubleSided});
+        //let texture = game.assets.fenceTexture
+        let material = new THREE.MeshPhongMaterial({color: 0x660000});
 
         for(let i = 0; i < game.assets.fence.children.length; i++)
         {
