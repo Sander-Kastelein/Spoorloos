@@ -15,8 +15,12 @@ assetLoader = new (class{
 	}
 
 	load(callback) {
+
+		// TODO write small abstraction to handle asset loading from array instead of
+		// with iterator and callback
+
 		var assetsLoaded = 0;
-		var amountOfAssetsToLoad = 13;
+		var amountOfAssetsToLoad = 18;
 
 		var assetLoaded = () =>
 		{
@@ -55,8 +59,8 @@ assetLoader = new (class{
 		});
 
 		//5
-		this.OBJLoader.load('models/Station.obj', function (group) {
-			assetLoader.assets.station = group;
+		this.OBJLoader.load('models/blockbuild.obj', function (group) {
+			assetLoader.assets.blockbuild = group;
 			assetLoaded();
 		});
 
@@ -108,24 +112,71 @@ assetLoader = new (class{
 			assetLoaded();
 		});
 
+		//14
+		this.OBJLoader.load('models/platformroof.obj', function (group) {
+			assetLoader.assets.platformroof = group;
+			assetLoaded();
+		});
+		//15
+
+		this.OBJLoader.load('models/parkinglot.obj', function (group) {
+			assetLoader.assets.parkinglot = group;
+			assetLoaded();
+		});
+
+		//16
+		this.OBJLoader.load('models/plazatower.obj', function (group) {
+			assetLoader.assets.plazatower = group;
+			assetLoaded();
+		});
+
+		//17
+		this.OBJLoader.load('models/fence.obj', function (group) {
+			assetLoader.assets.fence = group;
+			assetLoaded();
+		});
+
+		//18
+		this.OBJLoader.load('models/Ecleposs Subway opj cinema4d.obj', function (group) {
+			assetLoader.assets.backentrance = group;
+			assetLoaded();
+		});
 
 
-		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
-		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
-		this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
-		this.assets.groundTexture = new THREE.ImageUtils.loadTexture("img/ground.jpg");
-		this.assets.trackTexture = new THREE.ImageUtils.loadTexture("img/track.jpg");
-		this.assets.restaurantTexture = new THREE.ImageUtils.loadTexture("img/smullers.jpg");
-		this.assets.stationTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
-		this.assets.stationTowerTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
-		this.assets.stationbuildingTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg");
-		this.assets.sEntranceTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
-		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/blatt.jpg");
-		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/bark.jpg");
-		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg");
-		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg");
-		this.assets.streetlampTexture = new THREE.ImageUtils.loadTexture("img/grey-concrete-texture.jpg")
-		this.assets.cyclerackTexture = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
-		this.assets.stationroofTexture = new THREE.ImageUtils.loadTexture("img/dak.jpg");
+
+		let textures = [
+		{ name: "stationFloorTexture", src : "img/tegel.jpg"},
+		{ name: "trainTextureNS", src : "img/ns.png"},
+		{ name: "trainTextureArriva", src : "img/arriva.png"},
+		{ name: "groundTexture", src : "img/ground.jpg"},
+		{ name: "trackTexture", src : "img/track.jpg"},
+		{ name: "restaurantTexture", src : "img/smullers.jpg"},
+		{ name: "stationbuildingTexture", src : "img/brickwall.jpg"},
+		{ name: "treeTexture", src : "img/blatt.jpg"},
+		{ name: "treeTexture", src : "img/bark.jpg"},
+		{ name: "spot1Texture", src : "img/lamp.jpg"},
+		{ name: "streetlampTexture", src : "img/grey-concrete-texture.jpg"},
+		{ name: "stationroofTexture", src : "img/dak.jpg"},
+		{ name: "shelterPew", src : "img/shelterpew.jpg"},
+		{ name: "houseTexture", src : "img/brickwall.jpg"},
+		{ name: "plazatowerTexture", src : "img/skyscraper.jpg"},
+		{ name: "fenceTexture", src :  "img/fence.png"},
+		{ name: "blockbuildingTexture", src : "img/brickwall.jpg"},
+		{ name: "pavementTexture", src :  "img/pavements.jpg"},
+		{ name: "brickTexture", src : "img/baksteen.jpg"}
+		];
+
+		let textureLoader = new THREE.TextureLoader();
+		amountOfAssetsToLoad += textures.length; // add textures
+
+
+		for(let texture of textures)
+		{
+			textureLoader.load(texture.src, ((texture,result) => {
+				this.assets[texture.name] = result;
+				assetLoaded();
+			}).bind(this, texture));
 		}
+
+	};
 });

@@ -7,7 +7,7 @@ class StationFloor extends THREE.Object3D
     {
         super();
         // Stationfloor texture
-        let stationFloorTexture = game.assets.stationFloorTexture;
+        let stationFloorTexture = game.assets.brickTexture;
         stationFloorTexture.wrapS = stationFloorTexture.wrapT = THREE.RepeatWrapping;
         stationFloorTexture.repeat.set( 4, 4);
 
@@ -58,9 +58,35 @@ class StationFloor extends THREE.Object3D
         pavement58.receiveShadow = true;
         this.add(pavement58);
 
+        // triangle
+        let triangleGeometry = new THREE.BoxGeometry(25,2,15);
+        let triangleMaterial = new THREE.MeshPhongMaterial({map:pavementTexture, side: THREE.doubleSided});
+        let triangle = new THREE.Mesh(triangleGeometry, triangleMaterial);
+        triangle.position.set(-36.4,-1.08   ,58.1);
+        triangle.rotation.z = deg2rad(5);
+        triangle.castShadow = true    ;
+        triangle.receiveShadow = true;
+        this.add(triangle);
+
+        // parkinglotground
+        let texture = game.assets.pavementTexture;
+        texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set( 10, 10);
+
+        let pgGeometry = new THREE.BoxGeometry(80,1,90);
+        let pgMaterial = new THREE.MeshPhongMaterial({map: texture, side: THREE.doubleSided});
+        let parkingground = new THREE.Mesh(pgGeometry, pgMaterial);
+        parkingground.castShadow = true;
+        parkingground.receiveShadow = true;
+        parkingground.position.set(85,-1,-4)
+        this.add(parkingground);
+
         // add stationFloor to game
         game.scene.add(this);
         this.position.y = 1;
+
+        this.matrixAutoUpdate = false;
+        this.updateMatrix();
     }
 
     update()

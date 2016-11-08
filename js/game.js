@@ -15,15 +15,18 @@
 
 		this.scene = new THREE.Scene(); // Add new scene to game object.
 		this.clock = new THREE.Clock();
+		this.isRunning = false;
 		this.renderer = new THREE.WebGLRenderer(
 		{
 			antialias: true,
 			stencil: false,
 			precision: "lowp",
-			preserveDrawingBuffer: true,
+			preserveDrawingBuffer: false,
+			depth: true
 		});
 
 		this.camera = new Camera(45,  window.innerWidth / window.innerHeight, 0.1, 10000);
+
 		this.stationFloor = new StationFloor()
 		this.sun = new Sun();
 		this.hemisphere = new Hemisphere();
@@ -32,17 +35,23 @@
 		this.ground = new Ground();
 		this.trackManager = new TrackManager();
 		this.restaurant = new Restaurant();
-		this.hokje = new Hokje();
+		this.shelterpew = new ShelterPew();
 		this.station = new Station();
 		this.skydome = new SkyDome();
-  		this.stationroof = new Stationroof();
+		this.stationroof = new Stationroof();
 		this.lights = new Lights();
-        this.building = new Building();
+		this.building = new Building();
 		this.sEntrance = new SEntrance();
 		this.streetlampManager = new StreetlampManager();
 		this.cycleRackManager = new CycleRackManager();
 		this.houseManager = new HouseManager();
-
+		this.cyclerackroof = new Cyclerackroof();
+		this.parkinglot = new Parkinglot();
+		this.platformroofManager = new PlatformRoofManager();
+		this.plazatower = new PlazaTower();
+		this.backentrance = new BackEntrance();
+		this.fenceManager = new FenceManager();
+		this.pause();
 	}
 
 	initialize()
@@ -53,24 +62,20 @@
 		this.renderer.setClearColor(0x000000);
 
 		// enable shadows
-		this.renderer.shadowMap.enabled = false;
-		this.renderer.shadowMapSoft = false;
-		this.renderer.shadowMapDarkness = 0.5;
+		this.renderer.shadowMap.enabled = true;
+		this.renderer.shadowMapSoft = true;
 	}
 
 	render()
 	{
-		// Render logic
-		let start = Date.now();
-
-		this.update();
+		if(this.isRunning)
+		{
+			this.update();
+			DbgDraw.render(game.scene);
+			this.renderer.render(this.scene, this.camera);
+		}
 
 		requestAnimationFrame(this.render.bind(this)); // Add self to render queue
-		this.renderer.render(this.scene, this.camera);
-		let updateTime = Date.now() - start;
-		console.log("Render took: ", updateTime, "ms");
-
-
 	}
 
 	update(next)
@@ -85,7 +90,7 @@
 		this.ground,
 		this.trackManager,
 		this.restaurant,
-		this.hokje,	
+		this.shelterpew,
 		this.hemisphere,
 		this.station,
 		this.skydome,
@@ -96,26 +101,39 @@
 		this.treeManager,
 		this.streetlampManager,
 		this.cycleRackManager,
-		this.houseManager
+		this.houseManager,
+		this.cyclerackroof,
+		this.parkinglot,
+		this.platformroofManager,
+		this.plazatower,
+		this.backentrance,
+		this.fenceManager,
 		];
 
 
 		for(let i in objectsToUpdate)
 		{
 			let object = objectsToUpdate[i];
-			if(!object) alert("Een fucking opbject in objectsToUpdate bestaat niet in game.js; index = " + i);
+			if(!object);
 			object.update(delta);
 		}
 	}
 
-	start()
+	resume()
 	{
+		// console.log("Game resume");
+		jQuery("#overlay").hide();
 		this.clock.start();
+		this.isRunning = true;
+		
 	}
 
-	stop()
+	pause()
 	{
+		// console.log("Game pause");
+		jQuery("#overlay").fadeIn();
 		this.clock.stop();
+		this.isRunning = false;
 	}
 
 }

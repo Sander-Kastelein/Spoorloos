@@ -1,11 +1,10 @@
-/*
+	/*
 	init.js
 
 	This file boostraps the application
 */
 
 var game;
-
 
 /*
 	Misc functions
@@ -20,7 +19,6 @@ function rad2deg(radians)
 {
 	return (radians / Math.PI) * 180;
 }
-
 
 function getCurrentSecondOfTheDay()
 {
@@ -40,14 +38,37 @@ function getCurrentSunAngleInDegrees()
 	var  n = getCurrentSecondOfTheDay() / 3600 / 24;
 	n = n * 2 * Math.PI;
 	return rad2deg(n);
-
 }
+
+
+function randNum(min,max,bool)
+{
+  
+  var num = Math.floor(Math.random()*max) + min; // this will get a number between 1 and 99;
+  if(bool || typeof bool == "undefined"){
+    num *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
+  }
+  return num;
+}
+
+// Check of point is in radius
+function pointInCircle(point,target, radius) {
+  var distsq = (point.x - target.x) * (point.x - target.x) + (point.y - target.y) * (point.y - target.y) + (point.z - target.z) * (point.z - target.z);
+  // returns bool , distance to target origin 
+  return [distsq <= radius * radius * radius,distsq];
+}
+
+function calculatePointInCircle(r) {
+			x = Math.random() * 2 * r - r;
+			zlim = Math.sqrt(r * r - x * x);
+			z = Math.random() * 2 * zlim - zlim;
+    return [x,z];
+}
+
 
 
 document.addEventListener('DOMContentLoaded', function()
 {
-	
-
 	assetLoader.load(function(assets)
 	{
 		game = new Game(assets);
@@ -63,10 +84,6 @@ document.addEventListener('DOMContentLoaded', function()
 		window.onresize();
 	});
 	
-
-
-
-
 }, false);
 
 

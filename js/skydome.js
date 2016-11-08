@@ -18,7 +18,10 @@ class SkyDome extends THREE.Mesh
         let skyMat = new THREE.ShaderMaterial( { vertexShader: vertexShader, fragmentShader: fragmentShader, uniforms: uniforms, side: THREE.BackSide } );
 
         super(skyGeo, skyMat);
-            game.scene.add(this);
+        game.scene.add(this);
+
+        this.matrixAutoUpdate = false;
+        this.updateMatrix();
     }
 
     update()

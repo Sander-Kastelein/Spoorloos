@@ -9,36 +9,34 @@
 class Station extends THREE.Object3D
 {
 
-    constructor(stationObject)
+    constructor()
     {
         super();
 
-        this.data = stationObject;
+        let texture = game.assets.stationbuildingTexture;
+        texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set( 100,100);
+        let material = new THREE.MeshPhongMaterial({map: texture});
 
-        for(let i = 0; i < game.assets.station.children.length; i++)
+        for(let i = 0; i < game.assets.blockbuild.children.length; i++)
         {
-            let child = game.assets.station.children[i].clone();
-            let texture = game.assets.stationTexture;
-            child.material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: true});
-            child.castShadow = true;
-            child.receiveShadow = true;
+            let child = game.assets.blockbuild.children[i].clone();
+
+            child.material = material;
 
             this.add(child);
         }
 
-        this.scale.x = 0.05;
-        this.scale.z = 0.015;
-        this.scale.y = 0.015;
-
+        this.castShadow = true;
+        this.receiveShadow = true;
+        this.scale.x = 0.2;
+        this.scale.z = 0.5;
+        this.scale.y = 0.1;
+        this.position.set(-31, 0, 90);
+        this.rotateY(deg2rad(180));
+        this.matrixAutoUpdate = false;
+        this.updateMatrix();
         game.scene.add(this);
-
-        this.position.x = -38.5;
-        this.position.z = 150;
-        this.position.y = 2;
-        this.rotateY(deg2rad(90));// = deg2rad(0);
-
-
-
     }
 
     update()

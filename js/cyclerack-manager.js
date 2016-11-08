@@ -4,29 +4,35 @@
 
 class CycleRackManager
 {
-
     constructor()
     {
         this.cycleracks = [
-            (new CycleRack( new THREE.Vector3(55, 0.1, -100))),
-            (new CycleRack( new THREE.Vector3(55, 0.1, -95))),
-            (new CycleRack( new THREE.Vector3(55, 0, -90))),
-            (new CycleRack( new THREE.Vector3(55, 0, -85))),
-            (new CycleRack( new THREE.Vector3(55, 0.1, -80))),
-            (new CycleRack( new THREE.Vector3(55, 0.1, -75))),
-            (new CycleRack( new THREE.Vector3(55, 0, -70))),
-            (new CycleRack( new THREE.Vector3(55, 0, -65))),
-            (new CycleRack( new THREE.Vector3(55, 0, -60))),
-            (new CycleRack( new THREE.Vector3(55, 0, -55))),
-            (new CycleRack( new THREE.Vector3(55, 0, -50))),
-            (new CycleRack( new THREE.Vector3(55, 0, -45))),
-            (new CycleRack( new THREE.Vector3(55, 0, -40))),
-            (new CycleRack( new THREE.Vector3(55, 0, -35)))
+            (new CycleRack( new THREE.Vector3(55, 0.5, 8))),
+            (new CycleRack( new THREE.Vector3(55, 0.5, 3))),
+            (new CycleRack( new THREE.Vector3(55, 0.5, -2))),
+            (new CycleRack( new THREE.Vector3(55, 0.5, -7))),
+            (new CycleRack( new THREE.Vector3(55, 0.5, -12))),
+            (new CycleRack( new THREE.Vector3(55, 0.5, -17))),
+            (new CycleRack( new THREE.Vector3(55, 0.5, -22))),
+            (new CycleRack( new THREE.Vector3(55, 0.5, -27))),
+            (new CycleRack( new THREE.Vector3(55, 0.5, -32))),
+            (new CycleRack( new THREE.Vector3(55, 0.5, -37))),
+            (new CycleRack( new THREE.Vector3(55, 0.5, -42))),
+            (new CycleRack( new THREE.Vector3(55, 0.5, -47))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.5, 8))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.5, 3))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.5, -2))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.5, -7))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.5, -12))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.5, -17))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.5, -22))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.5, -27))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.5, -32))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.5, -37))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.5, -42))),
+            (new CycleRack( new THREE.Vector3(56.5, 0.5, -47)))
         ];
     }
-
-
-
 
     update(delta)
     {
@@ -36,7 +42,4 @@ class CycleRackManager
             cyclerack.update(delta);
         }
     }
-
-
-
 }

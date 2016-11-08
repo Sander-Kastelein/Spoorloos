@@ -5,29 +5,22 @@
 
 class TreeManager
 {
-
     constructor()
     {
         this.trees = [
-            (new Tree( new THREE.Vector3(60, 0.1, 30))),
-            (new Tree( new THREE.Vector3(60, 0.1, 20))),
-            (new Tree( new THREE.Vector3(60, 0, 8))),
-            (new Tree( new THREE.Vector3(60, 0, -5))),
-            (new Tree( new THREE.Vector3(60, 0.1, -19))),
-            (new Tree( new THREE.Vector3(60, 0.1, -30))),
-            (new Tree( new THREE.Vector3(60, 0, -43))),
-            (new Tree( new THREE.Vector3(60, 0, -50))),
-            (new Tree( new THREE.Vector3(60, 0, -62))),
-            (new Tree( new THREE.Vector3(60, 0, -80))),
-            (new Tree( new THREE.Vector3(60, 0, -92))),
-            (new Tree( new THREE.Vector3(60, 0, -100))),
-            (new Tree( new THREE.Vector3(60, 0, -108))),
-            (new Tree( new THREE.Vector3(60, 0, -110)))
+
+            (new Tree( new THREE.Vector3(60, 0.1, 90))),
+            (new Tree( new THREE.Vector3(52, 0, 20))),
+            (new Tree( new THREE.Vector3(64, 0.1, -65))),
+            (new Tree( new THREE.Vector3(55, 0, 0))),
+            (new Tree( new THREE.Vector3(46, 0, -97.6))),
+            (new Tree( new THREE.Vector3(13.5, 0, 20))),
+            (new Tree( new THREE.Vector3(10.5, 0, -58))),
+
         ];
+
+        
     }
-
-
-
 
     update(delta)
     {
