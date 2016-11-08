@@ -69,6 +69,6 @@ class TrainManager
 				this.trains = this.trains.splice(i, 1);
 			}
 		}
-	}
+	} 
 
 }
