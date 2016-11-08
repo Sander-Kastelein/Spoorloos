@@ -10,8 +10,9 @@
         let distance = 4000;
 
         super(color, intensity, distance);
-        this.castShadow = false;
+        this.castShadow = true;
         this.target = game.stationFloor;
+        this.position.y = 100;
         game.scene.add(this);
     }
 
@@ -19,6 +20,6 @@
     {
         this.position.x = 400 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
         this.position.z = 400 * (Math.cos(deg2rad(getCurrentSunAngleInDegrees())));
-        this.position.y = 200 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
+       // this.position.y = 200 * (Math.sin(deg2rad(getCurrentSunAngleInDegrees())));
     }
 }
