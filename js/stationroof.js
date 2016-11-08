@@ -20,12 +20,12 @@ class Stationroof extends THREE.Object3D
             let child = game.assets.stationroof.children[i].clone();
 
             child.material = material;
-            child.castShadow = true;
-            child.receiveShadow = true;
 
             this.add(child);
         }
 
+        this.castShadow = true;
+        this.receiveShadow = true;
         this.scale.x = 6;
         this.scale.z = 25.10;
         this.scale.y = 2.50;

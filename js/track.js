@@ -29,7 +29,7 @@
             this.add(child);
         }   
         this.receiveShadow = true;
-        this.castShadow = true;
+        this.castShadow = false;
 
         this.castShadow = false;
         this.receiveShadow = true;

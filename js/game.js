@@ -49,9 +49,8 @@
 		this.parkinglot = new Parkinglot();
 		this.platformroofManager = new PlatformRoofManager();
 		this.plazatower = new PlazaTower();
-		this.fence = new Fence();
 		this.backentrance = new BackEntrance();
-
+		this.fenceManager = new FenceManager();
 		this.pause();
 	}
 
@@ -107,8 +106,8 @@
 		this.parkinglot,
 		this.platformroofManager,
 		this.plazatower,
-		this.fence,
-		this.backentrance
+		this.backentrance,
+		this.fenceManager,
 		];
 
 

@@ -23,12 +23,12 @@ class Station extends THREE.Object3D
             let child = game.assets.blockbuild.children[i].clone();
 
             child.material = material;
-            child.castShadow = true;
-            child.receiveShadow = true;
 
             this.add(child);
         }
 
+        this.castShadow = true;
+        this.receiveShadow = true;
         this.scale.x = 0.2;
         this.scale.z = 0.5;
         this.scale.y = 0.1;
