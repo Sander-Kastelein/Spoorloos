@@ -15,6 +15,7 @@
 
 		this.scene = new THREE.Scene(); // Add new scene to game object.
 		this.clock = new THREE.Clock();
+		this.isRunning = false;
 		this.renderer = new THREE.WebGLRenderer(
 		{
 			antialias: true,
@@ -37,9 +38,9 @@
 		this.shelterpew = new ShelterPew();
 		this.station = new Station();
 		this.skydome = new SkyDome();
-  		this.stationroof = new Stationroof();
+		this.stationroof = new Stationroof();
 		this.lights = new Lights();
-        this.building = new Building();
+		this.building = new Building();
 		this.sEntrance = new SEntrance();
 		this.streetlampManager = new StreetlampManager();
 		this.cycleRackManager = new CycleRackManager();
@@ -50,6 +51,8 @@
 		this.plazatower = new PlazaTower();
 		this.fence = new Fence();
 		this.backentrance = new BackEntrance();
+
+		this.pause();
 	}
 
 	initialize()
@@ -66,15 +69,12 @@
 
 	render()
 	{
-		// Render logic
-		let start = Date.now();
-
-		this.update();
-
-		DbgDraw.render(game.scene);
-		this.renderer.render(this.scene, this.camera);
-
-		let updateTime = Date.now() - start;
+		if(this.isRunning)
+		{
+			this.update();
+			DbgDraw.render(game.scene);
+			this.renderer.render(this.scene, this.camera);
+		}
 
 		requestAnimationFrame(this.render.bind(this)); // Add self to render queue
 	}
@@ -120,14 +120,21 @@
 		}
 	}
 
-	start()
+	resume()
 	{
+		console.log("Game resume");
+		jQuery("#overlay").hide();
 		this.clock.start();
+		this.isRunning = true;
+		
 	}
 
-	stop()
+	pause()
 	{
+		console.log("Game pause");
+		jQuery("#overlay").fadeIn();
 		this.clock.stop();
+		this.isRunning = false;
 	}
 
 }
