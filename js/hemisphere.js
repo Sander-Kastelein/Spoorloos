@@ -9,9 +9,9 @@
 
         this.color.setHSL( 0, 1, 0.95);
         this.groundColor.setHSL( 0.43, 0.46, 1 );
-        this.intensity = 0.6;
+        this.intensity = 0.3;
 
-        this.position.set( 0, 500, 0 );
+        this.position.set( 0, 1000, 0 );
 
         this.matrixAutoUpdate = false;
         this.updateMatrix();
