@@ -99,7 +99,7 @@
         percentage 0..1
     */
     getPointInBetweenByPerc(pointA, pointB, percentage) {
-        percentage = Math.sqrt(percentage);
+        percentage = percentage * percentage;
 
 
         var dir = pointB.clone().sub(pointA);
