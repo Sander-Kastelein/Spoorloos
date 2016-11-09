@@ -72,7 +72,7 @@ class Train extends THREE.Object3D
 	{
 
 		// Check if train should become visible
-		if(!this.visible && this.timeFromDeparture <= (60 * 10)) // Show trains 10 minutes before departure
+		if(!this.visible && this.timeFromDeparture <= (60 * 30)) // Show trains 10 minutes before departure
 		{
 			this.show();
 		}

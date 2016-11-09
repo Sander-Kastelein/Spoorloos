@@ -80,6 +80,13 @@ class StationFloor extends THREE.Object3D
         parkingground.position.set(85,-1,-4)
         this.add(parkingground);
 
+        // TEST OBJECT TRAIN POSITION MEASURING
+        //let testgeometry = new THREE.BoxGeometry(5,2,40);
+        //let testMaterial = new THREE.MeshPhongMaterial({color: 0xff0000});
+        //let testObject = new THREE.Mesh(testgeometry, testMaterial);
+        //testObject.position.set(12, 4 , -190);
+        //this.add(testObject);
+
         // add stationFloor to game
         game.scene.add(this);
         this.position.y = 1;
