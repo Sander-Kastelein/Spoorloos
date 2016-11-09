@@ -7,7 +7,7 @@ class StationFloor extends THREE.Object3D
     {
         super();
         // Stationfloor texture
-        let stationFloorTexture = game.assets.stationFloorTexture;
+        let stationFloorTexture = game.assets.brickTexture;
         stationFloorTexture.wrapS = stationFloorTexture.wrapT = THREE.RepeatWrapping;
         stationFloorTexture.repeat.set( 4, 4);
 

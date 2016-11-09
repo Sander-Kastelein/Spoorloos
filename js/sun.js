@@ -31,7 +31,6 @@ class Sun extends THREE.SpotLight
 
     update(delta)
     {
-
         this.lastUpdate += delta;
 
         if(this.lastUpdate > 1)

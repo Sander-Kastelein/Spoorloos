@@ -15,6 +15,10 @@ assetLoader = new (class{
 	}
 
 	load(callback) {
+
+		// TODO write small abstraction to handle asset loading from array instead of
+		// with iterator and callback
+
 		var assetsLoaded = 0;
 		var amountOfAssetsToLoad = 18;
 
@@ -140,31 +144,39 @@ assetLoader = new (class{
 
 
 
+		let textures = [
+		{ name: "stationFloorTexture", src : "img/tegel.jpg"},
+		{ name: "trainTextureNS", src : "img/ns.png"},
+		{ name: "trainTextureArriva", src : "img/arriva.png"},
+		{ name: "groundTexture", src : "img/ground.jpg"},
+		{ name: "trackTexture", src : "img/track.jpg"},
+		{ name: "restaurantTexture", src : "img/smullers.jpg"},
+		{ name: "stationbuildingTexture", src : "img/brickwall.jpg"},
+		{ name: "treeTexture", src : "img/blatt.jpg"},
+		{ name: "treeTexture", src : "img/bark.jpg"},
+		{ name: "spot1Texture", src : "img/lamp.jpg"},
+		{ name: "streetlampTexture", src : "img/grey-concrete-texture.jpg"},
+		{ name: "stationroofTexture", src : "img/dak.jpg"},
+		{ name: "shelterPew", src : "img/shelterpew.jpg"},
+		{ name: "houseTexture", src : "img/brickwall.jpg"},
+		{ name: "plazatowerTexture", src : "img/skyscraper.jpg"},
+		{ name: "fenceTexture", src :  "img/fence.png"},
+		{ name: "blockbuildingTexture", src : "img/brickwall.jpg"},
+		{ name: "pavementTexture", src :  "img/pavements.jpg"},
+		{ name: "brickTexture", src : "img/baksteen.jpg"}
+		];
 
-		let baksteen = new THREE.ImageUtils.loadTexture("img/baksteen.jpg");
-
-		this.assets.stationFloorTexture = new THREE.ImageUtils.loadTexture("img/tegel.jpg");
-		this.assets.trainTextureNS = new THREE.ImageUtils.loadTexture("img/ns.png");
-		this.assets.trainTextureArriva = new THREE.ImageUtils.loadTexture("img/arriva.png");
-		this.assets.groundTexture = new THREE.ImageUtils.loadTexture("img/ground.jpg");
-		this.assets.trackTexture = new THREE.ImageUtils.loadTexture("img/track.jpg");
-		this.assets.restaurantTexture = new THREE.ImageUtils.loadTexture("img/smullers.jpg");
-		this.assets.stationbuildingTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg");
-		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/blatt.jpg");
-		this.assets.treeTexture = new THREE.ImageUtils.loadTexture("img/bark.jpg");
-		this.assets.spot1Texture = new THREE.ImageUtils.loadTexture("img/lamp.jpg");
-		this.assets.streetlampTexture = new THREE.ImageUtils.loadTexture("img/grey-concrete-texture.jpg")
-		this.assets.stationroofTexture = new THREE.ImageUtils.loadTexture("img/dak.jpg");
-		this.assets.shelterPew = new THREE.ImageUtils.loadTexture("img/shelterpew.jpg");
-        this.assets.houseTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg");
-		this.assets.plazatowerTexture = new THREE.ImageUtils.loadTexture("img/skyscraper.jpg");
-		this.assets.fenceTexture =  new THREE.ImageUtils.loadTexture("img/fence.png");
-		this.assets.blockbuildingTexture = new THREE.ImageUtils.loadTexture("img/brickwall.jpg")
-		this.assets.pavementTexture =  new THREE.ImageUtils.loadTexture("img/pavements.jpg");
-		this.assets.backentranceTexture = baksteen;
+		let textureLoader = new THREE.TextureLoader();
+		amountOfAssetsToLoad += textures.length; // add textures
 
 
-		this.assets.plantsTexture = new THREE.ImageUtils.loadTexture("https://saschas.github.io/experiments/flower/assets/tex/map.png");
+		for(let texture of textures)
+		{
+			textureLoader.load(texture.src, ((texture,result) => {
+				this.assets[texture.name] = result;
+				assetLoaded();
+			}).bind(this, texture));
+		}
 
-		};
+	};
 });
