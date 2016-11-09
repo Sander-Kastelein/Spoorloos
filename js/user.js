@@ -4,7 +4,7 @@
 class User extends THREE.FirstPersonControls
 {
 	
-	constructor(object, dsomElement)
+	constructor(object, domElement)
 	{
 		super(object, domElement);
 
