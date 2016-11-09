@@ -47,13 +47,12 @@ class StationFloor extends THREE.Object3D
         this.add(pavement1);
 
         //pavementRailway 5 & 8
-        let pavement58Geometry = new THREE.BoxGeometry(10,2,112.5);
+        let pavement58Geometry = new THREE.BoxGeometry(10,2,162.5);
         let pavement58Material = new THREE.MeshPhongMaterial({map:pavementTexture, side: THREE.doubleSided});
         let pavement58 = new THREE.Mesh(pavement58Geometry, pavement58Material);
-        pavement58.position.x = 16.5;
-        pavement58.position.z = -99;
+        pavement58.position.x = 19;
+        pavement58.position.z = -125;
         pavement58.position.y = 0;
-        pavement58.rotation.y = 5/360*Math.PI;
         pavement58.castShadow = true    ;
         pavement58.receiveShadow = true;
         this.add(pavement58);

@@ -28,7 +28,7 @@ class ShelterPew extends THREE.Object3D
         this.scale.x = 0.015;
         this.scale.z = 0.015;
         this.scale.y = 0.015;
-        this.position.x = 12;
+        this.position.x = 14;
         this.position.z = -55;
         this.position.y = 2;
         this.rotateY(deg2rad(90));

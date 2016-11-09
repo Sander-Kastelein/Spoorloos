@@ -63,8 +63,8 @@
         this.matrixAutoUpdate = false;
         this.updateMatrix();
 
-        this.trainStartPosition = new THREE.Vector3(this.position.x, this.position.y, this.position.z - 45);
-        this.trainEndPosition = new THREE.Vector3(this.position.x, this.position.y, this.position.z + 120);
+        this.trainStartPosition = new THREE.Vector3(this.position.x, this.position.y, this.position.z + 65 );
+        this.trainEndPosition = new THREE.Vector3(this.position.x, this.position.y, this.position.z - 120);
 
 
         game.scene.add(this);
