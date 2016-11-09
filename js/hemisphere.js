@@ -9,7 +9,7 @@
 
         this.color.setHSL( 0, 1, 0.95);
         this.groundColor.setHSL( 0.43, 0.46, 1 );
-        this.intensity = 0.3;
+        this.intensity = 0.2;
 
         this.position.set( 0, 1000, 0 );
 
