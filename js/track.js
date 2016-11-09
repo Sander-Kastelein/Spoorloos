@@ -2,12 +2,14 @@
  * Created by Ruud on 27-10-2016.
  */
 
+ const TRAIN_LENGTH = 40;
 
  class Track extends THREE.Object3D
  {
 
-    constructor(platform, position, rotation, scale)
+    constructor(platform, position, size, trainStartPositionZ, trainEndPositionZ)
     {
+        let scale, rotation;
         if(!scale) scale = new THREE.Vector3(0.001, 0.001, 0.005);
         if(!rotation) rotation = new THREE.Vector3(0, 0, 0);
         super();
@@ -19,6 +21,7 @@
         let texture = game.assets.trackTexture;
         let material = new THREE.MeshPhongMaterial({map: texture, needsUpdate: false});
 
+
         for(let i = 0; i < game.assets.track.children.length; i++)
         {
             let child = game.assets.track.children[i].clone();
@@ -27,7 +30,10 @@
             child.castShadow = false;
             child.receiveShadow = false;
             this.add(child);
-        }   
+        }
+
+
+
         this.receiveShadow = true;
         this.castShadow = false;
 
@@ -38,7 +44,7 @@
         this.rotation.y = rotation.y;
         this.rotation.z = rotation.z;
         this.scale.x = scale.x; //0.001;
-        this.scale.z = scale.z; //0.0050;
+        this.scale.z = scale.z * size; //0.0050;
         this.scale.y = scale.y; //0.001;
 
 
@@ -63,8 +69,8 @@
         this.matrixAutoUpdate = false;
         this.updateMatrix();
 
-        this.trainStartPosition = new THREE.Vector3(this.position.x, this.position.y, this.position.z + 65 );
-        this.trainEndPosition = new THREE.Vector3(this.position.x, this.position.y, this.position.z - 120);
+        this.trainStartPosition = new THREE.Vector3(this.position.x, this.position.y,  trainStartPositionZ );
+        this.trainEndPosition = new THREE.Vector3(this.position.x, this.position.y, trainEndPositionZ);
 
 
         game.scene.add(this);
@@ -97,18 +103,18 @@
     /*
         http://stackoverflow.com/questions/27426053/find-specific-point-between-2-points-three-js
         percentage 0..1
-    */
-    getPointInBetweenByPerc(pointA, pointB, percentage) {
-        percentage = percentage * percentage;
+        */
+        getPointInBetweenByPerc(pointA, pointB, percentage) {
+            percentage = percentage * percentage;
 
 
-        var dir = pointB.clone().sub(pointA);
-        var len = dir.length();
-        dir = dir.normalize().multiplyScalar( len*percentage );
-        return pointA.clone().add(dir);
+            var dir = pointB.clone().sub(pointA);
+            var len = dir.length();
+            dir = dir.normalize().multiplyScalar( len*percentage );
+            return pointA.clone().add(dir);
+
+        }
+
+
 
     }
-
-
-
-}

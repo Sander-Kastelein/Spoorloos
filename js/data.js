@@ -38,7 +38,7 @@ var Data;
 
 		for(let train of trains)
 		{
-			if(train.actueleAankomstTijd === false)
+			if(train.actueleAankomstTijd === 3600)
 			{
 				return this.failedApiCall();
 			}
